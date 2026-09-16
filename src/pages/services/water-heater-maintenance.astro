@@ -1,0 +1,331 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import FaqAccordion from '../../components/FaqAccordion.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import ContactForm from '../../components/ContactForm.astro';
+
+const pageTitle = "Water Heater Maintenance Idaho Falls | Hard Water Descaling";
+const pageDescription = "Protect your water heater from Idaho Falls' 14.1 GPG hard water. Annual power flushes, sediment descaling, and anode rod inspections to double equipment lifespan.";
+
+const breadcrumbs = [
+  { name: "Services", url: "/services/" },
+  { name: "Water Heater Maintenance", url: "/services/water-heater-maintenance/" }
+];
+
+const faqs = [
+  {
+    question: "How often should I have my water heater flushed in Idaho Falls?",
+    answer: "Because Idaho Falls municipal and well water averages approximately 14.1 GPG (Grains Per Gallon) of hardness, we strongly recommend flushing your water heater once every 12 months. In households with high hot water consumption or without a water softener, a semi-annual flush may be necessary to prevent rock-hard scale buildup."
+  },
+  {
+    question: "What does the sacrificial anode rod do and when should it be replaced?",
+    answer: "The sacrificial anode rod is a magnesium or aluminum rod inside your tank designed to corrode before the steel tank does. In Idaho Falls water, anode rods typically deplete within 2 to 4 years. Once the rod is eaten away, corrosive minerals begin eating the steel tank wall. Replacing this rod on schedule can double your tank's service life."
+  },
+  {
+    question: "Can an annual flush lower my monthly utility bill?",
+    answer: "Yes. Even a 3/8-inch layer of calcium carbonate scale at the bottom of a gas or electric water heater acts like an insulating blanket. This forces your burner or element to consume up to 25% to 30% more energy just to heat the same volume of water. Flushing out this sediment restores factory heating efficiency."
+  },
+  {
+    question: "Can you flush a water heater that hasn't been maintained in 8 years?",
+    answer: "We perform a preliminary inspection first. On very old tanks that have never been flushed, hardened sediment can sometimes act as a temporary sealant over tiny rust pinholes. If our technician determines that aggressive power flushing risks triggering a tank breach, we will explain your options honestly before proceeding."
+  },
+  {
+    question: "Do tankless water heaters also need annual maintenance?",
+    answer: "Yes, tankless water heaters require maintenance even more urgently than tank models. Their compact copper and stainless steel heat exchangers have tight water passages that easily clog with calcium scale. We perform a closed-loop recirculating descaling wash using food-grade solution to keep them running at peak efficiency."
+  }
+];
+
+const relatedServices = [
+  { name: "Water Heater Repair", url: "/services/water-heater-repair/" },
+  { name: "Water Heater Replacement", url: "/services/water-heater-replacement/" },
+  { name: "Tankless Water Heater Repair & Installation", url: "/services/tankless-water-heater-repair-installation/" },
+  { name: "Gas Water Heater Service", url: "/services/gas-water-heater-repair-installation/" }
+];
+---
+
+<Layout 
+  title={pageTitle} 
+  description={pageDescription} 
+  canonicalPath="/services/water-heater-maintenance/"
+  breadcrumbs={breadcrumbs}
+  serviceName="Water Heater Maintenance"
+  faqs={faqs}
+>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <section class="service-hero">
+    <div class="container">
+      <div class="service-hero-inner">
+        <div class="service-hero-content">
+          <span class="section-tag">Preventative Care</span>
+          <h1>Water Heater Maintenance in Idaho Falls</h1>
+          <p class="service-hero-lead">
+            In Eastern Idaho, hard water is the leading cause of premature water heater failure. With tap water measuring roughly 14.1 GPG of dissolved minerals, unmaintained tanks accumulate inches of calcified rock in just a few years. Idaho Falls Water Heater Pros provides comprehensive water heater maintenance in Idaho Falls to remove sediment, replace sacrificial anode rods, and keep your utility bills low.
+          </p>
+          <div class="service-hero-ctas">
+            <a href="tel:+12082182108" class="btn btn-primary btn-lg">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+              Call (208) 218-2108
+            </a>
+            <a href="#contact" class="btn btn-outline btn-lg">
+              Schedule Seasonal Tune-Up
+            </a>
+          </div>
+          <p class="hero-availability-note">
+            Serving residential and commercial systems throughout Idaho Falls. View all <a href="/locations/">service locations</a>.
+          </p>
+        </div>
+
+        <div class="service-hero-highlight">
+          <div class="highlight-card">
+            <img 
+              src="/images/hard-water-sediment-tank-flushing-descaling.webp" 
+              alt="Sediment flushing and descaling for hard water in Idaho Falls" 
+              width="450" 
+              height="280" 
+              class="service-feature-photo" 
+            />
+            <h3>Annual Hard Water Descaling</h3>
+            <p class="promo-desc">Multi-point safety inspection, tank sediment purge, anode rod inspection, and safety valve testing.</p>
+            <a href="tel:+12082182108" class="btn btn-primary" style="width:100%;">
+              Call for an Estimate: (208) 218-2108
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <!-- Scope -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Inspection Checklist</span>
+        <h2>What Our Annual Maintenance Service Covers</h2>
+        <p>A rigorous 12-point inspection and sediment purge protocol.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>Full Tank Power Flush</h3>
+          <p>We connect high-flow drain hoses to extract loose calcium flakes, sediment slurry, and mineral buildup from the bottom of your water tank.</p>
+        </div>
+        <div class="card">
+          <h3>Sacrificial Anode Rod Inspection</h3>
+          <p>We remove and inspect the anode rod. If more than 75% of the core wire is exposed, we replace it to protect your tank cylinder from rust.</p>
+        </div>
+        <div class="card">
+          <h3>T&P Safety Valve Function Test</h3>
+          <p>We manually cycle the temperature and pressure relief valve to confirm the spring isn't seized with limescale and seats properly without leaking.</p>
+        </div>
+        <div class="card">
+          <h3>Burner & Flame Inspection</h3>
+          <p>For gas water heaters, we clean the burner orifice, vacuum dust from the combustion chamber, and check flame color and draft velocity.</p>
+        </div>
+        <div class="card">
+          <h3>Electrical Heating Element Check</h3>
+          <p>For electric units, we test amperage draw and resistance (ohms) on upper and lower elements to detect early signs of calcification burnout.</p>
+        </div>
+        <div class="card">
+          <h3>Thermal Expansion Tank Verification</h3>
+          <p>We check the air bladder pressure in your thermal expansion tank with a digital tire gauge and calibrate it to match your home's incoming water pressure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hard Water Science -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Water Chemistry</span>
+        <h2>The Science of Sediment in Bonneville County</h2>
+        <p>Why Idaho Falls homeowners face unique maintenance challenges.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Calcium Carbonate Accumulation</h3>
+          <p>
+            The City of Idaho Falls pumps its municipal water from deep underground wells in the Eastern Snake River Plain Aquifer. This water is rich in dissolved limestone, measuring roughly 240 milligrams per liter (mg/L).
+          </p>
+          <p>
+            As water is heated inside your tank, calcium carbonate precipitates out of solution and falls like snow to the bottom of the cylinder. Over time, it hardens into solid mineral scale that traps heat, burns out elements, and causes popping noises.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Galvanic Corrosion & Tank Rust</h3>
+          <p>
+            When water sits in a steel tank, microscopic electrical currents naturally flow through the liquid, causing metal ions to detach from the steel shell. The sacrificial anode rod attracts this corrosive reaction to itself.
+          </p>
+          <p>
+            Once the anode rod dissolves completely, those corrosive currents attack your water heater's steel tank directly. Regular maintenance ensures you always have an active anode rod protecting your investment.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">How We Work</span>
+        <h2>Step-by-Step Maintenance Workflow</h2>
+        <p>Clean, efficient, and respectful of your home.</p>
+      </div>
+
+      <div class="grid-4 process-grid">
+        <div class="process-step">
+          <div class="step-badge">1</div>
+          <h3>Safety Shutoff</h3>
+          <p>We shut off the fuel or electrical power supply and close the cold water inlet valve to safely depressurize the system.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-badge">2</div>
+          <h3>Sediment Extraction</h3>
+          <p>We connect heavy-duty commercial hoses and run high-velocity water flushes until the drain output runs 100% clear.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-badge">3</div>
+          <h3>Component Testing</h3>
+          <p>We inspect the anode rod, test thermostats, verify heating elements, and test gas pressure settings.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-badge">4</div>
+          <h3>Recommissioning</h3>
+          <p>We refill the tank, bleed all air from the hot water lines, reignite the burner, and verify proper operational temperatures.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Explore More</span>
+        <h2>Other Services for Your Water Heater</h2>
+        <p>Keep your plumbing system in peak working order.</p>
+      </div>
+
+      <div class="grid-4">
+        {relatedServices.map((item) => (
+          <div class="card">
+            <h3>{item.name}</h3>
+            <p>Professional services across Idaho Falls and Bonneville County.</p>
+            <a href={item.url} class="btn btn-outline" style="width:100%; text-align:center;">
+              Learn More →
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <FaqAccordion faqs={faqs} title="Water Heater Maintenance FAQs" />
+
+  <CtaBand 
+    headline="Has Your Water Heater Been Flushed in the Last Year?"
+    subtext="Protect your equipment and lower your monthly energy costs. Call (208) 218-2108 to speak with a technician and request an estimate today."
+  />
+
+  <ContactForm 
+    title="Schedule Your Annual Maintenance"
+    subtitle="Keep your water heater running quietly and efficiently all year long."
+    locationContext="Idaho Falls Water Heater Maintenance"
+  />
+</Layout>
+
+<style>
+  .service-hero {
+    background: linear-gradient(180deg, #f0f7fc 0%, #ffffff 100%);
+    padding: 3.5rem 0 4rem 0;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .service-hero-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  @media (min-width: 960px) {
+    .service-hero-inner {
+      grid-template-columns: 1.2fr 0.8fr;
+    }
+  }
+
+  .service-hero-lead {
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+  }
+
+  .service-hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-availability-note {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    margin-bottom: 0;
+  }
+
+  .hero-availability-note a {
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+
+  .highlight-card {
+    background: #ffffff;
+    border: 2px solid var(--color-accent);
+    border-radius: var(--radius-lg);
+    padding: 2.25rem;
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+  }
+
+  .highlight-card h3 {
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+  }
+
+  .promo-title {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: var(--color-accent);
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+  }
+
+  .promo-desc {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1.25rem;
+  }
+
+  .promo-code {
+    display: inline-block;
+    background-color: var(--color-bg-subtle);
+    border: 1px dashed var(--color-primary);
+    padding: 0.5rem 1.25rem;
+    font-weight: 800;
+    color: var(--color-primary-dark);
+    border-radius: var(--radius-sm);
+    letter-spacing: 0.08em;
+  }
+</style>

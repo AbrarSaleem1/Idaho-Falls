@@ -1,0 +1,173 @@
+---
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  locationContext?: string;
+}
+
+const {
+  title = "Call for an Estimate & Immediate Dispatch",
+  subtitle = "Speak directly with our on-call Idaho Falls technician to discuss your system and request an estimate.",
+  locationContext = "Idaho Falls & Bonneville County"
+} = Astro.props;
+---
+
+<section class="section contact-section" id="contact">
+  <div class="container">
+    <div class="contact-cta-card">
+      <div class="contact-cta-content">
+        <span class="section-tag">24/7 Phone Dispatch</span>
+        <h2>{title}</h2>
+        <p class="contact-lead-desc">{subtitle}</p>
+
+        <div class="contact-phone-box">
+          <p class="phone-label">Call Our Idaho Falls Office Directly:</p>
+          <a href="tel:+12082182108" class="btn btn-primary phone-btn">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+            <span>(208) 218-2108</span>
+          </a>
+          <p class="phone-subtext">Call to speak with a technician and get an estimate for your water heater repair or installation.</p>
+        </div>
+
+        <div class="dispatch-details-grid">
+          <div class="detail-item">
+            <span class="detail-icon">📍</span>
+            <div>
+              <strong>Service Center Address:</strong>
+              <span>1265 Chaffin Ln, Idaho Falls, ID 83401, USA</span>
+            </div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">🕒</span>
+            <div>
+              <strong>Dispatch Availability:</strong>
+              <span>Open 24 Hours / 7 Days a Week, 365 Days a Year</span>
+            </div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">⚡</span>
+            <div>
+              <strong>Service Territory:</strong>
+              <span>{locationContext}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-map-column">
+        <div class="map-container">
+          <iframe
+            title="Idaho Falls Water Heater Pros Office Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45924.966964259834!2d-112.062089!3d43.498459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5354589d970fa4a9%3A0x6a1a1dbffea705!2s1265%20Chaffin%20Ln%2C%20Idaho%20Falls%2C%20ID%2083401!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+            width="100%"
+            height="320"
+            style="border:0; border-radius: 12px;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact-section {
+    background-color: var(--color-bg-light);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .contact-cta-card {
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
+    padding: 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  @media (min-width: 960px) {
+    .contact-cta-card {
+      grid-template-columns: 1.15fr 0.85fr;
+    }
+  }
+
+  .contact-lead-desc {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1.75rem;
+  }
+
+  .contact-phone-box {
+    background: #fff7ed;
+    border: 2px solid var(--color-accent);
+    padding: 1.75rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .phone-label {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .phone-btn {
+    font-size: 1.35rem;
+    padding: 1rem 2rem;
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .phone-subtext {
+    font-size: 0.88rem;
+    color: var(--color-text-muted);
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+  }
+
+  .dispatch-details-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+  }
+
+  .detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+  }
+
+  .detail-icon {
+    font-size: 1.35rem;
+    flex-shrink: 0;
+  }
+
+  .detail-item strong {
+    display: block;
+    color: var(--color-primary-dark);
+    font-size: 0.92rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .detail-item span {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+  }
+
+  .map-container {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+  }
+</style>

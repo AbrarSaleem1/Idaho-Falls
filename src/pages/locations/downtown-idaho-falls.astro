@@ -1,0 +1,355 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import FaqAccordion from '../../components/FaqAccordion.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import ContactForm from '../../components/ContactForm.astro';
+
+const pageTitle = "Water Heater Repair Downtown Idaho Falls | 24/7 Local Plumbers 83404";
+const pageDescription = "Fast, licensed water heater repair in Downtown Idaho Falls (83404). Expert troubleshooting for historic brick homes, low-ceiling basements, and commercial spaces along Broadway.";
+
+const breadcrumbs = [
+  { name: "Service Areas", url: "/locations/" },
+  { name: "Downtown Idaho Falls", url: "/locations/downtown-idaho-falls/" }
+];
+
+const neighborhoodFaqs = [
+  {
+    question: "How do you navigate narrow stairways and low ceilings in historic Downtown basements?",
+    answer: "Many properties near Broadway Street and Shoup Avenue feature basement staircases under 30 inches wide with ceiling heights hovering around six feet. Our technicians carry low-profile appliance dollies, protective floor runners, and specialize in short-height 'lowboy' water heater models designed to deliver 40 or 50 gallons of capacity without compromising headroom or flue pitch."
+  },
+  {
+    question: "Can an atmospheric gas water heater safely vent into an older Downtown chimney flue?",
+    answer: "Historic masonry chimneys built prior to the 1960s often have deteriorating clay liners or oversized flue cavities that cause exhaust gases to cool down before exiting the roof. This leads to condensation, masonry spalling, and dangerous carbon monoxide backdrafting. We inspect chimney flues with draft gauges and install certified aluminum or stainless steel B-vent liners to ensure full compliance with the City of Idaho Falls Building Division."
+  },
+  {
+    question: "How does Downtown's water hardness compare to the rest of Bonneville County?",
+    answer: "Downtown Idaho Falls receives municipal water from the city's well system tapping the Eastern Snake River Plain Aquifer, carrying roughly 14.1 GPG of dissolved calcium carbonate. However, older Downtown properties frequently have legacy galvanized iron piping that introduces rust particles into the tank, accelerating sediment accumulation at the tank base."
+  },
+  {
+    question: "What should Downtown restaurant and storefront owners do during a hot water outage?",
+    answer: "Commercial kitchens, salons, and offices along Park Avenue and Capital Avenue require hot water to satisfy Bonneville County Health Department sanitation codes. We offer priority commercial emergency dispatch, bringing high-recovery commercial gas valves, heavy-duty commercial heating elements, and immediate replacement units 24 hours a day."
+  },
+  {
+    question: "Are thermal expansion tanks required when replacing a water heater in Downtown Idaho Falls?",
+    answer: "Yes. The City of Idaho Falls enforces the Idaho State Plumbing Code, which mandates a thermal expansion tank on all closed plumbing systems. Because most downtown water meters now incorporate check valves or pressure regulators, an expansion tank is required to absorb thermal expansion and prevent premature tank failure."
+  }
+];
+
+const featuredServices = [
+  {
+    title: "Lowboy & Compact Tank Replacement",
+    desc: "Specially dimensioned gas and electric tanks engineered for Downtown's older cellars with limited vertical clearance.",
+    url: "/services/water-heater-replacement/"
+  },
+  {
+    title: "Emergency Gas Valve & Thermocouple Repair",
+    desc: "Rapid diagnostics for pilot outages, erratic water temperatures, and draft failures on atmospheric gas burners.",
+    url: "/services/gas-water-heater-repair-installation/"
+  },
+  {
+    title: "Heavy Mineral Sediment Power Flushing",
+    desc: "Targeted power descaling to remove rock-hard calcium deposits without damaging older steel tank cylinders.",
+    url: "/services/water-heater-maintenance/"
+  },
+  {
+    title: "Direct-Vent High Efficiency Conversions",
+    desc: "Upgrading deteriorating chimney vent connections to modern side-wall direct-vent systems.",
+    url: "/services/tankless-water-heater-repair-installation/"
+  }
+];
+---
+
+<Layout 
+  title={pageTitle} 
+  description={pageDescription} 
+  canonicalPath="/locations/downtown-idaho-falls/"
+  breadcrumbs={breadcrumbs}
+  faqs={neighborhoodFaqs}
+  areaServedName="Downtown Idaho Falls"
+>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero Section -->
+  <section class="neighborhood-hero">
+    <div class="container">
+      <span class="section-tag">ZIP Code 83404 Service Hub</span>
+      <h1>Water Heater Repair in Downtown Idaho Falls: Restoring Hot Water to Historic & Commercial Properties</h1>
+      <p class="neighborhood-hero-lead">
+        Operating in the historic urban core of Idaho Falls presents mechanical challenges that suburban tract homes simply do not face. Between brick foundations laid in the early 1900s, stone basements with six-foot ceilings, and older galvanized distribution pipes, repairing or replacing a water heater here demands experienced tradespeople who understand historic structural quirks. Idaho Falls Water Heater Pros provides dedicated water heater repair in Downtown Idaho Falls with 24/7 on-call dispatch, compact equipment options, and full code compliance.
+      </p>
+      <div class="hero-ctas">
+        <a href="tel:+12082182108" class="btn btn-primary btn-lg">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+          Call (208) 218-2108
+        </a>
+        <a href="#contact" class="btn btn-outline btn-lg">
+          Book Downtown Service
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <!-- Section: Downtown Local Context & Architectural Realities -->
+  <section class="section">
+    <div class="container content-container">
+      <div class="content-block">
+        <span class="section-tag">Urban Core Realities</span>
+        <h2>Plumbing in Idaho Falls' Historic Commercial & Residential Center</h2>
+        <p>
+          Downtown Idaho Falls forms the cultural and historical heartbeat of Bonneville County. Stretching from the scenic pedestrian pathways of the Snake River Greenbelt Riverwalk past the Museum of Idaho down Broadway Street, Shoup Avenue, Park Avenue, and Capital Avenue, this district features buildings constructed across distinct architectural eras.
+        </p>
+        <p>
+          In residential blocks just off the commercial center, many homes date back to the early and mid-20th century. Basements were originally dug out for coal storage or gravity furnaces rather than modern mechanical rooms. As a result, ceiling heights frequently fall well short of standard modern clearances, leaving little vertical room for tall 50-gallon water heaters and their mandatory draft hoods. When you add narrow, steep stairways with sharp turns, simply moving a 150-pound water heater into position without damaging plaster walls or wood trim requires specialized equipment and practiced care.
+        </p>
+        <p>
+          Commercial properties along A Street and B Street host popular bakeries, coffee houses, legal offices, and boutique storefronts. For these businesses, hot water is not an optional convenience—it is a strict requirement for health department operating permits. A sudden tank failure or pilot outage can halt operations during peak lunch hours. Our dispatch office on Chaffin Lane is positioned just minutes away, allowing our technicians to respond promptly when hot water problems threaten your business day.
+        </p>
+      </div>
+
+      <!-- Featured Services Grid -->
+      <div class="content-block">
+        <span class="section-tag">Targeted Solutions</span>
+        <h2>Specialized Water Heater Services for Downtown Properties</h2>
+        <p>
+          Because standard suburban solutions rarely fit downtown basements, we tailor our service offerings to the physical constraints of older buildings.
+        </p>
+        <div class="grid-2">
+          {featuredServices.map((srv) => (
+            <div class="card">
+              <h3>{srv.title}</h3>
+              <p>{srv.desc}</p>
+              <a href={srv.url} class="btn btn-outline" style="margin-top:0.5rem; display:inline-block;">
+                Learn More →
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Deep Dive: Technical Challenges in Older Homes -->
+      <div class="content-block">
+        <span class="section-tag">Technical Analysis</span>
+        <h2>Specific Water Heater Hurdles in the 83404 Area</h2>
+        <p>
+          When diagnosing water heaters in Downtown Idaho Falls, our technicians frequently encounter three primary mechanical friction points:
+        </p>
+
+        <h3>1. Masonry Chimney Venting and Draft Failure</h3>
+        <p>
+          Many older residences near Broadway and Capital Avenue were constructed with central brick chimneys that served both an old coal or oil furnace and a water heater. Over decades, mortar joints inside these flues deteriorate. When an atmospheric gas water heater vents into an oversized, cold brick chimney, the exhaust gases cool down too rapidly.
+        </p>
+        <p>
+          Instead of drafting safely up through the roof, moisture in the exhaust condenses along the chimney interior, creating carbonic acid that eats away at masonry and can cause poisonous combustion gases to spill back out into your basement. We test every gas water heater with calibrated digital draft meters to ensure safe upward airflow, installing certified metal chimney liners whenever masonry flues fail to draft properly.
+        </p>
+
+        <h3>2. Galvanized-to-Copper Pipe Transitions and Dielectric Breakdown</h3>
+        <p>
+          While modern homes utilize PEX or pure copper supply lines, historic Downtown properties often retain segments of original galvanized steel piping. When copper water heater supply lines connect directly to galvanized iron pipe without proper dielectric separation, galvanic corrosion begins immediately.
+        </p>
+        <p>
+          Electrical micro-currents cause the steel threads to rust from the inside out, restricting water volume and creating stubborn leaks right above the water heater inlets. Our technicians remove corroded iron fittings and install heavy-duty brass dielectric unions or long-pattern brass transition nipples that stop galvanic rust dead in its tracks.
+        </p>
+
+        <h3>3. Hard Water Sediment Settling Over Decades</h3>
+        <p>
+          Like all municipal water in Idaho Falls, downtown supply lines carry approximately 14.1 grains per gallon of mineral hardness from the Eastern Snake River Plain Aquifer. In older Downtown tanks that have operated for years without regular flushes, the calcium carbonate sediment does not remain soft.
+        </p>
+        <p>
+          Repeated heating cycles bake this sediment into thick, calcified slabs at the bottom of the tank. Homeowners frequently report loud popping, thumping, or kettle noises whenever the burner ignites. Our technicians evaluate the thickness of this mineral bed using inspection cameras and execute thorough hydro-flushes to clear the bottom plate before the steel warps or cracks.
+        </p>
+      </div>
+
+      <!-- Sizing Lowboy Units vs Tankless Conversions -->
+      <div class="content-block">
+        <span class="section-tag">Equipment Selection</span>
+        <h2>Choosing the Right Replacement: Lowboys vs. Tankless Conversions</h2>
+        <p>
+          When replacement becomes inevitable, downtown property owners face an important choice between specialized lowboy storage tanks and wall-mounted tankless systems.
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Traditional Lowboy Tank</th>
+                <th>Wall-Mounted Tankless System</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Height Clearance</strong></td>
+                <td>31 to 36 inches tall; fits under low joists</td>
+                <td>Zero floor space; mounts directly on brick or wood walls</td>
+              </tr>
+              <tr>
+                <td><strong>Hot Water Delivery</strong></td>
+                <td>30 to 50 gallons stored volume</td>
+                <td>Continuous flow (up to 5.5 GPM in cold winter)</td>
+              </tr>
+              <tr>
+                <td><strong>Venting Requirements</strong></td>
+                <td>Standard B-vent chimney connection</td>
+                <td>Direct-vent PVC pipe through exterior basement rim joist</td>
+              </tr>
+              <tr>
+                <td><strong>Sediment Maintenance</strong></td>
+                <td>Annual bottom tank drain and anode rod check</td>
+                <td>Annual pump descaling wash with food-grade citric flush</td>
+              </tr>
+              <tr>
+                <td><strong>Upfront Cost</strong></td>
+                <td>Lower initial equipment investment</td>
+                <td>Higher initial retrofit cost; superior energy efficiency</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          For homes with tight horizontal space but adequate chimney connections, a premium Bradford White or Rheem lowboy model is an economical, reliable replacement. For properties where basement floor space is needed for laundry or storage, or where older chimneys have been decommissioned, converting to a direct-vent Navien or Rinnai tankless water heater solves both clearance and venting challenges in a single upgrade.
+        </p>
+      </div>
+
+      <!-- Local Streets and Landmarks Covered -->
+      <div class="content-block">
+        <span class="section-tag">Service Boundary</span>
+        <h2>Streets, Landmarks & Service Coverage in Downtown Idaho Falls</h2>
+        <p>
+          We provide active 24/7 service throughout the entire Downtown 83404 core. Our technicians regularly complete repairs and installations along these corridors:
+        </p>
+        <ul>
+          <li><strong>Broadway Street:</strong> Servicing mixed commercial storefronts, historic retail buildings, and adjacent side streets.</li>
+          <li><strong>Shoup Avenue & Park Avenue:</strong> Providing rapid emergency maintenance for restaurants, offices, and urban apartments.</li>
+          <li><strong>Capital Avenue & A / B Streets:</strong> Specialized venting and low-ceiling installations in historic brick residences.</li>
+          <li><strong>Snake River Greenbelt & River Parkway:</strong> Servicing residential condominiums and townhomes along the river corridor.</li>
+          <li><strong>Museum of Idaho & Historic Corridor:</strong> Fast dispatch to surrounding residential blocks and historic bungalow homes.</li>
+        </ul>
+        <p>
+          Looking for service in adjacent areas? We also provide full coverage in neighboring districts including the <a href="/locations/kate-curley-park/">Kate Curley Park Area</a>, <a href="/locations/snake-river-landing/">Snake River Landing</a>, and suburban <a href="/locations/ammon/">Ammon</a>. Check our comprehensive <a href="/locations/">locations hub</a> for complete Bonneville County coverage.
+        </p>
+      </div>
+
+      <!-- Real World Case Scenario -->
+      <div class="content-block">
+        <span class="section-tag">Case Example</span>
+        <h2>Real-World Downtown Solution: Resolving Chronic Pilot Outages on Capital Avenue</h2>
+        <p>
+          A homeowner in an unrenovated 1948 home off Capital Avenue called our dispatch desk after their natural gas water heater pilot light failed repeatedly during November wind gusts. Two previous repair attempts had replaced the thermocouple, but the flame continued to blow out whenever wind gusted off the Snake River.
+        </p>
+        <p>
+          Our senior technician arrived and performed a complete draft analysis. The gas control valve and thermocouple were functioning properly, but the original masonry chimney had settled, creating a severe negative pressure backdraft down the flue whenever high winds swept across the roofline. Cold air was descending straight through the draft hood and snuffing the pilot flame.
+        </p>
+        <p>
+          Rather than continually replacing parts that were not broken, we installed a sealed draft hood connector with a wind-resistant high-velocity cap and relined the chimney flue with properly sized aluminum B-vent piping. The draft was restored, the pilot stayed lit, and the homeowner regained reliable hot water without fear of chimney backdrafting.
+        </p>
+      </div>
+
+      <!-- Transparent Pricing Principles -->
+      <div class="content-block">
+        <span class="section-tag">Honest Estimates</span>
+        <h2>Straightforward Pricing with Zero Downtown Surcharges</h2>
+        <p>
+          Some service companies charge premium parking, congestion, or historic home access fees for working in Downtown Idaho Falls. At Idaho Falls Water Heater Pros, we believe in complete fairness. We provide flat-rate, transparent pricing based solely on the work required.
+        </p>
+        <p>
+          Before we begin any work, our technician conducts a thorough inspection and provides a written estimate covering all parts, labor, permits, and haul-away fees. What we quote is what you pay—guaranteed.
+        </p>
+      </div>
+
+      <!-- Code Compliance & External Authority Link -->
+      <div class="content-block">
+        <span class="section-tag">Code Assurance</span>
+        <h2>Permitted & Inspected to Idaho State Plumbing Standards</h2>
+        <p>
+          Every water heater replacement we perform in Downtown Idaho Falls adheres strictly to the Uniform Plumbing Code as adopted by the State of Idaho. We coordinate all permitting and final inspections through the <a href="https://www.idahofallsidaho.gov/" target="_blank" rel="noopener">City of Idaho Falls Building Division</a>. This ensures your gas lines, combustion venting, seismic straps, and thermal expansion controls meet the highest standards of safety and property value protection.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <FaqAccordion faqs={neighborhoodFaqs} title="Downtown Idaho Falls Water Heater FAQs" />
+
+  <!-- CTA Band -->
+  <CtaBand 
+    headline="No Hot Water in Downtown Idaho Falls?"
+    subtext="Call (208) 218-2108 now for fast, local dispatch to Broadway, Shoup, Park, or anywhere in the 83404 zip code. We are on call 24/7."
+  />
+
+  <!-- Contact Form & Neighborhood Map -->
+  <ContactForm 
+    title="Schedule Downtown Service" 
+    subtitle="Call (208) 218-2108 directly to speak with an on-call technician and request an estimate."
+    locationContext="Downtown Idaho Falls 83404"
+  />
+</Layout>
+
+<style>
+  .neighborhood-hero {
+    background: linear-gradient(180deg, #f0f7fc 0%, #ffffff 100%);
+    padding: 3.5rem 0 3rem 0;
+    text-align: center;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .neighborhood-hero h1 {
+    max-width: 960px;
+    margin: 0 auto 1.25rem auto;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  }
+
+  .neighborhood-hero-lead {
+    max-width: 820px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+
+  .hero-ctas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .content-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .content-block {
+    margin-bottom: 3.5rem;
+  }
+
+  .content-block h2 {
+    margin-bottom: 1.25rem;
+  }
+
+  .content-block h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.6rem;
+    font-size: 1.25rem;
+  }
+
+  .content-block p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+
+  .content-block ul {
+    margin-bottom: 1.5rem;
+  }
+
+  .content-block li {
+    font-size: 1.02rem;
+    line-height: 1.6;
+    margin-bottom: 0.65rem;
+  }
+</style>

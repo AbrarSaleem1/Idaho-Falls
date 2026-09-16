@@ -1,0 +1,324 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import FaqAccordion from '../../components/FaqAccordion.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import ContactForm from '../../components/ContactForm.astro';
+
+const pageTitle = "Water Heater Replacement Idaho Falls | Fast Tank Changeouts";
+const pageDescription = "Professional water heater replacement in Idaho Falls, ID. Code-compliant installations with thermal expansion tanks, haul-away of old units, and 24/7 service.";
+
+const breadcrumbs = [
+  { name: "Services", url: "/services/" },
+  { name: "Water Heater Replacement", url: "/services/water-heater-replacement/" }
+];
+
+const faqs = [
+  {
+    question: "How long does a water heater replacement take in Idaho Falls?",
+    answer: "A standard tank-for-tank replacement typically takes between 2 to 4 hours. This includes safely isolating gas and water supplies, draining the old unit, hauling it away, installing the new heater with required thermal expansion tanks and shutoff valves, and testing the entire system to code."
+  },
+  {
+    question: "Do I need a city permit to replace a water heater in Idaho Falls?",
+    answer: "Yes. The City of Idaho Falls Building Division requires a plumbing permit for water heater replacements. This ensures proper combustion venting, gas line integrity, and thermal expansion control. As a licensed plumbing contractor, we manage the entire permit and inspection process on your behalf."
+  },
+  {
+    question: "What size water heater does my home need?",
+    answer: "For homes with 1 to 2 people, a 40-gallon tank is often sufficient. Families of 3 to 5 typically require a 50-gallon high-recovery unit, while larger households or homes with oversized soaking tubs benefit from 75-gallon tanks or a continuous-flow tankless system."
+  },
+  {
+    question: "What brands of water heaters do you install?",
+    answer: "We primarily install commercial-grade residential units from Bradford White, Rheem, and AO Smith. These brands feature robust glass linings, heavy-gauge steel, and enhanced anode rods engineered to withstand the severe hard water (14.1 GPG) common in Eastern Idaho."
+  },
+  {
+    question: "What is included with your water heater replacement service?",
+    answer: "Our turnkey service includes disconnecting and hauling away your old unit, delivery of the new water heater, installation of new brass ball shutoff valves, stainless steel flexible supply lines, code-mandated thermal expansion tank, seismic earthquake strapping, gas flex line or 240V wiring connection, and complete cleanup."
+  }
+];
+
+const relatedServices = [
+  { name: "Water Heater Repair", url: "/services/water-heater-repair/" },
+  { name: "Water Heater Installation", url: "/services/water-heater-installation/" },
+  { name: "Tankless Water Heater Repair & Installation", url: "/services/tankless-water-heater-repair-installation/" },
+  { name: "Water Heater Maintenance", url: "/services/water-heater-maintenance/" }
+];
+---
+
+<Layout 
+  title={pageTitle} 
+  description={pageDescription} 
+  canonicalPath="/services/water-heater-replacement/"
+  breadcrumbs={breadcrumbs}
+  serviceName="Water Heater Replacement"
+  faqs={faqs}
+>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <section class="service-hero">
+    <div class="container">
+      <div class="service-hero-inner">
+        <div class="service-hero-content">
+          <span class="section-tag">Turnkey Replacements</span>
+          <h1>Water Heater Replacement in Idaho Falls</h1>
+          <p class="service-hero-lead">
+            When an aging water heater begins to rust, leak from the bottom, or constantly run out of hot water, replacement is the safest and most energy-efficient choice. Idaho Falls Water Heater Pros provides turnkey water heater replacement in Idaho Falls with same-day changeouts, full code compliance, and complete haul-away of your old unit.
+          </p>
+          <div class="service-hero-ctas">
+            <a href="tel:+12082182108" class="btn btn-primary btn-lg">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+              Call (208) 218-2108
+            </a>
+            <a href="#contact" class="btn btn-outline btn-lg">
+              Request Replacement Quote
+            </a>
+          </div>
+          <p class="hero-availability-note">
+            Serving all Idaho Falls neighborhoods and Bonneville County. Learn more about our <a href="/locations/">service areas</a>.
+          </p>
+        </div>
+
+        <div class="service-hero-highlight">
+          <div class="highlight-card">
+            <img 
+              src="/images/commercial-residential-water-heater-replacement.webp" 
+              alt="Professional water heater replacement installation in Idaho Falls" 
+              width="450" 
+              height="280" 
+              class="service-feature-photo" 
+            />
+            <h3>Turnkey Tank Replacements</h3>
+            <p class="promo-desc">Includes safe haul-away of old equipment, code-compliant expansion tank, and city permit coordination.</p>
+            <a href="tel:+12082182108" class="btn btn-primary" style="width:100%;">
+              Call for an Estimate: (208) 218-2108
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <!-- Scope of Replacement -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Complete Scope</span>
+        <h2>What Our Replacement Service Includes</h2>
+        <p>Everything required for a clean, safe, and code-approved hot water upgrade.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>Safe Extraction & Haul-Away</h3>
+          <p>We safely drain, disconnect, and haul away your old water heater for responsible recycling, leaving your mechanical room clean.</p>
+        </div>
+        <div class="card">
+          <h3>Thermal Expansion Tank</h3>
+          <p>We size and mount a pre-pressurized expansion tank to protect your plumbing from dangerous hydrostatic spikes mandated by Idaho Plumbing Code.</p>
+        </div>
+        <div class="card">
+          <h3>Full-Port Brass Ball Valve</h3>
+          <p>We replace old seized gate valves with smooth-operating quarter-turn brass ball valves for easy, reliable future water shutoff.</p>
+        </div>
+        <div class="card">
+          <h3>Seismic Strapping</h3>
+          <p>We install heavy-duty seismic restraint straps anchored directly to wall studs to protect your home in the event of ground movement.</p>
+        </div>
+        <div class="card">
+          <h3>Venting & Gas Line Testing</h3>
+          <p>We verify proper draft on flue pipes, replace aging gas flex connectors, and test all joints with electronic gas sniffers and bubble leak detector.</p>
+        </div>
+        <div class="card">
+          <h3>City Permitting & Inspections</h3>
+          <p>We pull the necessary permits from the City of Idaho Falls Building Division and guarantee your installation passes inspection.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Signs You Need Replacement -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Replacement Indicators</span>
+        <h2>When Is It Time to Replace Your Water Heater?</h2>
+        <p>Watch for these telltale signs that repair is no longer an option.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>Tank Age Exceeds 10 Years</h3>
+          <p>Standard tank water heaters are engineered for 8 to 12 years of service. In Idaho Falls' hard water environment, unserviced tanks over a decade old are on borrowed time.</p>
+        </div>
+        <div class="card">
+          <h3>Water Pooling at the Base</h3>
+          <p>If water is seeping directly from the bottom seam of the cylinder, the inner glass lining has cracked and the steel shell has rusted through. This cannot be patched.</p>
+        </div>
+        <div class="card">
+          <h3>Recurring Repair Bills</h3>
+          <p>When you are constantly replacing elements, thermocouples, or gas valves, investing that money into an energy-efficient new unit is far more economical.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Step-by-Step</span>
+        <h2>Our Water Heater Replacement Process</h2>
+        <p>Executed with precision to minimize hot water disruption for your family.</p>
+      </div>
+
+      <div class="grid-4 process-grid">
+        <div class="process-step">
+          <div class="step-badge">1</div>
+          <h3>Sizing Calculation</h3>
+          <p>We calculate your home's peak-hour hot water demand and match you with the ideal gallon capacity and fuel type.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-badge">2</div>
+          <h3>Clean Removal</h3>
+          <p>We drain the existing tank, disconnect gas or power, and carefully remove the heavy equipment without damaging floors or doorways.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-badge">3</div>
+          <h3>Code-Ready Installation</h3>
+          <p>We set the new heater, connect dielectric unions to prevent galvanic corrosion, add the expansion tank, and connect rigid venting.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-badge">4</div>
+          <h3>Testing & Sign-Off</h3>
+          <p>We fill the tank, purge air, light the pilot or energize the breaker, verify temperature calibration, and provide warranty documentation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Explore More</span>
+        <h2>Related Hot Water Services</h2>
+        <p>Learn more about our comprehensive service capabilities throughout Eastern Idaho.</p>
+      </div>
+
+      <div class="grid-4">
+        {relatedServices.map((item) => (
+          <div class="card">
+            <h3>{item.name}</h3>
+            <p>Reliable service options tailored to your home's hot water needs.</p>
+            <a href={item.url} class="btn btn-outline" style="width:100%; text-align:center;">
+              Explore Service →
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <FaqAccordion faqs={faqs} title="Water Heater Replacement FAQs" />
+
+  <CtaBand 
+    headline="Ready to Replace Your Failing Water Heater?"
+    subtext="Call (208) 218-2108 now to schedule your same-day replacement with our licensed Idaho Falls plumbers."
+  />
+
+  <ContactForm 
+    title="Schedule Your Replacement Quote"
+    subtitle="Let us know your current tank size and fuel type for a prompt estimate."
+    locationContext="Idaho Falls Water Heater Replacement"
+  />
+</Layout>
+
+<style>
+  .service-hero {
+    background: linear-gradient(180deg, #f0f7fc 0%, #ffffff 100%);
+    padding: 3.5rem 0 4rem 0;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .service-hero-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  @media (min-width: 960px) {
+    .service-hero-inner {
+      grid-template-columns: 1.2fr 0.8fr;
+    }
+  }
+
+  .service-hero-lead {
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+  }
+
+  .service-hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-availability-note {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    margin-bottom: 0;
+  }
+
+  .hero-availability-note a {
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+
+  .highlight-card {
+    background: #ffffff;
+    border: 2px solid var(--color-accent);
+    border-radius: var(--radius-lg);
+    padding: 2.25rem;
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+  }
+
+  .highlight-card h3 {
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+  }
+
+  .promo-title {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: var(--color-accent);
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+  }
+
+  .promo-desc {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1.25rem;
+  }
+
+  .promo-code {
+    display: inline-block;
+    background-color: var(--color-bg-subtle);
+    border: 1px dashed var(--color-primary);
+    padding: 0.5rem 1.25rem;
+    font-weight: 800;
+    color: var(--color-primary-dark);
+    border-radius: var(--radius-sm);
+    letter-spacing: 0.08em;
+  }
+</style>

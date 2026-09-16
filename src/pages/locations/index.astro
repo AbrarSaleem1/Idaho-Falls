@@ -1,0 +1,559 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import FaqAccordion from '../../components/FaqAccordion.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import ContactForm from '../../components/ContactForm.astro';
+
+const pageTitle = "Water Heater Repair Service Areas | Idaho Falls & Bonneville County";
+const pageDescription = "Explore our 24/7 water heater repair, replacement and installation service coverage across all Idaho Falls neighborhoods and zip codes: 83401, 83402, 83404, 83406, and beyond.";
+
+const breadcrumbs = [
+  { name: "Service Areas", url: "/locations/" }
+];
+
+const zip83406Locations = [
+  {
+    name: "Ammon",
+    slug: "ammon",
+    highlight: "High-Demand Suburban Residential & Subdivisions",
+    desc: "Sizing high-capacity 50-75 gallon storage tanks and dual tankless systems for busy family households.",
+    streets: "Sunnyside Rd, 17th St, Ammon Rd, Ross Ave, McCowin Park"
+  },
+  {
+    name: "Country Club Hills",
+    slug: "country-club-hills",
+    highlight: "Hillside Luxury Estates & High-Pressure Zones",
+    desc: "High-capacity water heaters, expansion tank calibration, and pressure-reducing valve installations for hillside residences.",
+    streets: "Country Club Dr, Fairway Dr, Eagle Dr, Sunnyside Corridor, Pinehurst Ln"
+  },
+  {
+    name: "Cedar Ridge",
+    slug: "cedar-ridge",
+    highlight: "Foothill Architecture & Winter Delta-T Management",
+    desc: "Direct-vent sidewall exhaust freeze defense, high-efficiency condensing units, and multi-story recirculation balancing.",
+    streets: "Cedar Ridge Dr, Foothill Rd, Ridge View Way, Skyline Dr, Ponderosa Ct"
+  },
+  {
+    name: "Hidden Valley",
+    slug: "hidden-valley",
+    highlight: "Custom Enclaves & Water Softener Integration",
+    desc: "Mitigating rapid sacrificial anode decay in softened water and descaling lower heating elements in walkout basements.",
+    streets: "Hidden Valley Dr, Valley View Ct, Canyon Creek Rd, Sunnyside Ext, Meadow Wood"
+  },
+  {
+    name: "Heritage Heights",
+    slug: "heritage-heights",
+    highlight: "Established Suburban Homes & Thermal Expansion Care",
+    desc: "Diagnosing failed expansion tank bladders, relining older chimney flues, and power-flushing calcified sediment.",
+    streets: "Heritage Dr, Founders Way, Liberty Cir, Constitution Way, 17th S Foothill"
+  },
+  {
+    name: "Boulder Creek Estates",
+    slug: "boulder-creek-estates",
+    highlight: "Modern Construction & High-Efficiency Tankless",
+    desc: "Tankless descaling in 14.1 GPG hard water, thermostatic mixing valve calibration, and PEX transition piping.",
+    streets: "Boulder Creek Ln, Cobblestone Way, Granite Dr, Canyon Rim Rd, Sandstone Ct"
+  },
+  {
+    name: "Woodruff Area",
+    slug: "woodruff",
+    highlight: "Ranch Homes & Legacy Chimney Flue Upgrades",
+    desc: "Upgrading corroded single-wall vent connectors, resolving dielectric rust, and clearing heavy bottom tank sediment.",
+    streets: "Woodruff Ave, 17th St E, 12th St, 1st St Corridor, John Adams Pkwy"
+  }
+];
+
+const zip83404Locations = [
+  {
+    name: "Downtown Idaho Falls",
+    slug: "downtown-idaho-falls",
+    highlight: "Historic Homes & Broadway Commercial Corridor",
+    desc: "Addressing tight basement spaces, legacy masonry flues, and copper-to-galvanized transitions in historic properties.",
+    streets: "Broadway St, Shoup Ave, Park Ave, A St, Capital Ave"
+  },
+  {
+    name: "Cotton",
+    slug: "cotton",
+    highlight: "Mid-Century Ramblers & Brass Drain Valve Upgrades",
+    desc: "Replacing brittle plastic drain valves with full-port brass, fixing galvanic corrosion, and lowboy basement tanks.",
+    streets: "Cottonwood Dr, Holmes Ave, Sunnyside Rd Access, Elm St, Linden Dr"
+  },
+  {
+    name: "Community Park Area",
+    slug: "community-park",
+    highlight: "Active Family Neighborhoods & Element Replacements",
+    desc: "Diagnosing lower heating element burnout, inspecting chimney draft hoods, and stabilizing line pressure fluctuations.",
+    streets: "South Blvd, Tautphaus Park Access, Rollandet Ave, 25th St, 19th St"
+  },
+  {
+    name: "Kate Curley Park Area",
+    slug: "kate-curley-park",
+    highlight: "Numbered Streets Historic Craftsman Bungalows",
+    desc: "Atmospheric gas venting troubleshooting, water pressure regulation, and element upgrades in mature residential districts.",
+    streets: "9th St, 10th St, 11th St, South Boulevard, Linden Park"
+  }
+];
+
+const zip83402Locations = [
+  {
+    name: "Eagle Rock",
+    slug: "eagle-rock",
+    highlight: "West Side Residential & Burner Maintenance",
+    desc: "Cleaning clogged burner flame arrestor screens, upgrading T&P discharge piping, and electric element replacements.",
+    streets: "Pancheri Dr, Grizzly Ave, West Broadway, Skyline Dr, Grandview Dr"
+  },
+  {
+    name: "Idaho Falls West",
+    slug: "idaho-falls-west",
+    highlight: "West of Snake River & Pressure Regulation",
+    desc: "Installing pressure reducing valves (PRVs) for 85+ PSI city lines, well silt management, and utility room make-up air.",
+    streets: "West Broadway, Skyline Dr, Airport Rd, Pancheri Dr W, Bellin Rd"
+  },
+  {
+    name: "Snake River Landing",
+    slug: "snake-river-landing",
+    highlight: "Modern Condos, Townhomes & Direct-Vent Tankless",
+    desc: "High-efficiency tankless water heater maintenance, annual heat exchanger descaling, and modern power-vent replacements.",
+    streets: "Snake River Pkwy, Pier View Dr, Sunnyside Rd, Milligan Park"
+  }
+];
+
+const zip83401Locations = [
+  {
+    name: "New Sweden",
+    slug: "new-sweden",
+    highlight: "Agricultural Properties & Domestic Well Water",
+    desc: "Installing spin-down sand filters, powered titanium anode rods to stop sulfur odors, and LP propane water heater servicing.",
+    streets: "New Sweden Hwy, W 33rd S, Milligan Rd, Great Feeder Canal Area, S 45th W"
+  },
+  {
+    name: "Osgood",
+    slug: "osgood",
+    highlight: "Rural Farmsteads & Propane (LP) Heating Systems",
+    desc: "Heavy mineral well scale management, propane burner orifice cleaning, and wind-resistant chimney vent terminations.",
+    streets: "Osgood Rd, W 65th N, Sage Canal Rd, Old Butte Rd N, N 35th W"
+  },
+  {
+    name: "Lincoln",
+    slug: "lincoln",
+    highlight: "Lincoln Road Corridor & Atmospheric Gas Flues",
+    desc: "Correcting chimney flue spillage, thermal expansion protection on updated mains, and commercial shop water heaters.",
+    streets: "Lincoln Rd, Lewisville Hwy, E 1st St, N 25th E, Yellowstone Hwy"
+  },
+  {
+    name: "Grant",
+    slug: "grant",
+    highlight: "Snake River Rural Acreage & Winter Heat Tracing",
+    desc: "Pipe freeze-protection cabling, high-recovery propane water heaters, and power-flushing heavy well silt deposits.",
+    streets: "N 3500 E, Grant Hwy, County Line Rd N, Lewisville Rd, Snake River Rd"
+  },
+  {
+    name: "Coltman",
+    slug: "coltman",
+    highlight: "Semi-Rural Subdivisions & Low-Watt-Density Elements",
+    desc: "Combating 16+ GPG well scale, installing hybrid heat pump water heaters, and balancing well pump cycling pressure.",
+    streets: "Coltman Rd, N 25th E Corridor, E 65th N, Willow Creek Area"
+  },
+  {
+    name: "Hillview",
+    slug: "hillview",
+    highlight: "Elevated Suburban Terraces & Lowboy Basements",
+    desc: "Pressure reducing valve installations for 85+ PSI hill lines, compact lowboy tank replacements, and dip tube repairs.",
+    streets: "Hillview Dr, Skyline Corridor, E 49th N, Meadow Ln, Foothill Access Rd"
+  },
+  {
+    name: "Taylor",
+    slug: "taylor",
+    highlight: "Foothills Acreage & High-Recovery Propane Upgrades",
+    desc: "Sizing high-BTU units for 36°F winter well water, anti-scale pre-filtration, and powered titanium anode rods.",
+    streets: "Taylor Mountain Rd, E 65th S, S 15th E, Foothill Blvd, Jameston Rd"
+  },
+  {
+    name: "Shelton",
+    slug: "shelton",
+    highlight: "South Fork River Corridor & Heavy Scale Removal",
+    desc: "Removing calcified gravel from propane tank bottoms, spin-down sand separators, and sealed B-vent exhaust upgrades.",
+    streets: "Shelton Rd, E 100th N, Ririe Hwy Access, South Fork River Rd, N 55th E"
+  },
+  {
+    name: "Bone",
+    slug: "bone",
+    highlight: "Highland Foothills & Sub-Zero Freeze Protection",
+    desc: "Delivering 86°F+ temperature rises for 34°F mountain groundwater, freeze-burst defense, and non-electric millivolt units.",
+    streets: "Bone Rd, Blackfoot Reservoir Rd Access, Willow Creek, E 97th S, Highland Valley"
+  }
+];
+
+const allZipCodes = [
+  { code: "83401", areas: "North/East Idaho Falls, Ammon Historic, Lincoln, Grant, Coltman, Osgood, New Sweden, Bone, Shelton, Taylor, Hillview" },
+  { code: "83402", areas: "West Idaho Falls, Eagle Rock, Snake River Landing, Historic West Side, Airport Area" },
+  { code: "83403", areas: "Idaho Falls Regional PO Boxes & Central Administrative District" },
+  { code: "83404", areas: "City Center, Downtown, Historic Numbered Streets, Kate Curley Park, Cotton, Community Park" },
+  { code: "83405", areas: "Idaho Falls Distribution Hub & Regional Postal Dispatch" },
+  { code: "83406", areas: "Ammon, Country Club Hills, Cedar Ridge, Hidden Valley, Heritage Heights, Boulder Creek Estates, Woodruff" },
+  { code: "83415", areas: "Idaho National Laboratory (INL) Corridor & Regional Bonneville County Rural Route" }
+];
+
+const locationFaqs = [
+  {
+    question: "Do you charge extra travel or trip fees for outer zip codes like 83406 or 83401?",
+    answer: "No. Idaho Falls Water Heater Pros provides consistent, transparent pricing across our entire Bonneville County service territory. Whether you are located in downtown Idaho Falls (83404), outer Ammon (83406), or rural Bone (83401), your estimate is based on the job required, not your street address."
+  },
+  {
+    question: "Are your mobile trucks stocked with replacement water heaters?",
+    answer: "Yes. Our dispatch vehicles carry common sizes of energy-efficient natural gas and electric water heaters (40, 50, and 75-gallon tanks) as well as genuine replacement elements, thermocouples, gas control valves, and thermal expansion tanks. In most cases, we can replace your failing unit during our very first visit."
+  },
+  {
+    question: "How does water quality vary between neighborhoods in Idaho Falls?",
+    answer: "The entire Idaho Falls municipality draws from the Eastern Snake River Plain Aquifer, meaning high mineral hardness (roughly 14.1 GPG) is uniform throughout the city. Rural pockets in 83401 drawing from private wells often experience even higher mineral levels (15 to 16+ GPG) and occasional sulfur odors that require powered titanium anode rods."
+  },
+  {
+    question: "How do I know if my neighborhood requires a plumbing permit for water heater installation?",
+    answer: "All water heater installations and replacements within Idaho Falls city limits and Bonneville County require a plumbing permit under the Idaho State Plumbing Code. As a licensed contractor, Idaho Falls Water Heater Pros handles the entire permit application with the City of Idaho Falls Building Division or Bonneville County and coordinates the final inspection."
+  },
+  {
+    question: "Do you offer emergency after-hours water heater repair in Ammon, West Idaho Falls, and rural areas?",
+    answer: "Yes. Our on-call technicians operate 24 hours a day, 7 days a week, including weekends and holidays. If you have an active tank leak flooding your basement or zero hot water in the middle of winter, call (208) 218-2108 for immediate priority dispatch."
+  }
+];
+---
+
+<Layout 
+  title={pageTitle} 
+  description={pageDescription} 
+  canonicalPath="/locations/"
+  breadcrumbs={breadcrumbs}
+  faqs={locationFaqs}
+>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero Section -->
+  <section class="locations-hero">
+    <div class="container">
+      <span class="section-tag">Bonneville County Coverage</span>
+      <h1>Idaho Falls Water Heater Service Locations</h1>
+      <p class="locations-hero-lead">
+        From historic numbered street basements to foothill luxury estates and rural farmsteads, we provide rapid 24/7 water heater repair, replacement, and code-compliant installations across every neighborhood in Idaho Falls.
+      </p>
+      <div class="hero-ctas" style="display:flex; justify-content:center; gap:1rem; margin-top:1.5rem;">
+        <a href="tel:+12082182108" class="btn btn-primary btn-lg">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+          Call (208) 218-2108
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <!-- ZIP 83406 Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">ZIP Code 83406</span>
+        <h2>Ammon & Foothills Neighborhoods</h2>
+        <p>Comprehensive water heater repair and high-capacity system installations across eastern Idaho Falls and Ammon.</p>
+      </div>
+
+      <div class="grid-2">
+        {zip83406Locations.map((loc) => (
+          <div class="card area-card">
+            <div class="area-badge">{loc.highlight}</div>
+            <h3>{loc.name}</h3>
+            <p class="area-desc">{loc.desc}</p>
+            <div class="area-streets">
+              <strong>Key Corridors & Streets:</strong> {loc.streets}
+            </div>
+            <div class="area-action">
+              <a href={`/locations/${loc.slug}/`} class="btn btn-secondary">
+                Read Full {loc.name} Guide →
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ZIP 83404 Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">ZIP Code 83404</span>
+        <h2>Central & Historic Idaho Falls Neighborhoods</h2>
+        <p>Tailored solutions for mature housing stock, low-clearance basements, and historic masonry chimneys.</p>
+      </div>
+
+      <div class="grid-2">
+        {zip83404Locations.map((loc) => (
+          <div class="card area-card">
+            <div class="area-badge">{loc.highlight}</div>
+            <h3>{loc.name}</h3>
+            <p class="area-desc">{loc.desc}</p>
+            <div class="area-streets">
+              <strong>Key Corridors & Streets:</strong> {loc.streets}
+            </div>
+            <div class="area-action">
+              <a href={`/locations/${loc.slug}/`} class="btn btn-secondary">
+                Read Full {loc.name} Guide →
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ZIP 83402 Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">ZIP Code 83402</span>
+        <h2>West Idaho Falls & Riverfront Neighborhoods</h2>
+        <p>Serving residential corridors west of the Snake River, airport districts, and modern riverfront developments.</p>
+      </div>
+
+      <div class="grid-2">
+        {zip83402Locations.map((loc) => (
+          <div class="card area-card">
+            <div class="area-badge">{loc.highlight}</div>
+            <h3>{loc.name}</h3>
+            <p class="area-desc">{loc.desc}</p>
+            <div class="area-streets">
+              <strong>Key Corridors & Streets:</strong> {loc.streets}
+            </div>
+            <div class="area-action">
+              <a href={`/locations/${loc.slug}/`} class="btn btn-secondary">
+                Read Full {loc.name} Guide →
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ZIP 83401 Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">ZIP Code 83401</span>
+        <h2>North, East & Rural Community Enclaves</h2>
+        <p>Specialized well-water filtration, propane conversions, and sub-zero freeze protection for country and acreage properties.</p>
+      </div>
+
+      <div class="grid-2">
+        {zip83401Locations.map((loc) => (
+          <div class="card area-card">
+            <div class="area-badge">{loc.highlight}</div>
+            <h3>{loc.name}</h3>
+            <p class="area-desc">{loc.desc}</p>
+            <div class="area-streets">
+              <strong>Key Corridors & Streets:</strong> {loc.streets}
+            </div>
+            <div class="area-action">
+              <a href={`/locations/${loc.slug}/`} class="btn btn-secondary">
+                Read Full {loc.name} Guide →
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Complete Zip Code Coverage Matrix -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Complete Geographic Reach</span>
+        <h2>Serving Every Zip Code in Greater Idaho Falls</h2>
+        <p>Our licensed technicians are dispatched 24/7 throughout these postal codes in Bonneville County.</p>
+      </div>
+
+      <div class="zip-matrix-grid">
+        {allZipCodes.map((item) => (
+          <div class="zip-card">
+            <div class="zip-head">
+              <span class="zip-number">ZIP {item.code}</span>
+              <span class="zip-status">Active 24/7 Service</span>
+            </div>
+            <p class="zip-areas">{item.areas}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Local Reliability</span>
+        <h2>Why Idaho Falls Homeowners Trust Our Dispatch Team</h2>
+        <p>Licensed plumbing craftsmanship, authentic local knowledge, and direct phone estimates.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>Centrally Dispatched</h3>
+          <p>Located on Chaffin Lane, our mobile units reach 83401, 83402, 83404, and 83406 promptly without long delays.</p>
+        </div>
+        <div class="card">
+          <h3>Hard Water Specialists</h3>
+          <p>We use heavy-duty commercial elements and proven descaling techniques designed for Idaho Falls' 14.1 GPG mineral content.</p>
+        </div>
+        <div class="card">
+          <h3>No Subcontractors</h3>
+          <p>Every technician who knocks on your door is a direct employee, fully licensed, background-checked, and insured.</p>
+        </div>
+        <div class="card">
+          <h3>True 24/7 Availability</h3>
+          <p>Water heaters fail unexpectedly. We answer live calls and dispatch technicians day and night, 365 days a year.</p>
+        </div>
+        <div class="card">
+          <h3>Written Estimates</h3>
+          <p>You receive a clear, upfront estimate before work begins. No hidden travel fees or surprise add-ons.</p>
+        </div>
+        <div class="card">
+          <h3>Permits & Inspections</h3>
+          <p>We work directly with City of Idaho Falls and Bonneville County inspectors so your installation is fully certified.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <FaqAccordion faqs={locationFaqs} title="Location & Dispatch FAQs" />
+
+  <!-- CTA Band -->
+  <CtaBand 
+    headline="Looking for Fast Water Heater Repair in Your Neighborhood?"
+    subtext="Call (208) 218-2108 now to speak directly with an on-call technician and request an estimate in your zip code."
+  />
+
+  <!-- Contact Section (Pure Phone CTA) -->
+  <ContactForm 
+    title="Call for Service Across Idaho Falls" 
+    subtitle="Call (208) 218-2108 directly to speak with our on-call dispatch desk and request an estimate."
+    locationContext="All Idaho Falls & Bonneville County Zip Codes"
+  />
+</Layout>
+
+<style>
+  .locations-hero {
+    background: linear-gradient(180deg, #f0f7fc 0%, #ffffff 100%);
+    padding: 3.5rem 0 3rem 0;
+    text-align: center;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .locations-hero h1 {
+    max-width: 900px;
+    margin: 0 auto 1.25rem auto;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+  }
+
+  .locations-hero-lead {
+    max-width: 780px;
+    margin: 0 auto;
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+
+  .area-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    border-top: 4px solid var(--color-primary);
+  }
+
+  .area-badge {
+    display: inline-block;
+    align-self: flex-start;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-secondary);
+    background: rgba(234, 88, 12, 0.1);
+    padding: 0.25rem 0.6rem;
+    border-radius: var(--radius-sm);
+    margin-bottom: 0.75rem;
+  }
+
+  .area-card h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.35rem;
+  }
+
+  .area-desc {
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+  }
+
+  .area-streets {
+    font-size: 0.9rem;
+    color: var(--color-text-dark);
+    background: #f8fafc;
+    padding: 0.75rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border-light);
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+  }
+
+  .area-action {
+    margin-top: auto;
+  }
+
+  .zip-matrix-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+
+  .zip-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .zip-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+
+  .zip-number {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--color-primary);
+  }
+
+  .zip-status {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #15803d;
+    background: #dcfce7;
+    padding: 0.2rem 0.5rem;
+    border-radius: 999px;
+  }
+
+  .zip-areas {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    margin: 0;
+  }
+</style>

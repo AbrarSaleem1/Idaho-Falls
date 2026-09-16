@@ -1,0 +1,349 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import FaqAccordion from '../../components/FaqAccordion.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import ContactForm from '../../components/ContactForm.astro';
+
+const pageTitle = "Water Heater Repair Kate Curley Park Idaho Falls | 83404 Plumbers";
+const pageDescription = "Trusted water heater repair in the Kate Curley Park & Numbered Streets district of Idaho Falls (83404). Expert service for historic bungalows, electrical panels, and gas venting.";
+
+const breadcrumbs = [
+  { name: "Service Areas", url: "/locations/" },
+  { name: "Kate Curley Park Area", url: "/locations/kate-curley-park/" }
+];
+
+const neighborhoodFaqs = [
+  {
+    question: "Can my older home in the Numbered Streets support an electric water heater upgrade?",
+    answer: "Many classic craftsman homes along 9th and 10th Streets still operate on 60-amp or 100-amp electrical service panels. Standard electric water heaters require a dedicated 30-amp, 240-volt double-pole circuit. Our technicians inspect your electrical panel capacity before recommending an electric unit. If your panel is at capacity, we often recommend high-efficiency atmospheric gas models or hybrid units to avoid expensive electrical panel upgrades."
+  },
+  {
+    question: "Why does my basement have water puddles around the water heater drain pan?",
+    answer: "In older bungalows around Kate Curley Park, basements often lack floor drains connected to sewer stacks. If a temperature and pressure (T&P) relief valve leaks or a tank fitting weeps, water collects in the pan and overflows onto concrete floors. We install automatic water shutoff sensors and route compliant discharge lines to safe drainage points."
+  },
+  {
+    question: "How do you handle water heater replacement through steep cellar stairs?",
+    answer: "Homes built in the 1920s to 1940s around Kate Curley Park typically feature steep, wooden cellar stairs with narrow doorways. We use specialized motorized stair-climbing hand trucks and neoprene floor protection runners to remove old, heavy, sediment-laden water heaters safely without damaging historic woodwork or plaster."
+  },
+  {
+    question: "Why does my hot water smell metallic or sulfurous in my historic home?",
+    answer: "When original galvanized iron plumbing interacts with our 14.1 GPG hard water and an aging sacrificial magnesium anode rod inside the tank, chemical reactions can produce a distinct metallic taste or rotten-egg sulfur odor. We inspect your piping and replace decaying magnesium rods with powered titanium anode rods that eliminate odors without dissolving."
+  },
+  {
+    question: "Do you offer 24/7 emergency water heater repair near Kate Curley Park?",
+    answer: "Yes. Our dispatch office on Chaffin Lane operates 24 hours a day, 7 days a week. We can have an on-call technician at your home in the Numbered Streets within 45 to 60 minutes for active leaks, burst tanks, or pilot light outages."
+  }
+];
+
+const featuredServices = [
+  {
+    title: "Atmospheric Gas Venting & Flue Drafting",
+    desc: "Inspecting chimney draft hoods, clearing flue blockages, and installing certified B-vent piping to prevent carbon monoxide backdrafting.",
+    url: "/services/gas-water-heater-repair-installation/"
+  },
+  {
+    title: "Electrical Panel Compatibility & Element Sizing",
+    desc: "Evaluating older 60/100-amp breaker boxes and installing low-watt density immersion elements that balance power draw.",
+    url: "/services/electric-water-heater-repair-installation/"
+  },
+  {
+    title: "Sacrificial Anode Rod Upgrades",
+    desc: "Replacing depleted magnesium rods with powered titanium rods to stop tank corrosion and eliminate sulfur water odors.",
+    url: "/services/water-heater-maintenance/"
+  },
+  {
+    title: "Turnkey Basement Tank Replacements",
+    desc: "Careful removal and installation in tight, low-ceiling cellars with code-approved expansion tanks and brass shutoff valves.",
+    url: "/services/water-heater-replacement/"
+  }
+];
+---
+
+<Layout 
+  title={pageTitle} 
+  description={pageDescription} 
+  canonicalPath="/locations/kate-curley-park/"
+  breadcrumbs={breadcrumbs}
+  faqs={neighborhoodFaqs}
+  areaServedName="Kate Curley Park Area"
+>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero Section -->
+  <section class="neighborhood-hero">
+    <div class="container">
+      <span class="section-tag">ZIP Code 83404 Historic District</span>
+      <h1>Water Heater Repair in the Kate Curley Park Area: Caring for Numbered Streets Craftsman & Brick Homes</h1>
+      <p class="neighborhood-hero-lead">
+        The mature tree-lined avenues of the historic Numbered Streets surrounding Kate Curley Park showcase some of Idaho Falls' most charming early-20th-century residential architecture. Yet behind original hardwood floors, covered porches, and hand-laid brick masonry lie aging utility systems that require specialized plumbing care. When low basement ceilings, older electrical services, or aging gravity flues cause water heater failures, Idaho Falls Water Heater Pros provides dependable water heater repair in the Kate Curley Park area with 24/7 on-call dispatch, vintage home expertise, and honest upfront pricing.
+      </p>
+      <div class="hero-ctas">
+        <a href="tel:+12082182108" class="btn btn-primary btn-lg">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+          Call (208) 218-2108
+        </a>
+        <a href="#contact" class="btn btn-outline btn-lg">
+          Request Service Online
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <!-- Content Section -->
+  <section class="section">
+    <div class="container content-container">
+      <div class="content-block">
+        <span class="section-tag">Neighborhood Character</span>
+        <h2>Honoring Heritage Craftsmanship Around Kate Curley Park</h2>
+        <p>
+          Situated in the heart of the historic 83404 zip code, the residential district anchored by Kate Curley Park—spanning 9th Street, 10th Street, 11th Street, and South Boulevard—features classic craftsman bungalows, brick tudors, and mid-century family cottages. Shaded by mature maple and elm trees planted decades ago, this quiet neighborhood represents the historical soul of residential Idaho Falls.
+        </p>
+        <p>
+          Unlike newer subdivisions where mechanical rooms are spacious and standardized, homes in the Numbered Streets feature unique basements. Many were hand-dug decades after the home was initially erected, resulting in low, exposed floor joists, uneven stone or concrete slab floors, and tight access hatches. Water heaters in these cellars often sit adjacent to old gravity furnace ducts or cast-iron soil stacks, leaving little clearance for standard modern tall tanks.
+        </p>
+        <p>
+          Furthermore, older utility infrastructure creates specific plumbing vulnerabilities. Many homes retain original gas iron pipe manifolds or have undergone partial electrical modernizations where 60-amp or 100-amp main breaker panels are nearly maxed out. Servicing water heaters in this neighborhood requires a technician who doesn't simply swap parts, but thoroughly evaluates electrical capacity, gas supply pressures, and chimney venting safety.
+        </p>
+      </div>
+
+      <!-- Featured Services -->
+      <div class="content-block">
+        <span class="section-tag">Customized Solutions</span>
+        <h2>Targeted Services for Historic Numbered Streets Homes</h2>
+        <p>
+          We provide practical solutions tailored to the physical constraints and utility limits of older residences.
+        </p>
+        <div class="grid-2">
+          {featuredServices.map((srv) => (
+            <div class="card">
+              <h3>{srv.title}</h3>
+              <p>{srv.desc}</p>
+              <a href={srv.url} class="btn btn-outline" style="margin-top:0.5rem; display:inline-block;">
+                Explore Details →
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Deep Dive: Technical Challenges in Historic Homes -->
+      <div class="content-block">
+        <span class="section-tag">Technical Grounding</span>
+        <h2>Common Water Heating Complications Near Kate Curley Park</h2>
+        <p>
+          When diagnosing water heaters across the 9th to 12th Street corridors, our technicians address these critical mechanical realities:
+        </p>
+
+        <h3>1. Atmospheric Venting into Shared or Unlined Masonry Flues</h3>
+        <p>
+          Homes built prior to 1960 around South Boulevard and 10th Street frequently vent their gas water heaters into a central brick chimney originally designed for wood, coal, or early oil stoves. These chimneys are often oversized for modern 40,000 BTU gas burners.
+        </p>
+        <p>
+          When hot exhaust enters a large, cold masonry cavity, the air cools rapidly and loses buoyant upward draft velocity. Moisture containing corrosive carbonic acid condenses along the flue walls, deteriorating brick mortar joints and spilling dangerous carbon monoxide into the cellar. We conduct digital draft velocity tests on every gas service call and install certified aluminum B-vent chimney liners to create a safe, dedicated exhaust pathway directly to the roofline.
+        </p>
+
+        <h3>2. Electrical Panel Headroom & Circuit Limitations</h3>
+        <p>
+          While some homeowners have updated to 200-amp electrical panels, many bungalows in the Numbered Streets still operate on 100-amp or older split-bus service panels. A standard residential electric water heater demands a 30-amp, 240-volt double-pole breaker—drawing 4,500 watts when the heating elements engage.
+        </p>
+        <p>
+          If your panel cannot safely accommodate that additional continuous load, adding an electric water heater can trigger main breaker trips whenever the kitchen oven or laundry dryer runs simultaneously. We evaluate panel capacity honestly. When electrical headroom is limited, we recommend high-efficiency atmospheric gas models or hybrid heat pump water heaters that draw under 15 amps.
+        </p>
+
+        <h3>3. Accelerated Corrosion from Mixed Metal Piping</h3>
+        <p>
+          Over decades of renovations, many Kate Curley Park homes have experienced piecemeal plumbing repairs. It is common to see modern copper or PEX tubing connected directly to older galvanized iron pipes without dielectric insulation.
+        </p>
+        <p>
+          In the presence of Idaho Falls' mineral-rich water (14.1 GPG), this junction creates an active galvanic cell. The steel pipe threads rapidly corrode, producing thick rust flakes that drop into the water heater tank and restrict flow. We replace corroded transition joints with brass dielectric unions and install full-port brass shutoff valves that make future maintenance simple.
+        </p>
+      </div>
+
+      <!-- Comparison: Gas Atmospheric vs Lowboy Electric in Vintage Basements -->
+      <div class="content-block">
+        <span class="section-tag">System Selection</span>
+        <h2>Comparing Water Heater Options for Low-Clearance Cellars</h2>
+        <p>
+          When replacing a water heater under 6-foot basement joists, choosing the right physical format is vital.
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>System Type</th>
+                <th>Vertical Clearance</th>
+                <th>Utility Requirement</th>
+                <th>Best Fit in Numbered Streets</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Standard Tall 50-Gal Gas</strong></td>
+                <td>60 to 64 inches + draft hood; requires 72+ inch ceiling</td>
+                <td>Natural gas supply + B-vent chimney flue</td>
+                <td>Only suitable for excavated, full-height modern basements</td>
+              </tr>
+              <tr>
+                <td><strong>Short / Lowboy Gas Tank</strong></td>
+                <td>48 to 52 inches; fits under low joists comfortably</td>
+                <td>Natural gas supply + pitch-corrected vent connector</td>
+                <td>Ideal for original cellars with existing chimney flues</td>
+              </tr>
+              <tr>
+                <td><strong>Lowboy Electric Tank (40/50 Gal)</strong></td>
+                <td>31 to 36 inches; lowest vertical profile available</td>
+                <td>Dedicated 30A, 240V circuit; zero venting required</td>
+                <td>Homes with adequate electrical capacity needing maximum headroom</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Our technicians measure your exact floor-to-joist clearance and chimney connector angle before recommending a replacement, ensuring your new unit operates safely and meets all local building codes.
+        </p>
+      </div>
+
+      <!-- Local Streets and Landmarks Covered -->
+      <div class="content-block">
+        <span class="section-tag">Service Boundary</span>
+        <h2>Corridors & Landmarks Covered in the Kate Curley Park Area</h2>
+        <p>
+          Our service vehicles are dispatched 24 hours a day throughout the historic Numbered Streets, including:
+        </p>
+        <ul>
+          <li><strong>Kate Curley Park & Pavilion:</strong> Direct dispatch to homes immediately bordering the park grounds along 9th and 10th Streets.</li>
+          <li><strong>South Boulevard:</strong> Comprehensive service for brick cottages, mid-century homes, and multi-unit conversions.</li>
+          <li><strong>11th & 12th Streets Corridor:</strong> Servicing classic craftsman residences, lowboy installations, and venting retrofits.</li>
+          <li><strong>Linden Park Adjacency:</strong> Fast emergency response for water heater leaks and pilot failures in nearby residential pockets.</li>
+          <li><strong>Numbered Streets Historic Core:</strong> Dedicated diagnostics for older basements, mixed-metal piping, and electrical panels.</li>
+        </ul>
+        <p>
+          Need service in surrounding areas? We also serve nearby neighborhoods including <a href="/locations/downtown-idaho-falls/">Downtown Idaho Falls</a>, the modern riverfront at <a href="/locations/snake-river-landing/">Snake River Landing</a>, and suburban <a href="/locations/ammon/">Ammon</a>. Visit our full <a href="/locations/">locations directory</a> for complete Bonneville County details.
+        </p>
+      </div>
+
+      <!-- Real Case Example -->
+      <div class="content-block">
+        <span class="section-tag">Case Study</span>
+        <h2>Case Study: Overcoming Low Ceiling Clearance on 10th Street</h2>
+        <p>
+          A homeowner on 10th Street near Kate Curley Park experienced a catastrophic bottom seam leak on their 12-year-old water heater on a chilly December morning. The existing unit was a standard tall 50-gallon tank installed decades earlier by a previous owner who had wedged the draft hood directly against an exposed wood ceiling joist—creating a serious fire hazard and scorching the lumber.
+        </p>
+        <p>
+          Our team arrived, drained the leaking tank, and safely moved the heavy unit up the steep basement stairs. Rather than forcing another dangerous tall tank into the low space, we installed a commercial-grade Bradford White short-boy gas water heater measuring only 50 inches in height.
+        </p>
+        <p>
+          This provided an ample 16 inches of vertical clearance between the draft hood and the floor joists. We rebuilt the flue connector with rigid B-vent pipe, installed a thermal expansion tank, and added a heavy-duty aluminum drip pan. The homeowner gained peace of mind with a safe, code-approved installation that restored hot water by early afternoon.
+        </p>
+      </div>
+
+      <!-- Transparent Upfront Pricing -->
+      <div class="content-block">
+        <span class="section-tag">Fair Pricing</span>
+        <h2>Transparent Quotes with No Historic Home Upcharges</h2>
+        <p>
+          Some contractors charge extra fees for older homes, claiming steep cellar stairs or tight access justify steep surcharges. We disagree. At Idaho Falls Water Heater Pros, our pricing is flat-rate and transparent.
+        </p>
+        <p>
+          You receive an itemized, written quote before any work begins, covering delivery, installation, required permits, and complete removal of your old equipment. What we quote is the exact price you pay upon completion.
+        </p>
+      </div>
+
+      <!-- Permitting & Code Link -->
+      <div class="content-block">
+        <span class="section-tag">Code Compliance</span>
+        <h2>Permitted & Inspected to Idaho State Plumbing Standards</h2>
+        <p>
+          All water heater replacements in the Kate Curley Park neighborhood are permitted through the <a href="https://www.idahofallsidaho.gov/" target="_blank" rel="noopener">City of Idaho Falls Building Division</a> to ensure compliance with the Idaho State Plumbing Code. We manage the application, verify thermal expansion tank sizing, anchor seismic earthquake straps, and arrange the city inspection so your home remains safe, compliant, and properly protected.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <FaqAccordion faqs={neighborhoodFaqs} title="Kate Curley Park Area Water Heater FAQs" />
+
+  <!-- CTA Band -->
+  <CtaBand 
+    headline="Water Heater Leaking in the Numbered Streets?"
+    subtext="Call (208) 218-2108 now for fast, local dispatch to 9th, 10th, South Boulevard, or anywhere in the 83404 area. We are on call 24/7."
+  />
+
+  <!-- Contact Form & Map -->
+  <ContactForm 
+    title="Schedule Service in the Numbered Streets"
+    subtitle="Submit your service request below for prompt callback from our on-call technician."
+    locationContext="Kate Curley Park 83404"
+  />
+</Layout>
+
+<style>
+  .neighborhood-hero {
+    background: linear-gradient(180deg, #f0f7fc 0%, #ffffff 100%);
+    padding: 3.5rem 0 3rem 0;
+    text-align: center;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .neighborhood-hero h1 {
+    max-width: 960px;
+    margin: 0 auto 1.25rem auto;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  }
+
+  .neighborhood-hero-lead {
+    max-width: 820px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+
+  .hero-ctas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .content-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .content-block {
+    margin-bottom: 3.5rem;
+  }
+
+  .content-block h2 {
+    margin-bottom: 1.25rem;
+  }
+
+  .content-block h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.6rem;
+    font-size: 1.25rem;
+  }
+
+  .content-block p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+
+  .content-block ul {
+    margin-bottom: 1.5rem;
+  }
+
+  .content-block li {
+    font-size: 1.02rem;
+    line-height: 1.6;
+    margin-bottom: 0.65rem;
+  }
+</style>

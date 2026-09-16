@@ -1,0 +1,332 @@
+---
+const currentYear = new Date().getFullYear();
+
+const services = [
+  { name: "Water Heater Repair", href: "/services/water-heater-repair/" },
+  { name: "Water Heater Replacement", href: "/services/water-heater-replacement/" },
+  { name: "Water Heater Maintenance", href: "/services/water-heater-maintenance/" },
+  { name: "Water Heater Installation", href: "/services/water-heater-installation/" },
+  { name: "Tankless Water Heater Repair & Installation", href: "/services/tankless-water-heater-repair-installation/" },
+  { name: "Gas Water Heater Repair & Installation", href: "/services/gas-water-heater-repair-installation/" },
+  { name: "Electric Water Heater Repair & Installation", href: "/services/electric-water-heater-repair-installation/" }
+];
+
+const neighborhoods = [
+  { name: "Downtown Idaho Falls (83404)", href: "/locations/downtown-idaho-falls/" },
+  { name: "Ammon (83406)", href: "/locations/ammon/" },
+  { name: "Snake River Landing (83402)", href: "/locations/snake-river-landing/" },
+  { name: "Country Club Hills (83406)", href: "/locations/country-club-hills/" },
+  { name: "Cedar Ridge (83406)", href: "/locations/cedar-ridge/" },
+  { name: "Eagle Rock (83402)", href: "/locations/eagle-rock/" },
+  { name: "New Sweden (83401)", href: "/locations/new-sweden/" },
+  { name: "Lincoln (83401)", href: "/locations/lincoln/" },
+  { name: "View All 23 Neighborhood Guides →", href: "/locations/" }
+];
+
+const zipcodes = ["83401", "83402", "83403", "83404", "83405", "83406", "83415"];
+---
+
+<footer class="site-footer">
+  <!-- Emergency Banner inside footer -->
+  <div class="footer-emergency-band">
+    <div class="container emergency-band-inner">
+      <div>
+        <h3 class="emergency-band-title">Need Water Heater Service Right Now in Idaho Falls?</h3>
+        <p class="emergency-band-desc">24/7 dispatch available for emergency leaks, pilot outages, and cold water emergencies.</p>
+      </div>
+      <a href="tel:+12082182108" class="btn btn-primary emergency-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+        Call (208) 218-2108
+      </a>
+    </div>
+  </div>
+
+  <div class="container footer-content">
+    <div class="footer-grid">
+      <!-- Col 1: About & NAP -->
+      <div class="footer-col">
+        <div class="footer-brand">
+          <div class="footer-logo-icon">
+            <svg viewBox="0 0 64 64" fill="none" width="36" height="36">
+              <path d="M32 4 C32 4 10 28 10 42 C10 53.05 19.85 62 32 62 C44.15 62 54 53.05 54 42 C54 28 32 4 32 4 Z" fill="#ffffff"/>
+              <path d="M32 56 C26 56 22 51.5 22 45.5 C22 39 27 34 32 26 C37 34 42 39 42 45.5 C42 51.5 38 56 32 56 Z" fill="#ea580c"/>
+              <path d="M32 54 C28.5 54 26 50.8 26 47 C26 42.5 29.5 39 32 34 C34.5 39 38 42.5 38 47 C38 50.8 35.5 54 32 54 Z" fill="#facc15"/>
+            </svg>
+          </div>
+          <span class="footer-brand-title">Idaho Falls Water Heater Pros</span>
+        </div>
+        <p class="footer-bio">
+          Locally operated water heater repair, replacement, and installation specialists serving Idaho Falls and Bonneville County with honest diagnostics and 24/7 service.
+        </p>
+        <div class="footer-contact-details">
+          <div class="contact-item">
+            <span class="ci-icon">📍</span>
+            <span>1265 Chaffin Ln, Idaho Falls, ID 83401, USA</span>
+          </div>
+          <div class="contact-item">
+            <span class="ci-icon">📞</span>
+            <a href="tel:+12082182108">(208) 218-2108</a>
+          </div>
+          <div class="contact-item">
+            <span class="ci-icon">🕒</span>
+            <span>Open 24 Hours / 7 Days a Week</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Col 2: Services -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Our Services</h4>
+        <ul class="footer-links">
+          {services.map((item) => (
+            <li><a href={item.href}>{item.name}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Col 3: Areas -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Service Areas</h4>
+        <ul class="footer-links">
+          {neighborhoods.map((item) => (
+            <li><a href={item.href}>{item.name}</a></li>
+          ))}
+        </ul>
+        <div class="zip-list">
+          <span class="zip-label">Serving Zip Codes:</span>
+          <div class="zip-tags">
+            {zipcodes.map((zip) => (
+              <span class="zip-tag">{zip}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- Col 4: Quick Links & E-E-A-T Info -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about-us/">About Our Company</a></li>
+          <li><a href="/blog/">Plumbing Knowledge Blog (20 Guides)</a></li>
+          <li><a href="/locations/">All 23 Neighborhood Locations</a></li>
+          <li><a href="/services/">All Services Directory</a></li>
+          <li><a href="/contact-us/">Contact & Phone Dispatch</a></li>
+        </ul>
+        <div class="compliance-box">
+          <p class="compliance-title">Idaho Licensed & Insured</p>
+          <p class="compliance-text">All installations strictly adhere to Idaho State Plumbing Code (UPC) and City of Idaho Falls thermal expansion regulations.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <p>© {currentYear} Idaho Falls Water Heater Pros. All rights reserved.</p>
+      <p class="footer-subtext">Dedicated domestic hot water systems repair, tankless conversions, and emergency plumbing service in Idaho Falls, ID.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background-color: var(--color-primary-dark);
+    color: #e2e8f0;
+    margin-top: auto;
+  }
+
+  .footer-emergency-band {
+    background-color: #0c2d4a;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem 0;
+  }
+
+  .emergency-band-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .emergency-band-title {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .emergency-band-desc {
+    color: #94a3b8;
+    margin-bottom: 0;
+    font-size: 1rem;
+  }
+
+  .emergency-btn {
+    padding: 0.85rem 1.75rem;
+  }
+
+  .footer-content {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .footer-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .footer-grid {
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    }
+  }
+
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer-brand-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #ffffff;
+  }
+
+  .footer-bio {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    font-size: 0.92rem;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    color: #cbd5e1;
+  }
+
+  .contact-item a {
+    color: #fdba74;
+    font-weight: 700;
+  }
+
+  .footer-col-title {
+    color: #ffffff;
+    font-size: 1.15rem;
+    margin-bottom: 1.25rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+
+  .footer-col-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 36px;
+    height: 3px;
+    background-color: var(--color-accent);
+    border-radius: 2px;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.6rem;
+  }
+
+  .footer-links a {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    transition: color 0.15s ease;
+  }
+
+  .footer-links a:hover {
+    color: #fed7aa;
+    padding-left: 4px;
+  }
+
+  .zip-list {
+    margin-top: 1.5rem;
+  }
+
+  .zip-label {
+    display: block;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+  }
+
+  .zip-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .zip-tag {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0.2rem 0.5rem;
+    font-size: 0.78rem;
+    border-radius: 4px;
+    color: #cbd5e1;
+  }
+
+  .compliance-box {
+    margin-top: 1.25rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--color-accent);
+  }
+
+  .compliance-title {
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+
+  .compliance-text {
+    font-size: 0.82rem;
+    color: #94a3b8;
+    margin-bottom: 0;
+    line-height: 1.4;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+    text-align: center;
+    font-size: 0.88rem;
+    color: #64748b;
+  }
+
+  .footer-subtext {
+    font-size: 0.82rem;
+    color: #475569;
+    margin-top: 0.35rem;
+  }
+</style>

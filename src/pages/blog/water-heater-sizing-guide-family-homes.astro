@@ -1,0 +1,307 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import FaqAccordion from '../../components/FaqAccordion.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import ContactForm from '../../components/ContactForm.astro';
+
+const pageTitle = "Water Heater Sizing Guide: 40 vs 50 vs 75 Gallons in Idaho Falls | Idaho Falls Water Heater Pros";
+const pageDescription = "How to choose between a 40, 50, or 75-gallon water heater in Idaho Falls. Calculate first-hour ratings (FHR), bathroom demands, and winter recovery speeds.";
+
+const breadcrumbs = [
+  { name: "Blog", url: "/blog/" },
+  { name: "Water Heater Sizing Guide: 40 vs 50 vs 75 Gallons in Idaho Falls", url: "/blog/water-heater-sizing-guide-family-homes/" }
+];
+
+const postFaqs = [
+  {
+    "question": "Can I replace a 40-gallon water heater with a 50-gallon unit?",
+    "answer": "In most cases, yes. A 50-gallon tank is typically only 2 to 4 inches taller and 2 inches wider. However, our technicians verify basement ceiling clearances, chimney vent diameters, and gas line sizing before installation to guarantee code compliance."
+  },
+  {
+    "question": "Why does an electric water heater run out of hot water faster than gas?",
+    "answer": "Natural gas water heaters recover more than twice as fast as electric models. A 40,000 BTU gas heater can reheat 35 to 40 gallons of cold water per hour, while standard electric elements reheat only 18 to 22 gallons per hour."
+  },
+  {
+    "question": "What size water heater is required for a large soaking tub?",
+    "answer": "A soaking or whirlpool tub requires a water heater with a tank capacity equal to at least 70% of the tub’s total water volume. For an 80-gallon soaking tub, a 50-gallon heater is marginal; a 75-gallon unit or a condensing tankless system is strongly recommended."
+  },
+  {
+    "question": "Will a larger water heater increase my monthly energy bills drastically?",
+    "answer": "Modern water heaters feature 2+ inches of high-density polyurethane foam insulation, meaning standby heat loss is minimal. Heating 60 gallons of water for your family’s actual daily use costs roughly the same whether it comes from a 50-gallon or 75-gallon tank."
+  },
+  {
+    "question": "How do I get an estimate for water heater replacement in Idaho Falls?",
+    "answer": "Call our office at (208) 218-2108. Our on-call technician will calculate your home’s peak demand and provide a clear, upfront estimate."
+  }
+];
+---
+
+<Layout 
+  title={pageTitle} 
+  description={pageDescription} 
+  canonicalPath="/blog/water-heater-sizing-guide-family-homes/"
+  breadcrumbs={breadcrumbs}
+  faqs={postFaqs}
+>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Article Header -->
+  <article class="blog-post-article">
+    <header class="post-header">
+      <div class="container post-header-container">
+        <div class="post-meta-top">
+          <span class="post-cat">Equipment Sizing & Efficiency</span>
+          <span class="post-date">Published August 20, 2026</span>
+          <span class="post-read-time">8 Min Read</span>
+        </div>
+        <h1>Water Heater Sizing Guide for Idaho Falls Homes: 40 vs. 50 vs. 75 Gallons</h1>
+        <p class="post-lead">
+          There are few domestic frustrations worse than stepping into the shower on a cold January morning in Idaho Falls, only for the hot water to turn lukewarm halfway through your shampoo. Sizing a residential water heater is not merely a matter of guessing based on square footage. It requires calculating your household’s peak-hour hot water demand, fixture flow rates, fuel recovery speeds, and the reality of 38°F winter groundwater in Bonneville County.
+        </p>
+      </div>
+    </header>
+
+    <TrustStrip />
+
+    <!-- Article Content -->
+    <section class="section">
+      <div class="container blog-content-container">
+        <div class="article-body">
+          
+      <h2>The Concept of First-Hour Rating (FHR)</h2>
+      <p>
+        When shopping for a water heater, most homeowners look only at tank capacity—e.g., "50 gallons." However, tank volume only tells half the story. The true measurement of a water heater's real-world capacity is its <strong>First-Hour Rating (FHR)</strong>.
+      </p>
+      <p>
+        The First-Hour Rating is the total number of gallons of hot water the appliance can deliver in one hour of continuous peak demand, starting with a fully heated tank. It combines two variables:
+      </p>
+      <p style="text-align: center; font-weight: bold; font-size: 1.15rem; background: #f0f7fc; padding: 1rem; border-radius: 8px; border-left: 4px solid #0b3b60;">
+        FHR = Usable Stored Water (approx. 70% of tank volume) + Burner Recovery Rate in 1 Hour
+      </p>
+      <p>
+        Because natural gas burns with high BTU intensity (typically 40,000 to 50,000 BTU/hr on residential tanks), a 50-gallon gas water heater boasts an FHR of roughly <strong>80 to 88 gallons</strong>. By contrast, a standard 50-gallon electric water heater (powered by 4500-watt elements) heats much more slowly, offering an FHR of only <strong>60 to 65 gallons</strong>.
+      </p>
+
+      <h2>How to Calculate Your Household Peak Demand</h2>
+      <p>
+        To determine the FHR required for your home, calculate your family's busiest one-hour window—usually between 6:30 AM and 7:30 AM on weekdays. Add up the hot water consumed during that sixty-minute period:
+      </p>
+      <ul>
+        <li><strong>Standard Shower (8-10 minutes):</strong> 15 to 20 gallons</li>
+        <li><strong>Luxury Multi-Head Shower:</strong> 25 to 35 gallons</li>
+        <li><strong>Garden / Soaking Tub Fill:</strong> 40 to 60 gallons</li>
+        <li><strong>Dishwasher Normal Cycle:</strong> 6 to 10 gallons</li>
+        <li><strong>Washing Machine (Warm/Hot Cycle):</strong> 15 to 25 gallons</li>
+        <li><strong>Morning Food Prep & Sink Handwashing:</strong> 3 to 5 gallons</li>
+      </ul>
+      <p>
+        If your peak hour involves two back-to-back showers (35 gal), a dishwasher run (8 gal), and kitchen sink use (4 gal), your peak demand is <strong>47 gallons</strong>. If your peak hour involves three simultaneous showers and a load of laundry, your peak demand jumps to <strong>75+ gallons</strong>.
+      </p>
+
+      <h2>Sizing Breakdown: 40 vs. 50 vs. 75 Gallons</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Tank Size</th>
+              <th>Typical First-Hour Rating (Gas / Electric)</th>
+              <th>Ideal Household Profile</th>
+              <th>Bathroom Count</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>40 Gallon</strong></td>
+              <td>Gas: 65-72 Gal | Electric: 50-55 Gal</td>
+              <td>1 to 2 occupants; condos or smaller ranch homes</td>
+              <td>1 to 1.5 Baths</td>
+            </tr>
+            <tr>
+              <td><strong>50 Gallon</strong></td>
+              <td>Gas: 80-88 Gal | Electric: 60-66 Gal</td>
+              <td>3 to 5 occupants; standard family residence</td>
+              <td>2 to 3 Baths</td>
+            </tr>
+            <tr>
+              <td><strong>75 Gallon</strong></td>
+              <td>Gas: 110-125 Gal | Electric: 80-90 Gal</td>
+              <td>5+ occupants; luxury homes, soaking tubs, high simultaneous draw</td>
+              <td>3.5 to 5+ Baths</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Why Winter Groundwater Temperature Shrinks Usable Volume</h2>
+      <p>
+        In southern states where winter tap water is 65°F, mixing hot and cold water at the shower valve requires relatively little hot water. A comfortable 105°F shower uses roughly 60% hot water and 40% cold water.
+      </p>
+      <p>
+        In Idaho Falls, however, winter groundwater arriving from the Eastern Snake River Plain Aquifer drops to <strong>38°F</strong>. Because the incoming cold water is ice-cold, your shower mixing valve must blend approximately <strong>75% to 80% hot water</strong> with only 20% to 25% cold water to achieve that same 105°F shower.
+      </p>
+      <p>
+        This reality drains your stored hot water volume up to 25% faster during Bonneville County winters than during the summer. For this reason, we frequently recommend sizing up to the next tank tier (e.g., upgrading from a 40 to a 50-gallon tank, or a 50 to a 75-gallon tank) for growing Idaho Falls families.
+      </p>
+
+      <h2>The Role of Thermostatic Mixing Valves in Boosting Capacity</h2>
+      <p>
+        If your mechanical room is too tight for a large 75-gallon tank, there is an ingenious plumbing code solution: installing a <strong>thermostatic mixing valve</strong>.
+      </p>
+      <p>
+        A mixing valve is installed directly on top of a 50-gallon water heater. The water heater thermostat is dialed up from 120°F to <strong>140°F</strong>. Storing water at 140°F kills bacteria (including Legionella) and packs significantly more thermal energy into the same steel vessel.
+      </p>
+      <p>
+        As hot water exits the tank, the mixing valve automatically blends cold incoming water into the stream, delivering a safe, non-scalding 120°F to household fixtures. This effectively boosts the usable hot water capacity of a 50-gallon tank by up to <strong>50%</strong>, providing the equivalent delivery of a 75-gallon heater without taking up extra basement floor space.
+      </p>
+      <p>
+        Need help sizing the perfect replacement water heater for your Idaho Falls home? Call Idaho Falls Water Heater Pros at <a href="tel:+12082182108">(208) 218-2108</a> to schedule an in-home evaluation and request a comprehensive estimate.
+      </p>
+    
+        
+      <!-- In-Depth Preventive Maintenance & Professional Protocols -->
+      <div class="content-block">
+        <span class="section-tag">Idaho Falls Preventive Protocol</span>
+        <h2>Proactive Maintenance Protocols for Bonneville County Homeowners</h2>
+        <p>
+          Given the unique environmental stresses of Eastern Idaho—including 14.1 GPG dissolved calcium carbonate from the Eastern Snake River Plain Aquifer, winter groundwater temperatures dropping to 38°F, and severe seasonal freeze-thaw cycles—relying solely on reactive emergency repairs is costly and disruptive. Implementing a structured preventive maintenance routine protects your investment, maintains manufacturer warranty compliance, and preserves peak energy efficiency.
+        </p>
+        <p>
+          Our licensed service team recommends the following seasonal schedule for all residential and commercial water heating systems in Idaho Falls and Ammon:
+        </p>
+        <ul>
+          <li><strong>Every 6 Months: Visual and Operational Inspection:</strong> Inspect the cold water inlet and hot water outlet connections for green oxidation or white crusting (dielectric corrosion). Check the temperature and pressure (T&P) relief valve discharge pipe to verify there is no active dripping or dried mineral trails. Examine the burner viewing glass on gas units to ensure a crisp blue flame without yellow tipping or soot buildup.</li>
+          <li><strong>Every 12 Months: Pressurized Hydro-Flush and Descaling:</strong> Connect a high-temperature drain hose to the lower drain valve and evacuate accumulated calcium gravel from the tank floor. For tankless systems, isolate the heat exchanger using service valves and circulate a food-grade virgin citric acid solution for 60 to 90 minutes to dissolve microscopic scale adhering to heat exchanger tubes.</li>
+          <li><strong>Every 2 Years: Sacrificial Anode Rod Evaluation:</strong> Unthread the top anode rod bolt using a 1-1/16-inch socket and inspect the core wire. If more than six inches of the steel center wire is exposed, or if the rod diameter has diminished below 1/4 inch, replace the rod immediately with a new magnesium rod or upgrade to a powered titanium anode.</li>
+          <li><strong>Every 3 to 5 Years: Thermal Expansion Tank and Pressure Regulation Audit:</strong> Test your home’s baseline static water pressure using a calibrated digital pressure gauge. If municipal pressure exceeds 75 PSI, recalibrate or replace the pressure reducing valve (PRV). Test the air Schrader valve on the thermal expansion tank to verify that the internal rubber bladder has not torn or waterlogged.</li>
+        </ul>
+        <p>
+          By following this preventive maintenance framework, Idaho Falls property owners can easily extend the service life of their water heaters from the regional average of 8 years up to 12 to 15 years, saving thousands of dollars in premature replacement expenses while enjoying consistent, scalding-safe hot water every day of the year.
+        </p>
+      </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <FaqAccordion faqs={postFaqs} title="Frequently Asked Questions" />
+
+    <!-- CTA Band -->
+    <CtaBand 
+      headline="Need Professional Water Heater Help in Idaho Falls?"
+      subtext="Call (208) 218-2108 now to speak directly with an on-call licensed plumber and request an estimate."
+    />
+
+    <!-- Contact Section (Pure Phone CTA) -->
+    <ContactForm 
+      title="Request Your On-Site Estimate" 
+      subtitle="Call (208) 218-2108 directly to discuss your system with an on-call technician and schedule prompt local dispatch."
+      locationContext="Idaho Falls & Bonneville County"
+    />
+  </article>
+</Layout>
+
+<style>
+  .post-header {
+    background: linear-gradient(180deg, #f0f7fc 0%, #ffffff 100%);
+    padding: 3.5rem 0 2.5rem 0;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .post-header-container {
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .post-meta-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .post-cat {
+    color: var(--color-secondary);
+    background: rgba(234, 88, 12, 0.1);
+    padding: 0.25rem 0.65rem;
+    border-radius: var(--radius-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .post-date, .post-read-time {
+    color: var(--color-text-muted);
+  }
+
+  .post-header h1 {
+    font-size: clamp(1.85rem, 3.5vw, 2.5rem);
+    line-height: 1.25;
+    margin-bottom: 1.25rem;
+  }
+
+  .post-lead {
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+    margin: 0 auto;
+  }
+
+  .blog-content-container {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  .article-body {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--color-text-dark);
+  }
+
+  .article-body h2 {
+    font-size: 1.6rem;
+    margin-top: 2.75rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+  }
+
+  .article-body h3 {
+    font-size: 1.3rem;
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .article-body p {
+    margin-bottom: 1.35rem;
+  }
+
+  .article-body ul, .article-body ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .article-body li {
+    margin-bottom: 0.65rem;
+    line-height: 1.6;
+  }
+
+  .article-body strong {
+    color: var(--color-primary-dark);
+  }
+
+  .article-body a {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  .article-body a:hover {
+    color: var(--color-secondary);
+  }
+</style>

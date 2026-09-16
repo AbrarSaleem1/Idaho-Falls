@@ -1,0 +1,261 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import FaqAccordion from '../../components/FaqAccordion.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import ContactForm from '../../components/ContactForm.astro';
+
+const pageTitle = "Thermocouple vs Gas Control Valve: Diagnosis Guide for Idaho Falls | Idaho Falls Water Heater Pros";
+const pageDescription = "Diagnose why your gas water heater pilot light won’t stay lit. Compare thermocouple vs gas control valve failure symptoms, testing steps, and repairs.";
+
+const breadcrumbs = [
+  { name: "Blog", url: "/blog/" },
+  { name: "Thermocouple vs Gas Control Valve: Diagnosis Guide for Idaho Falls", url: "/blog/signs-thermocouple-vs-gas-control-valve-failure/" }
+];
+
+const postFaqs = [
+  {
+    "question": "Can I clean a thermocouple with sandpaper?",
+    "answer": "Lightly rubbing the tip with fine emery cloth or steel wool can remove surface carbon and temporarily restore electrical contact. However, if the internal metal junction has degraded, cleaning will only provide a temporary fix and the thermocouple must be replaced."
+  },
+  {
+    "question": "What is the difference between a thermocouple and a thermopile?",
+    "answer": "A thermocouple produces 20 to 30 millivolts to hold open a mechanical safety valve. A thermopile contains multiple thermocouples wired in series, producing 750 millivolts to power digital control boards and electronic ignition systems on newer water heaters."
+  },
+  {
+    "question": "Why does my pilot light blow out only on windy days in Idaho Falls?",
+    "answer": "Wind gusts coming off the foothills can push cold air down an unlined or oversized chimney flue, blowing out the pilot flame. Installing a wind-resistant high-velocity vent cap or relining the chimney flue eliminates wind downdrafts."
+  },
+  {
+    "question": "Is it dangerous to hold the pilot knob down with tape?",
+    "answer": "YES. Never tape, clamp, or wedge the pilot knob in the \"ON\" position. Bypassing the safety shutoff allows unburned gas to accumulate continuously if the flame goes out, creating a severe explosion hazard."
+  },
+  {
+    "question": "How quickly can a technician replace a thermocouple in Idaho Falls?",
+    "answer": "Our technicians carry genuine OEM thermocouples and thermopiles on our service trucks and can typically diagnose and replace a failed unit within 45 to 60 minutes of arrival."
+  }
+];
+---
+
+<Layout 
+  title={pageTitle} 
+  description={pageDescription} 
+  canonicalPath="/blog/signs-thermocouple-vs-gas-control-valve-failure/"
+  breadcrumbs={breadcrumbs}
+  faqs={postFaqs}
+>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Article Header -->
+  <article class="blog-post-article">
+    <header class="post-header">
+      <div class="container post-header-container">
+        <div class="post-meta-top">
+          <span class="post-cat">Gas Burner Diagnostics</span>
+          <span class="post-date">Published September 8, 2026</span>
+          <span class="post-read-time">8 Min Read</span>
+        </div>
+        <h1>Thermocouple vs. Gas Control Valve Failure: How to Diagnose Why Your Pilot Light Won't Stay Lit</h1>
+        <p class="post-lead">
+          You walk down to your Idaho Falls basement for a hot morning shower, only to be met with icy cold water. You check your gas water heater and discover that the pilot flame is completely out. You follow the lighting instructions on the front panel, press and hold the pilot knob, ignite the flame, wait sixty seconds, and release the knob—only for the pilot to snap off instantly. Is it a simple inexpensive thermocouple, or has your gas control valve failed? Here is how professional plumbers diagnose the difference.
+        </p>
+      </div>
+    </header>
+
+    <TrustStrip />
+
+    <!-- Article Content -->
+    <section class="section">
+      <div class="container blog-content-container">
+        <div class="article-body">
+          
+      <h2>The Anatomy of Pilot Safety: How a Thermocouple Operates</h2>
+      <p>
+        To diagnose gas pilot issues safely, you must first understand the electro-mechanical safety circuit built into every modern gas water heater.
+      </p>
+      <p>
+        A <strong>thermocouple</strong> (or a modern <em>thermopile</em> on newer electronic-ignition systems) is a thermoelectric generator composed of two dissimilar metals welded together inside a sealed copper sheath. When the tip of the thermocouple is engulfed in the blue flame of the pilot light, the temperature differential between the hot tip and the cold base produces a tiny direct-current electrical charge, typically measured between <strong>20 and 30 millivolts (mV)</strong>.
+      </p>
+      <p>
+        This microscopic electrical current travels through the copper lead wire back into the gas control valve, where it powers a tiny internal electromagnet. As long as the electromagnet receives 20+ millivolts of electricity, it holds open the internal safety shutoff valve, allowing gas to flow continuously to the pilot burner.
+      </p>
+      <p>
+        If the pilot flame is extinguished by a gust of wind, or if the thermocouple degrades and stops producing electricity, the electromagnet immediately loses power and a spring snaps the gas valve shut. This critical safety mechanism prevents raw natural gas from filling your basement.
+      </p>
+
+      <h2>Five Symptoms of a Failing Thermocouple</h2>
+      <p>
+        In more than 80% of pilot outage service calls in Idaho Falls, the thermocouple—not the gas control valve—is the culprit. Thermocouples endure constant 1,200°F heat inside the combustion chamber, causing eventual metal fatigue and oxidation.
+      </p>
+      <p>
+        Common signs of thermocouple failure include:
+      </p>
+      <ul>
+        <li><strong>Pilot Snaps Off the Instant You Release the Knob:</strong> If the flame burns bright blue while you hold down the pilot knob, but extinguishes immediately the moment you let go, the thermocouple is not generating sufficient millivolts to hold the safety magnet open.</li>
+        <li><strong>Heavy Carbon or Mineral Crust on the Copper Tip:</strong> In Eastern Idaho homes, dust, lint, and hard water mineral vapor can coat the tip of the thermocouple in black carbon or white mineral scale. This insulating coating prevents the pilot flame from heating the internal metal junction.</li>
+        <li><strong>Physical Bending or Misalignment:</strong> The tip of the thermocouple must be enveloped by the upper 3/8 to 1/2 inch of the pilot flame. If the mounting clip has loosened and the tip has slipped away from the flame, it will not heat up sufficiently.</li>
+        <li><strong>Pilot Shuts Down Randomly After Hours of Operation:</strong> A weak thermocouple may generate just enough voltage (around 12–14 mV) to hold the valve open during standby, but drops below the dropout threshold when main burner draft surges, shutting off the system.</li>
+        <li><strong>Corroded Threaded Connection:</strong> The male brass nut that threads into the bottom of the gas control valve must make clean metal-to-metal contact to complete the electrical ground. Dirt or corrosion on these threads breaks the circuit.</li>
+      </ul>
+
+      <h2>Symptoms of a Failed Gas Control Valve</h2>
+      <p>
+        The <strong>gas control valve</strong> is the large thermostat box mounted on the front lower face of the water heater, featuring the temperature knob and gas shutoff switch. While less common than thermocouple failures, gas valves do fail—often due to internal electrical component breakdown or mineral accumulation on the sensing probe.
+      </p>
+      <p>
+        Signs that point to a failed gas control valve include:
+      </p>
+      <ul>
+        <li><strong>Thermocouple Tests Good, But Magnet Drops Out:</strong> When a plumber tests the thermocouple with a digital multimeter and measures a healthy 25+ millivolts under open-circuit load, yet the internal electromagnet fails to hold, the magnet inside the valve has burned out.</li>
+        <li><strong>Electronic Status LED Error Codes:</strong> Modern water heaters (Honeywell and White-Rodgers valves) feature an LED status light. Specific blink patterns (e.g., 4 blinks for high-temperature cutoff or 5 blinks for sensor failure) indicate internal valve diagnostics.</li>
+        <li><strong>Internal High-Limit Switch (ECO) Tripped:</strong> Gas valves contain an internal Emergency Cut-Off (ECO) switch designed to melt and permanently disable the valve if water temperature exceeds 180°F. If the ECO trips, the valve cannot be reset and must be replaced as a complete assembly.</li>
+        <li><strong>Erratic Water Temperatures:</strong> If the pilot stays lit, but the main burner fails to fire when you turn the temperature dial to "Hot," or if the water becomes dangerously scalding regardless of the setting, the internal bi-metal temperature probe has failed.</li>
+        <li><strong>Gas Smell Around the Valve Body:</strong> Any detectable odor of natural gas around the valve housing or threaded inlet pipe warrants immediate gas shutoff and emergency service.</li>
+      </ul>
+
+      <h2>Step-by-Step Professional Multimeter Testing</h2>
+      <p>
+        Rather than replacing parts on guesswork, our licensed technicians perform precise electrical diagnostics using digital multimeters:
+      </p>
+      <ol>
+        <li><strong>Open-Circuit Voltage Test:</strong> We unscrew the thermocouple from the valve, connect alligator clips to the center terminal and outer copper casing, ignite the pilot manually, and measure DC millivolts. A healthy thermocouple reads between 20 and 30 mV within 60 seconds. If it reads below 12 mV, the thermocouple is defective.</li>
+        <li><strong>Closed-Circuit Load Test:</strong> Using a specialized testing adapter, we measure voltage while the thermocouple is connected to the valve under active magnetic load. A healthy circuit holds 10 to 15 mV under load.</li>
+        <li><strong>Magnet Dropout Test:</strong> We blow out the pilot flame and time how long it takes for the internal electromagnet to release with an audible "click." A normal valve drops out within 30 to 90 seconds. If it drops out in under 10 seconds with a good thermocouple, the valve magnet is failing.</li>
+      </ol>
+
+      <h2>Repair vs. Replacement Cost Realities</h2>
+      <p>
+        Replacing a thermocouple is a fast, cost-effective repair that restores reliable operation for years. Replacing a complete electronic gas control valve, however, involves draining part of the tank, disconnecting the gas supply line, and unthreading the long thermostat probe from the tank vessel.
+      </p>
+      <p>
+        If your water heater is over eight to ten years old and facing a complete gas control valve replacement, we recommend evaluating the overall condition of the tank. In Idaho Falls' 14.1 GPG mineral water, an older tank may be near the end of its structural lifespan, making complete replacement a wiser long-term investment.
+      </p>
+      <p>
+        If your pilot light refuses to stay lit, call Idaho Falls Water Heater Pros at <a href="tel:+12082182108">(208) 218-2108</a>. Our mobile service trucks carry universal thermocouples, thermopiles, and OEM gas valves for immediate same-day repair.
+      </p>
+    
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <FaqAccordion faqs={postFaqs} title="Frequently Asked Questions" />
+
+    <!-- CTA Band -->
+    <CtaBand 
+      headline="Need Professional Water Heater Help in Idaho Falls?"
+      subtext="Call (208) 218-2108 now to speak directly with an on-call licensed plumber and request an estimate."
+    />
+
+    <!-- Contact Section (Pure Phone CTA) -->
+    <ContactForm 
+      title="Request Your On-Site Estimate" 
+      subtitle="Call (208) 218-2108 directly to discuss your system with an on-call technician and schedule prompt local dispatch."
+      locationContext="Idaho Falls & Bonneville County"
+    />
+  </article>
+</Layout>
+
+<style>
+  .post-header {
+    background: linear-gradient(180deg, #f0f7fc 0%, #ffffff 100%);
+    padding: 3.5rem 0 2.5rem 0;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .post-header-container {
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .post-meta-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .post-cat {
+    color: var(--color-secondary);
+    background: rgba(234, 88, 12, 0.1);
+    padding: 0.25rem 0.65rem;
+    border-radius: var(--radius-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .post-date, .post-read-time {
+    color: var(--color-text-muted);
+  }
+
+  .post-header h1 {
+    font-size: clamp(1.85rem, 3.5vw, 2.5rem);
+    line-height: 1.25;
+    margin-bottom: 1.25rem;
+  }
+
+  .post-lead {
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+    margin: 0 auto;
+  }
+
+  .blog-content-container {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  .article-body {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--color-text-dark);
+  }
+
+  .article-body h2 {
+    font-size: 1.6rem;
+    margin-top: 2.75rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+  }
+
+  .article-body h3 {
+    font-size: 1.3rem;
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .article-body p {
+    margin-bottom: 1.35rem;
+  }
+
+  .article-body ul, .article-body ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .article-body li {
+    margin-bottom: 0.65rem;
+    line-height: 1.6;
+  }
+
+  .article-body strong {
+    color: var(--color-primary-dark);
+  }
+
+  .article-body a {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  .article-body a:hover {
+    color: var(--color-secondary);
+  }
+</style>

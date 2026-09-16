@@ -1,0 +1,349 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import FaqAccordion from '../../components/FaqAccordion.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import ContactForm from '../../components/ContactForm.astro';
+
+const pageTitle = "Water Heater Repair Ammon ID | 24/7 Local Plumbers 83406 & 83401";
+const pageDescription = "Fast, licensed water heater repair and replacement in Ammon, ID (83406 & 83401). High-recovery tanks, dual element replacements, and 24/7 emergency dispatch.";
+
+const breadcrumbs = [
+  { name: "Service Areas", url: "/locations/" },
+  { name: "Ammon", url: "/locations/ammon/" }
+];
+
+const neighborhoodFaqs = [
+  {
+    question: "Why does our Ammon home run out of hot water after two morning showers?",
+    answer: "Many suburban homes built along Sunnyside Road or near McCowin Park feature 4 to 6 bedrooms, multiple bathrooms, and busy morning routines. If your home has a standard 40-gallon electric water heater, it delivers only about 30 gallons of usable hot water before cold groundwater dilutes the tank. In an Ammon winter with 38°F groundwater, you need a high-recovery 50 or 75-gallon unit or a continuous tankless system to handle simultaneous demands."
+  },
+  {
+    question: "How hard is the water in Ammon, and does it affect electric elements faster than gas?",
+    answer: "Ammon's municipal and well supplies tap the same Eastern Snake River Plain Aquifer as Idaho Falls, measuring roughly 14.1 grains per gallon of mineral hardness. Electric water heaters are particularly vulnerable because calcium carbonate cakes directly onto the high-temperature immersion elements. Without annual flushing, standard electric elements in Ammon typically burn out within 2 to 4 years."
+  },
+  {
+    question: "What permits are required for a water heater replacement in Ammon?",
+    answer: "Under the Idaho State Plumbing Code (UPC), any water heater replacement or alteration within the City of Ammon requires a plumbing permit and subsequent inspection. As a licensed contractor, Idaho Falls Water Heater Pros handles all permit filings with the local building department and coordinates the final inspection."
+  },
+  {
+    question: "Can you upgrade our Ammon home to a high-efficiency tankless water heater?",
+    answer: "Yes. Many Ammon homeowners convert to tankless systems to gain unlimited hot water for growing families while freeing up space in utility basements. We inspect your existing gas meter and supply piping to ensure adequate BTU capacity (up to 199,000 BTU) and route direct-vent PVC or polypropylene pipe through the exterior rim joist."
+  },
+  {
+    question: "Do you charge extra travel fees to dispatch technicians to Ammon?",
+    answer: "No. Our headquarters on Chaffin Lane is located right near the Ammon border. We dispatch to all neighborhoods in 83406 and 83401—including McCowin Park, Ross Avenue, and the 17th Street retail corridor—at our standard flat-rate pricing with zero travel surcharges."
+  }
+];
+
+const featuredServices = [
+  {
+    title: "High-Recovery 50 & 75-Gallon Tank Installations",
+    desc: "Sizing high-capacity storage units engineered to supply simultaneous showers, laundry, and dishwashers for busy family households.",
+    url: "/services/water-heater-installation/"
+  },
+  {
+    title: "Heavy-Duty Low-Watt Density Element Upgrades",
+    desc: "Replacing failed electric elements with resistored incoloy components built to withstand Ammon's severe 14.1 GPG mineral hardness.",
+    url: "/services/electric-water-heater-repair-installation/"
+  },
+  {
+    title: "Whole-Home Tankless Upgrades & Multi-Unit Cascades",
+    desc: "Installing high-output on-demand systems that deliver endless hot water across multi-story suburban floor plans.",
+    url: "/services/tankless-water-heater-repair-installation/"
+  },
+  {
+    title: "Annual Sediment Power-Flushing & Descaling",
+    desc: "Purging accumulated calcium carbonate sediment to silence rumbling tanks and cut monthly electrical and gas bills.",
+    url: "/services/water-heater-maintenance/"
+  }
+];
+---
+
+<Layout 
+  title={pageTitle} 
+  description={pageDescription} 
+  canonicalPath="/locations/ammon/"
+  breadcrumbs={breadcrumbs}
+  faqs={neighborhoodFaqs}
+  areaServedName="Ammon"
+>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero Section -->
+  <section class="neighborhood-hero">
+    <div class="container">
+      <span class="section-tag">ZIP Codes 83406 & 83401 Service Hub</span>
+      <h1>Water Heater Repair & High-Capacity Replacement in Ammon, ID</h1>
+      <p class="neighborhood-hero-lead">
+        As one of Eastern Idaho's fastest-growing residential communities, Ammon is home to active, growing families with busy morning routines, multi-bathroom households, and high simultaneous hot water demands. When a 50-gallon tank fails or calcified electric elements leave your household shivering in lukewarm showers, you need rapid, experienced local service. Idaho Falls Water Heater Pros provides dependable water heater repair in Ammon, ID with 24/7 emergency dispatch, high-recovery equipment options, and transparent upfront quotes.
+      </p>
+      <div class="hero-ctas">
+        <a href="tel:+12082182108" class="btn btn-primary btn-lg">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+          Call (208) 218-2108
+        </a>
+        <a href="#contact" class="btn btn-outline btn-lg">
+          Schedule Ammon Service
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <!-- Content Section -->
+  <section class="section">
+    <div class="container content-container">
+      <div class="content-block">
+        <span class="section-tag">Suburban Metro Growth</span>
+        <h2>High Hot Water Demands in Ammon's Expanding Neighborhoods</h2>
+        <p>
+          Situated immediately east of Idaho Falls along the busy 17th Street and Sunnyside Road corridors, Ammon has evolved from a quiet agricultural community into a thriving suburban hub. Anchored by recreational destinations like McCowin Park and community gathering spots along Ross Avenue and Ammon Road, this city features extensive subdivisions developed between the 1970s and today.
+        </p>
+        <p>
+          Unlike downtown historic districts characterized by compact bungalows, homes in Ammon typically span 2,500 to 4,500+ square feet across two or three levels. Large family residences frequently feature three or four bathrooms, double laundry hookups, and high-efficiency dishwashers running concurrently. During peak morning hours between 6:30 AM and 8:00 AM, the simultaneous demand for domestic hot water pushes undersized equipment past its limits.
+        </p>
+        <p>
+          Additionally, homes in Ammon utilize a mix of natural gas and high-voltage electric heating systems. Because large utility basements are common here, mechanical rooms provide ample square footage, allowing homeowners to select between high-capacity 50- to 75-gallon storage tanks or advanced wall-mounted tankless units. However, because tap water carries heavy mineral hardness from the Eastern Snake River Plain Aquifer, proper system sizing and regular sediment maintenance are vital to keeping household hot water flowing without disruption.
+        </p>
+      </div>
+
+      <!-- Featured Services -->
+      <div class="content-block">
+        <span class="section-tag">Targeted Solutions</span>
+        <h2>Specialized Water Heater Services for Ammon Households</h2>
+        <p>
+          We provide high-capacity solutions engineered to meet the intense hot water demands of active suburban families.
+        </p>
+        <div class="grid-2">
+          {featuredServices.map((srv) => (
+            <div class="card">
+              <h3>{srv.title}</h3>
+              <p>{srv.desc}</p>
+              <a href={srv.url} class="btn btn-outline" style="margin-top:0.5rem; display:inline-block;">
+                Explore Details →
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Deep Dive: Technical Challenges in Large Homes -->
+      <div class="content-block">
+        <span class="section-tag">Engineering Insights</span>
+        <h2>Key Mechanical Challenges in the 83406 & 83401 Areas</h2>
+        <p>
+          Our technicians address three primary performance and longevity factors when working in Ammon homes:
+        </p>
+
+        <h3>1. Undersized First-Hour Rating (FHR) for Large Households</h3>
+        <p>
+          Many suburban builders originally installed standard 40-gallon water heaters as a baseline cost-saving measure. When an Ammon household grows to four, five, or six family members, a 40-gallon tank simply cannot keep pace.
+        </p>
+        <p>
+          During winter, municipal groundwater enters Ammon homes at roughly 38°F. Raising that water to 125°F requires substantial energy. A standard 40-gallon electric tank can take over an hour to fully recover after just one teenager's long shower. We calculate your home's true First Hour Rating (FHR) and install high-recovery units (such as 50-gallon high-recovery gas or 75-gallon electric units) that deliver over 80 gallons of hot water in the first hour, eliminating morning arguments over cold showers.
+        </p>
+
+        <h3>2. Rapid Calcium Scale on High-Wattage Electric Elements</h3>
+        <p>
+          A substantial portion of residential subdivisions in eastern Ammon rely entirely on all-electric utilities. In these homes, dual 4,500-watt electric immersion elements heat the water. In our local 14.1 GPG water, calcium carbonate crystallizes directly onto the element's metal sheath whenever it is energized.
+        </p>
+        <p>
+          Within 24 to 36 months, an element can accumulate a half-inch crust of mineral rock. This traps heat inside the resistance wire, causing the lower element to overheat and snap. When the lower element fails, the water heater only heats the top 15 gallons of water, leaving the bottom 35 gallons cold. Our technicians replace failed elements with heavy-duty low-watt-density incoloy elements that operate at lower surface temperatures and resist scale adhesion.
+        </p>
+
+        <h3>3. Thermal Expansion Pressure in Closed Systems</h3>
+        <p>
+          Most newer subdivisions in Ammon operate on closed plumbing networks equipped with pressure-reducing valves or backflow preventers. When a 50-gallon tank of 38°F winter water is heated to 125°F, it expands by approximately 1.5 gallons in volume.
+        </p>
+        <p>
+          In a closed system, this expanding water has no outlet. Without a functioning thermal expansion tank, internal plumbing pressure spikes to 120+ PSI, placing tremendous strain on tank weld seams, toilet fill valves, and refrigerator water dispensers. We calibrate and install code-mandated thermal expansion tanks with properly pre-charged air bladders that absorb this hydraulic surge safely.
+        </p>
+      </div>
+
+      <!-- Sizing Guide: Sizing for Large Suburban Families -->
+      <div class="content-block">
+        <span class="section-tag">Sizing Protocol</span>
+        <h2>Hot Water Capacity Guide for Ammon Households</h2>
+        <p>
+          Selecting the correct capacity ensures your family never experiences cold water during peak morning routines.
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Household Profile</th>
+                <th>Recommended System</th>
+                <th>First Hour Rating (FHR)</th>
+                <th>Performance Characteristics</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1 to 2 People (Single Level)</strong></td>
+                <td>40-Gallon Gas or Electric Tank</td>
+                <td>55 to 60 Gallons</td>
+                <td>Adequate for single morning shower and small laundry loads</td>
+              </tr>
+              <tr>
+                <td><strong>3 to 4 People (Standard Subdivisions)</strong></td>
+                <td>50-Gallon High-Recovery Tank</td>
+                <td>75 to 82 Gallons</td>
+                <td>Supports two back-to-back showers and dishwasher cycle</td>
+              </tr>
+              <tr>
+                <td><strong>5+ People or Homes with Soaking Tubs</strong></td>
+                <td>75-Gallon Tank or 199K BTU Tankless</td>
+                <td>95+ Gallons / Continuous</td>
+                <td>Endless hot water; easily fills large whirlpools and garden tubs</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Our licensed technicians assess your family size, plumbing fixtures, and future remodel plans to recommend an appropriately sized system that balances upfront investment with low monthly operating costs.
+        </p>
+      </div>
+
+      <!-- Service Boundaries in Ammon -->
+      <div class="content-block">
+        <span class="section-tag">Local Landmarks</span>
+        <h2>Key Corridors & Neighborhoods We Service in Ammon</h2>
+        <p>
+          Our mobile service fleet is dispatched 24 hours a day throughout Ammon and surrounding Bonneville County, including:
+        </p>
+        <ul>
+          <li><strong>Sunnyside Road Corridor:</strong> Servicing modern residential subdivisions and commercial developments connecting Ammon to Idaho Falls.</li>
+          <li><strong>17th Street Retail & Residential Strip:</strong> Rapid emergency dispatch for homes, townhomes, and light-commercial facilities.</li>
+          <li><strong>Ammon Road & Ross Avenue:</strong> Servicing established family neighborhoods, custom builds, and dual-unit installations.</li>
+          <li><strong>McCowin Park & Community District:</strong> Dedicated residential maintenance for high-recovery tanks and electric element swaps.</li>
+          <li><strong>Hillview Corridor & Eastern Suburban Pocket:</strong> Complete coverage for large rural-residential properties and high-capacity setups.</li>
+        </ul>
+        <p>
+          Looking for service in neighboring communities? We also provide comprehensive coverage in <a href="/locations/downtown-idaho-falls/">Downtown Idaho Falls</a>, modern <a href="/locations/snake-river-landing/">Snake River Landing</a>, and the historic <a href="/locations/kate-curley-park/">Kate Curley Park Area</a>. Visit our full <a href="/locations/">service area directory</a> for complete details.
+        </p>
+      </div>
+
+      <!-- Case Study -->
+      <div class="content-block">
+        <span class="section-tag">Field Example</span>
+        <h2>Case Study: Solving Morning Water Shortages on Ross Avenue</h2>
+        <p>
+          A family of five living in a two-story home off Ross Avenue in Ammon contacted us because their water heater could not support morning routines. With two working parents and three school-age children, hot water routinely ran out midway through the second shower, leaving family members with freezing water before school.
+        </p>
+        <p>
+          Our inspection revealed an undersized 40-gallon electric water heater installed nine years earlier. The lower element was heavily encrusted in calcium scale, reducing its heating efficiency by nearly 40%.
+        </p>
+        <p>
+          We replaced the struggling unit with an energy-efficient Bradford White 50-gallon high-recovery model equipped with resistored low-watt-density incoloy elements and a properly sized thermal expansion tank. The family now enjoys three consecutive morning showers without any drop in temperature, while their electric utility bill decreased due to the clean, scale-free heating elements.
+        </p>
+      </div>
+
+      <!-- Transparent Upfront Pricing -->
+      <div class="content-block">
+        <span class="section-tag">Pricing Ethics</span>
+        <h2>Flat-Rate Upfront Pricing with Zero Hidden Travel Fees</h2>
+        <p>
+          Because our dispatch hub is centrally located on Chaffin Lane, we do not charge extra mileage or suburban trip fees to serve Ammon. Our pricing is 100% transparent and quoted upfront before any repair or installation begins.
+        </p>
+        <p>
+          You receive a complete written estimate covering all parts, labor, municipal permit filings, and disposal of your old equipment. What we quote is the exact price you pay—no surprises, no gimmicks.
+        </p>
+      </div>
+
+      <!-- Code Compliance -->
+      <div class="content-block">
+        <span class="section-tag">Code Assurance</span>
+        <h2>Permitted & Inspected to Idaho State Plumbing Standards</h2>
+        <p>
+          All water heater installations in Ammon must adhere to the Uniform Plumbing Code as enforced under Idaho law. We pull all required permits through the local building department, verify thermal expansion compliance and seismic bracing, and coordinate final inspections so your home's mechanical systems remain safe and fully compliant.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <FaqAccordion faqs={neighborhoodFaqs} title="Ammon Water Heater FAQs" />
+
+  <!-- CTA Band -->
+  <CtaBand 
+    headline="Cold Showers in Ammon? Let's Fix It Today."
+    subtext="Call (208) 218-2108 now for fast, local dispatch to Sunnyside, 17th Street, McCowin Park, or anywhere in 83406 and 83401. We are on call 24/7."
+  />
+
+  <!-- Contact Form & Map -->
+  <ContactForm 
+    title="Schedule Service in Ammon"
+    subtitle="Call (208) 218-2108 directly to speak with an on-call technician and request an estimate."
+    locationContext="Ammon ID 83406 & 83401"
+  />
+</Layout>
+
+<style>
+  .neighborhood-hero {
+    background: linear-gradient(180deg, #f0f7fc 0%, #ffffff 100%);
+    padding: 3.5rem 0 3rem 0;
+    text-align: center;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .neighborhood-hero h1 {
+    max-width: 960px;
+    margin: 0 auto 1.25rem auto;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  }
+
+  .neighborhood-hero-lead {
+    max-width: 820px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+
+  .hero-ctas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .content-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .content-block {
+    margin-bottom: 3.5rem;
+  }
+
+  .content-block h2 {
+    margin-bottom: 1.25rem;
+  }
+
+  .content-block h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.6rem;
+    font-size: 1.25rem;
+  }
+
+  .content-block p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+
+  .content-block ul {
+    margin-bottom: 1.5rem;
+  }
+
+  .content-block li {
+    font-size: 1.02rem;
+    line-height: 1.6;
+    margin-bottom: 0.65rem;
+  }
+</style>

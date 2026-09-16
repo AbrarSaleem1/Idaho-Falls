@@ -1,0 +1,382 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import FaqAccordion from '../../components/FaqAccordion.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import ContactForm from '../../components/ContactForm.astro';
+
+const pageTitle = "Water Heater Repair in Grant, Idaho Falls | 24/7 Plumbers 83401";
+const pageDescription = "Licensed water heater repair, replacement & maintenance in Grant (83401), Idaho Falls. 24/7 emergency service, local technicians & fast estimates.";
+
+const breadcrumbs = [
+  { name: "Service Areas", url: "/locations/" },
+  { name: "Grant", url: "/locations/grant/" }
+];
+
+const neighborhoodFaqs = [
+  {
+    "question": "How can I protect my water heater from freezing in an unheated room in Grant?",
+    "answer": "We install pipe insulation, commercial heat trace cabling on water lines, and ensure combustion air vents do not blow sub-zero air directly onto the water heater base. In extreme cases, we recommend relocating the unit to a conditioned space."
+  },
+  {
+    "question": "Do you service propane water heaters in Grant?",
+    "answer": "Yes. All of our technicians are trained and licensed to service, repair, and install liquid propane (LP) water heaters and gas supply lines."
+  },
+  {
+    "question": "Why is my Grant well water causing my water heater to pop and rumble?",
+    "answer": "Popping sounds indicate a heavy layer of calcium carbonate sediment at the bottom of the tank. Water trapped underneath turns to steam and pops through the mineral crust. A pressurized power flush removes this buildup."
+  },
+  {
+    "question": "Can you install a tankless water heater on propane in Grant?",
+    "answer": "Yes. Propane tankless water heaters are an excellent choice for country homes, delivering continuous hot water while taking up zero floor space."
+  },
+  {
+    "question": "How do I request an estimate in Grant?",
+    "answer": "Call our team at (208) 218-2108. We serve all addresses in Grant and northern Bonneville County."
+  }
+];
+
+const featuredServices = [
+  {
+    title: "Emergency Water Heater Repair",
+    desc: "Rapid diagnostics for pilot failures, heating element burnouts, water leaks, and noisy sediment buildup in Grant.",
+    url: "/services/water-heater-repair/"
+  },
+  {
+    title: "High-Efficiency Tank Replacement",
+    desc: "Professional installation of 40, 50, and 75-gallon gas and electric water heaters engineered for high-mineral Idaho water.",
+    url: "/services/water-heater-replacement/"
+  },
+  {
+    title: "Tankless Water Heater Installation",
+    desc: "Continuous hot water systems with compact wall-mounted footprints, ideal for high-demand modern households in 83401.",
+    url: "/services/tankless-water-heater-repair-installation/"
+  },
+  {
+    title: "Annual Mineral Power Flushing",
+    desc: "Specialized descaling and sediment hydro-flushes to protect heating surfaces from Eastern Snake River Plain 14.1 GPG scale.",
+    url: "/services/water-heater-maintenance/"
+  }
+];
+---
+
+<Layout 
+  title={pageTitle} 
+  description={pageDescription} 
+  canonicalPath="/locations/grant/"
+  breadcrumbs={breadcrumbs}
+  faqs={neighborhoodFaqs}
+  areaServedName="Grant, Idaho Falls"
+>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero Section -->
+  <section class="neighborhood-hero">
+    <div class="container">
+      <span class="section-tag">ZIP Code 83401 Service Territory</span>
+      <h1>Specialized Water Heater Repair & Installation in Grant</h1>
+      <p class="neighborhood-hero-lead">
+        Located north of Idaho Falls near the scenic banks of the Snake River, Grant is a peaceful rural community of expansive farm acreage, custom country homes, and multi-generation family properties. Homes here operate on independent domestic wells and propane fuel systems, requiring rugged, high-capacity water heaters that can handle heavy mineral content and freezing winter temperatures. Idaho Falls Water Heater Pros offers dedicated propane water heater repair, sediment power flushing, and replacement services throughout Grant.
+      </p>
+      <div class="hero-ctas">
+        <a href="tel:+12082182108" class="btn btn-primary btn-lg">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+          Call (208) 218-2108
+        </a>
+        <a href="#contact" class="btn btn-outline btn-lg">
+          Book Service in Grant
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <!-- Section: Neighborhood Context & Architecture -->
+  <section class="section">
+    <div class="container content-container">
+      <div class="content-block">
+        <span class="section-tag">Local Plumbing Dynamics</span>
+        <h2>Plumbing Architecture & Water Heating Demands in Grant</h2>
+        <p>
+          Located in the 83401 postal district of greater Idaho Falls, Grant showcases distinct architectural styles and mechanical demands. Rural acreage residences, custom ramblers, historic farm properties, and expansive shops with finished living quarters. Operating a residential or commercial water heating system in this environment requires an intimate understanding of local housing layouts, elevation shifts, and eastern Idaho seasonal swings.
+        </p>
+        <p>
+          Water chemistry plays an equally decisive role in equipment longevity throughout Grant. Private domestic well water with high calcium carbonate hardness (15+ GPG), cold winter temperatures, and variable well pump pressures. When untreated or improperly maintained, this intense mineral density forces standard heating elements to operate at elevated temperatures, encrusts burner bottoms in rock-hard sediment, and causes premature tank leaks.
+        </p>
+        <p>
+          At Idaho Falls Water Heater Pros, our mobile plumbing units are stationed locally on Chaffin Lane, equipped with OEM diagnostic components, commercial-grade replacement tanks, and heavy-duty descaling equipment. Whether you are dealing with a sudden 2:00 AM leak or planning an energy-efficient upgrade, our licensed team is ready to respond immediately.
+        </p>
+      </div>
+
+      <!-- Featured Services Grid -->
+      <div class="content-block">
+        <span class="section-tag">Specialized Solutions</span>
+        <h2>Tailored Water Heater Services for Grant Residents</h2>
+        <p>
+          We align our service offerings with the specific infrastructure, fuel types, and mechanical room configurations common throughout Grant.
+        </p>
+        <div class="grid-2">
+          {featuredServices.map((srv) => (
+            <div class="card">
+              <h3>{srv.title}</h3>
+              <p>{srv.desc}</p>
+              <a href={srv.url} class="btn btn-outline" style="margin-top:0.5rem; display:inline-block;">
+                Learn More →
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Deep Dive: Technical Challenges in This Neighborhood -->
+      <div class="content-block">
+        <span class="section-tag">Engineering Analysis</span>
+        <h2>Specific Water Heating Challenges in Grant (83401)</h2>
+        <p>
+          Our field service records identify three primary mechanical friction points that frequently impact water heaters in this specific area:
+        </p>
+
+        <h3>1. High-Demand Agricultural and Family Hot Water Draws</h3>
+        <p>
+          Country properties in Grant often require large volumes of hot water for large families, outdoor wash stations, and shop sinks. Standard 40-gallon tanks run out of hot water rapidly under heavy simultaneous demand.
+        </p>
+
+        <h3>2. Heavy Well Silt and Calcium Scale Accumulation</h3>
+        <p>
+          Without municipal filtration, water heaters in Grant accumulate heavy silt and gravel-like calcium deposits. This mineral bed insulates the tank bottom, leading to metal overheating, noisy popping, and premature tank rupture.
+        </p>
+
+        <h3>3. Propane Burner Orifice and Gas Valve Clogging</h3>
+        <p>
+          Propane systems can accumulate heavy ends or oil residues in gas lines if exterior regulators are not properly maintained. Contaminated gas lines clog pilot orifices and cause erratic burner operation.
+        </p>
+      </div>
+
+      <!-- Comparison Table -->
+      <div class="content-block">
+        <span class="section-tag">System Comparison</span>
+        <h2>Selecting the Optimal Water Heater for Your Grant Home</h2>
+        <p>
+          Comparing replacement equipment requires balancing upfront installation factors, fuel availability, first-hour recovery, and long-term hard water resistance.
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Equipment Type</th>
+                <th>Standard 40-Gal Electric</th>
+                <th>75-Gal High-Recovery Propane</th>
+                <th>Dual Propane Tankless</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Hot Water Output</strong></td>
+                <td>Limited (50 gal first hour)</td>
+                <td>Very High (90+ gal first hour)</td>
+                <td>Limitless continuous flow</td>
+              </tr>
+              <tr>
+                <td><strong>Operating Cost</strong></td>
+                <td>Higher electrical demand</td>
+                <td>Cost-effective LP usage</td>
+                <td>High efficiency (burns fuel on demand)</td>
+              </tr>
+              <tr>
+                <td><strong>Hard Water Defense</strong></td>
+                <td>Vulnerable lower element</td>
+                <td>Requires periodic flushes</td>
+                <td>Annual citric acid descale required</td>
+              </tr>
+              <tr>
+                <td><strong>Winter Performance</strong></td>
+                <td>Slow recovery in winter</td>
+                <td>Fast 45-minute tank recovery</td>
+                <td>Continuous hot water at scaled GPM</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Local Streets & Corridors Covered -->
+      <div class="content-block">
+        <span class="section-tag">Local Service Corridors</span>
+        <h2>Streets & Roads We Regularly Service in Grant</h2>
+        <p>
+          Our service vehicles provide comprehensive coverage throughout all residential streets, subdivisions, and rural routes in Grant, including:
+        </p>
+        <ul>
+          <li><strong>North 3500 East:</strong> Complete diagnostics, rapid leak repair, annual maintenance, and emergency replacements.</li>
+          <li><strong>Grant Highway:</strong> Complete diagnostics, rapid leak repair, annual maintenance, and emergency replacements.</li>
+          <li><strong>County Line Road North:</strong> Complete diagnostics, rapid leak repair, annual maintenance, and emergency replacements.</li>
+          <li><strong>Lewisville Road Access:</strong> Complete diagnostics, rapid leak repair, annual maintenance, and emergency replacements.</li>
+          <li><strong>Snake River Road:</strong> Complete diagnostics, rapid leak repair, annual maintenance, and emergency replacements.</li>
+        </ul>
+        <p>
+          We also provide prompt dispatch to neighboring districts across Bonneville County. Explore our full regional coverage on our <a href="/locations/">locations hub</a>, or check nearby neighborhood guides including <a href="/locations/ammon/">Ammon</a>, <a href="/locations/downtown-idaho-falls/">Downtown Idaho Falls</a>, and <a href="/locations/snake-river-landing/">Snake River Landing</a>.
+        </p>
+      </div>
+
+      <!-- Real World Case Scenario -->
+      <div class="content-block">
+        <span class="section-tag">Local Case Scenario</span>
+        <h2>Real-World Solution: Upgrading a Freezing Propane Water Heater in a Grant Country Home</h2>
+        <p>
+          A homeowner on North 3500 East experienced freezing water lines and repeated pilot failure on their water heater located in an attached unheated utility room during a -15°F cold snap. Our technician insulated the incoming and outgoing water lines with self-regulating heat tape, cleaned the propane pilot burner assembly, and installed an insulated thermal jacket. We also adjusted the gas pressure to factory specs, ensuring reliable hot water through the remainder of the winter.
+        </p>
+      </div>
+
+      <!-- Transparent Estimates Section -->
+      <div class="content-block">
+        <span class="section-tag">Honest Estimates</span>
+        <h2>Transparent Pricing with Upfront Estimates</h2>
+        <p>
+          At Idaho Falls Water Heater Pros, we believe in complete clarity and honesty. We never charge hidden travel surcharges or surprise trip fees for servicing properties in Grant. 
+        </p>
+        <p>
+          Before any repair or installation begins, our licensed technician completes an on-site multi-point evaluation and provides a clear written estimate detailing all necessary parts, labor, permits, and haul-away services. Call our dispatch team at <a href="tel:+12082182108">(208) 218-2108</a> to request an estimate today.
+        </p>
+      </div>
+
+      <!-- Step-by-Step Repair vs Replacement Framework -->
+      <div class="content-block">
+        <span class="section-tag">Diagnostic Decision Guide</span>
+        <h2>Water Heater Repair vs. Replacement: Making the Right Call in Grant</h2>
+        <p>
+          Homeowners in Grant often ask whether repairing an aging water heater makes financial sense or if replacing the unit is the more prudent investment. While minor component failures such as a faulty thermocouple, a burnt electric heating element, or a leaking drain valve can be resolved with prompt repairs, physical degradation of the tank vessel itself requires full replacement.
+        </p>
+        <p>
+          We use a four-point diagnostic framework tailored to Bonneville County operating conditions to help you make an informed choice:
+        </p>
+        <ul>
+          <li><strong>Age of the Appliance:</strong> The average operational lifespan of a residential tank water heater in Idaho Falls is 8 to 10 years due to the relentless 14.1 GPG mineral content of the Eastern Snake River Plain Aquifer. If your system is over eight years old and facing a repair cost exceeding 50% of a new installation, investing in a modern high-efficiency replacement is typically more economical.</li>
+          <li><strong>Location of the Leak:</strong> If water is weeping from an inlet pipe fitting, an upper dielectric union, or the temperature and pressure relief valve discharge pipe, the issue is external and readily repairable. However, if water is pooling beneath the unit or seeping from behind the lower jacket seams, the inner steel cylinder has suffered glass lining failure. Internal tank leaks cannot be patched or welded; immediate replacement is mandatory to avoid catastrophic basement flooding.</li>
+          <li><strong>Accumulated Mineral Scale Thickness:</strong> When tanks operate for several seasons without regular flushing, calcium carbonate settles into dense, calcified gravel layers several inches deep. If this scale has baked into a solid rock slab on the bottom head, standard flushing cannot dissolve it, and burner heat cannot penetrate efficiently. This leads to bottom-head metal fatigue and eventual cracking.</li>
+          <li><strong>Energy Efficiency and Utility Costs:</strong> Older atmospheric water heaters operate with Uniform Energy Factors (UEF) between 0.52 and 0.58, losing substantial heat up the chimney flue. Modern high-efficiency power-vent units (0.70+ UEF) and condensing tankless water heaters (0.95+ UEF) consume significantly less fuel, yielding meaningful monthly savings during bitter Idaho Falls winters.</li>
+        </ul>
+      </div>
+
+      <!-- Deep Dive: Seasonal Ground Temperature Physics -->
+      <div class="content-block">
+        <span class="section-tag">Seasonal Plumbing Science</span>
+        <h2>The Impact of Eastern Idaho Winter Ground Temperatures on Water Heating</h2>
+        <p>
+          Plumbing physics in Grant and across the 83401 postal district are heavily influenced by severe seasonal climate shifts. During summer months, municipal and well water enters homes at roughly 55°F to 58°F. However, as winter arrives and sub-zero cold grips Bonneville County, groundwater temperatures plummet to between 36°F and 38°F.
+        </p>
+        <p>
+          This drastic temperature drop significantly increases the workload placed upon your water heater:
+        </p>
+        <ul>
+          <li><strong>Temperature Rise (Delta-T) Demands:</strong> To elevate incoming 38°F water to a standard, comfortable shower temperature of 120°F, a water heater must provide an 82°F temperature rise. In summer, the required temperature rise is only 62°F. This 32% increase in thermal workload forces gas burners and electric elements to fire for much longer durations.</li>
+          <li><strong>Thermal Shock and Glass Lining Stress:</strong> When cold 38°F water rushes into an empty tank that has just been heated to 130°F, the sudden temperature gradient causes metal expansion and contraction cycles known as thermal shock. Over time, microscopic fractures form in the internal porcelain enamel glass lining, exposing raw steel to water and accelerating tank corrosion.</li>
+          <li><strong>Standby Heat Loss in Unfinished Basements:</strong> Water heaters installed in cold basements, utility crawlspaces, or attached garages lose heat continuously through their metal jackets to the surrounding chilled air. Installing a high-density insulation blanket and pipe foam on the first six feet of hot and cold water lines reduces standby losses significantly.</li>
+          <li><strong>Condensation Drip on Cold Gas Burners:</strong> During winter morning fill cycles, the large volume of ice-cold incoming water causes atmospheric moisture inside the combustion chamber to condense rapidly onto the cold tank bottom. Homeowners often hear a distinct sizzling sound as condensation drips onto the hot burner, frequently mistaking it for an internal tank leak. Our technicians can inspect your burner to verify whether sizzling is normal condensation or a true tank failure.</li>
+        </ul>
+      </div>
+
+      <!-- Permitting, Code Compliance & Safety Regulations -->
+      <div class="content-block">
+        <span class="section-tag">Permits & Building Codes</span>
+        <h2>Idaho State Plumbing Code Requirements for Water Heater Installations in Grant</h2>
+        <p>
+          Installing a water heater in Grant involves far more than simply connecting water lines and lighting a pilot flame. Because water heaters are pressurized vessels combining high thermal energy with combustible gas or 240-volt electrical circuits, strict adherence to the Uniform Plumbing Code as adopted by the State of Idaho is essential for household safety and property protection.
+        </p>
+        <p>
+          When Idaho Falls Water Heater Pros completes a replacement in Grant, we handle all permitting and ensure full compliance with these mandatory safety standards:
+        </p>
+        <ul>
+          <li><strong>Plumbing Permits and City Inspections:</strong> Under Idaho Code Title 54, Chapter 26, any installation or replacement of a water heater requires an official plumbing permit. We pull all necessary permits through the <a href="https://www.idahofallsidaho.gov/" target="_blank" rel="noopener">City of Idaho Falls Building Division</a> or <a href="https://www.bonnevillecountyidaho.gov/" target="_blank" rel="noopener">Bonneville County Public Works</a> and schedule the required post-installation inspection so you have official documentation for your homeowner insurance records.</li>
+          <li><strong>Calibrated Thermal Expansion Tanks:</strong> Because modern municipal water meters and backflow preventers create a closed plumbing loop, water expanding under heating cannot push backward into the city main. Without an expansion tank, pressure spikes can blow out supply hoses, burst washing machine lines, or crack the water heater itself. We install and pre-charge heavy-duty thermal expansion tanks matched to your home’s incoming static water pressure.</li>
+          <li><strong>Temperature and Pressure (T&P) Relief Discharge Piping:</strong> The safety T&P valve must have a dedicated, unthreaded discharge pipe constructed of rigid copper, CPVC, or galvanized steel. It must slope downward without traps and terminate between 6 and 24 inches above the floor or floor drain to prevent scalding in the event of an emergency discharge.</li>
+          <li><strong>Seismic Restraint Strapping:</strong> Eastern Idaho falls within an active seismic zone associated with the Intermountain Seismic Belt. Idaho plumbing code requires water heaters to be securely strapped to the surrounding wall framing using heavy-gauge metal seismic straps located in the upper and lower thirds of the tank cylinder to prevent tip-overs during earth tremors.</li>
+          <li><strong>Combustion Air Clearances:</strong> Gas-fired water heaters require adequate fresh oxygen for safe, complete combustion. When units are enclosed in small utility rooms or finished basements, we install high and low combustion air intake grilles to prevent oxygen starvation and carbon monoxide accumulation.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <FaqAccordion faqs={neighborhoodFaqs} title="Grant Water Heater FAQs" />
+
+  <!-- CTA Band -->
+  <CtaBand 
+    headline="Need Water Heater Service in Grant?"
+    subtext="Call (208) 218-2108 now for fast, licensed dispatch anywhere in Grant and the 83401 zip code. We are on call 24/7."
+  />
+
+  <!-- Contact Form & Map (Pure Phone CTA) -->
+  <ContactForm 
+    title="Schedule Service in Grant" 
+    subtitle="Call (208) 218-2108 directly to speak with an on-call technician and request an estimate."
+    locationContext="Grant 83401"
+  />
+</Layout>
+
+<style>
+  .neighborhood-hero {
+    background: linear-gradient(180deg, #f0f7fc 0%, #ffffff 100%);
+    padding: 3.5rem 0 3rem 0;
+    text-align: center;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .neighborhood-hero h1 {
+    max-width: 960px;
+    margin: 0 auto 1.25rem auto;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  }
+
+  .neighborhood-hero-lead {
+    max-width: 820px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+
+  .hero-ctas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .content-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .content-block {
+    margin-bottom: 3.5rem;
+  }
+
+  .content-block h2 {
+    margin-bottom: 1.25rem;
+  }
+
+  .content-block h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.6rem;
+    font-size: 1.25rem;
+  }
+
+  .content-block p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+
+  .content-block ul {
+    margin-bottom: 1.5rem;
+  }
+
+  .content-block li {
+    font-size: 1.02rem;
+    line-height: 1.6;
+    margin-bottom: 0.65rem;
+  }
+</style>

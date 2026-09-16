@@ -1,0 +1,385 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import FaqAccordion from '../../components/FaqAccordion.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import ContactForm from '../../components/ContactForm.astro';
+
+const pageTitle = "Water Heater Services Idaho Falls | Repair, Replace & Install";
+const pageDescription = "Explore our complete water heater services in Idaho Falls: repair, replacement, annual maintenance, tankless conversion, gas, and electric systems.";
+
+const breadcrumbs = [
+  { name: "Services", url: "/services/" }
+];
+
+const allServices = [
+  {
+    title: "Water Heater Repair",
+    slug: "water-heater-repair",
+    tag: "Emergency & Same-Day",
+    lead: "Quick diagnostics and lasting repairs for leaking valves, pilot outages, bad thermostats, and cold showers.",
+    points: [
+      "No hot water troubleshooting",
+      "Leaking drain valve and pressure relief valve repair",
+      "Gas control valve & thermocouple replacements",
+      "Electric heating element swaps"
+    ]
+  },
+  {
+    title: "Water Heater Replacement",
+    slug: "water-heater-replacement",
+    tag: "Code-Compliant Upgrades",
+    lead: "Safe removal of rusted or ruptured tanks and installation of new, high-efficiency systems sized for your home.",
+    points: [
+      "Removal and environmentally safe disposal of old units",
+      "Bradford White, Rheem, and AO Smith models",
+      "Thermal expansion tank sizing and installation",
+      "City of Idaho Falls permit filing and inspection support"
+    ]
+  },
+  {
+    title: "Water Heater Maintenance",
+    slug: "water-heater-maintenance",
+    tag: "Extends Lifespan",
+    lead: "Combat Idaho Falls' 14.1 GPG hard water with professional tank flushing, sediment descaling, and anode rod inspections.",
+    points: [
+      "Complete tank power-flushing to remove calcium scale",
+      "Sacrificial magnesium or aluminum anode rod inspection",
+      "T&P safety relief valve testing",
+      "Burner assembly and electrical amperage verification"
+    ]
+  },
+  {
+    title: "Water Heater Installation",
+    slug: "water-heater-installation",
+    tag: "New Builds & Remodels",
+    lead: "Turnkey installations for new residential construction, basement finishing projects, and remodeling upgrades.",
+    points: [
+      "Precise BTU and gallon sizing calculations",
+      "Gas line supply and electrical circuit verification",
+      "Seismic earthquake strapping to Idaho code",
+      "Direct venting and combustion air verification"
+    ]
+  },
+  {
+    title: "Tankless Water Heater Repair and Installation",
+    slug: "tankless-water-heater-repair-installation",
+    tag: "Endless Hot Water",
+    lead: "Modern wall-mounted on-demand hot water technology that slashes energy consumption and never runs out of hot water.",
+    points: [
+      "Navien and Rinnai certified installations",
+      "Annual vinegar and acid pump descaling service",
+      "Gas line sizing upgrades (3/4 inch dedicated feeds)",
+      "Direct-vent concentric PVC/polypropylene venting"
+    ]
+  },
+  {
+    title: "Gas Water Heater Repair and Installation",
+    slug: "gas-water-heater-repair-installation",
+    tag: "Natural Gas & Propane",
+    lead: "Comprehensive service for atmospheric draft, power-vented, and direct-vent gas water heaters throughout Bonneville County.",
+    points: [
+      "Pilot light relighting and thermopile diagnostics",
+      "Gas leak detection and rigid pipe fitting",
+      "Draft hood and chimney flue inspection",
+      "Energy Star gas storage tank replacements"
+    ]
+  },
+  {
+    title: "Electric Water Heater Repair and Installation",
+    slug: "electric-water-heater-repair-installation",
+    tag: "240V High Efficiency",
+    lead: "Safe, licensed electrical diagnostics for residential electric water heaters, thermostats, and circuit breaker issues.",
+    points: [
+      "High-limit reset button troubleshooting",
+      "Upper and lower immersion element replacement",
+      "Dual-thermostat calibration and wiring checks",
+      "Hybrid heat pump water heater options"
+    ]
+  }
+];
+
+const serviceFaqs = [
+  {
+    question: "What is included in a typical water heater diagnostic inspection?",
+    answer: "Our certified technician checks static and dynamic water pressure, tests the temperature and pressure relief valve, inspects combustion draft and gas valve millivoltage (for gas units) or electrical continuity and resistance (for electric units), evaluates sediment depth, and checks for any leaks at fittings or the tank cylinder."
+  },
+  {
+    question: "How much does water heater replacement cost in Idaho Falls?",
+    answer: "Cost depends on whether your home uses gas or electric, the gallon capacity needed (typically 40, 50, or 75 gallons), venting requirements, and whether updates are required to meet current Idaho Plumbing Code (such as a thermal expansion tank or seismic strapping). We provide complete upfront quotes before any work begins, so you know the exact final price."
+  },
+  {
+    question: "How long does a standard tank water heater last in Eastern Idaho?",
+    answer: "Due to the severe hard water (14.1 GPG) from the Eastern Snake River Plain Aquifer, unmaintained tanks in Idaho Falls often fail within 6 to 8 years. However, with regular annual descaling and timely replacement of the sacrificial anode rod, a quality tank can reliably reach 10 to 12 years."
+  },
+  {
+    question: "Can I convert from a traditional tank water heater to a tankless system?",
+    answer: "Yes. Many Idaho Falls homeowners convert to tankless systems to free up valuable basement floor space and enjoy continuous hot water. A conversion usually requires upgrading the gas supply line to support higher BTU draw (up to 199,000 BTU) and installing modern direct-vent piping through an exterior wall or roof."
+  },
+  {
+    question: "Do you provide emergency service on weekends and holidays?",
+    answer: "Yes, our phone line (208) 218-2108 is answered 24 hours a day, 7 days a week, 365 days a year. Our on-call technicians are equipped to handle emergency leaks, gas shutoffs, and cold water restorations across all Idaho Falls zip codes."
+  }
+];
+---
+
+<Layout 
+  title={pageTitle} 
+  description={pageDescription} 
+  canonicalPath="/services/"
+  breadcrumbs={breadcrumbs}
+  faqs={serviceFaqs}
+>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero Section -->
+  <section class="services-hero">
+    <div class="container">
+      <span class="section-tag">Reliable Hot Water Systems</span>
+      <h1>Professional Water Heater Services in Idaho Falls</h1>
+      <p class="services-hero-lead">
+        From emergency leak troubleshooting to high-efficiency tankless retrofits, our licensed technicians provide dependable, code-compliant water heater service for residential and light-commercial properties across Bonneville County.
+      </p>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <!-- Services Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Full Lineup</span>
+        <h2>Choose the Right Hot Water Service for Your Home</h2>
+        <p>Explore our specialized service areas below for detailed scopes of work, symptoms, and maintenance recommendations.</p>
+      </div>
+
+      <div class="services-hub-grid">
+        {allServices.map((srv) => (
+          <div class="card service-hub-card">
+            <div class="service-hub-tag">{srv.tag}</div>
+            <h3>{srv.title}</h3>
+            <p class="service-hub-lead">{srv.lead}</p>
+            
+            <ul class="service-points">
+              {srv.points.map((pt) => (
+                <li>{pt}</li>
+              ))}
+            </ul>
+
+            <div class="service-hub-action">
+              <a href={`/services/${srv.slug}/`} class="btn btn-secondary">
+                View Full {srv.title} Guide →
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">How We Work</span>
+        <h2>Our Professional Service Delivery Process</h2>
+        <p>We believe in straightforward communication, safety compliance, and lasting results.</p>
+      </div>
+
+      <div class="grid-4 process-grid">
+        <div class="process-step">
+          <div class="step-badge">1</div>
+          <h3>Prompt Dispatch</h3>
+          <p>Call (208) 218-2108. We collect your water heater symptoms and schedule an immediate appointment or 24/7 emergency dispatch.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-badge">2</div>
+          <h3>System Inspection</h3>
+          <p>Our technician examines pressure, sediment depth, electrical circuits, gas valves, and tank integrity on site.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-badge">3</div>
+          <h3>Upfront Quote</h3>
+          <p>We present a clear, itemized repair or replacement price with zero hidden fees. Work begins only after your approval.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-badge">4</div>
+          <h3>Testing & Code Sign-Off</h3>
+          <p>We test the water temperature, verify safety relief valves, pull required permits, and clean up the work area thoroughly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">The Pros Advantage</span>
+        <h2>Why Idaho Falls Chooses Idaho Falls Water Heater Pros</h2>
+        <p>We focus exclusively on domestic and commercial water heating systems.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>Strict Code Adherence</h3>
+          <p>Every installation meets Idaho State Plumbing Code, including mandatory thermal expansion tanks and compliant flue drafting.</p>
+        </div>
+        <div class="card">
+          <h3>Hard Water Solutions</h3>
+          <p>We tailor our maintenance and hardware choices to withstand Bonneville County's high 14.1 GPG calcium and magnesium scale.</p>
+        </div>
+        <div class="card">
+          <h3>24/7 Availability</h3>
+          <p>Water heaters do not wait for business hours to fail. Our technicians are on call around the clock across all local zip codes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <FaqAccordion faqs={serviceFaqs} title="Water Heater Service FAQs" />
+
+  <!-- CTA Band -->
+  <CtaBand 
+    headline="Need an Expert Technician at Your Door?"
+    subtext="Call (208) 218-2108 right now for same-day service or emergency assistance anywhere in Idaho Falls."
+  />
+
+  <!-- Contact Form & Map -->
+  <ContactForm 
+    title="Request Water Heater Service"
+    subtitle="Let us know what service you need and our team will get back to you promptly."
+  />
+</Layout>
+
+<style>
+  .services-hero {
+    background: linear-gradient(180deg, #f0f7fc 0%, #ffffff 100%);
+    padding: 3.5rem 0 3rem 0;
+    text-align: center;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .services-hero h1 {
+    margin-bottom: 1rem;
+  }
+
+  .services-hero-lead {
+    max-width: 780px;
+    margin: 0 auto;
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+  }
+
+  .services-hub-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .services-hub-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1100px) {
+    .services-hub-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .service-hub-card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-top: 4px solid var(--color-primary);
+  }
+
+  .service-hub-tag {
+    background-color: #ffedd5;
+    color: #c2410c;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+    margin-bottom: 0.85rem;
+    display: inline-block;
+    align-self: flex-start;
+  }
+
+  .service-hub-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .service-hub-lead {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .service-points {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.75rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  .service-points li {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    padding-left: 1.2rem;
+    position: relative;
+    line-height: 1.4;
+  }
+
+  .service-points li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 800;
+  }
+
+  .service-hub-action .btn {
+    width: 100%;
+  }
+
+  .process-step {
+    background: #ffffff;
+    padding: 1.75rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    position: relative;
+  }
+
+  .step-badge {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    color: #ffffff;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .process-step h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .process-step p {
+    font-size: 0.92rem;
+    margin-bottom: 0;
+  }
+</style>

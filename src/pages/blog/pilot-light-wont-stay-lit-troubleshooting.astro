@@ -1,0 +1,327 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import FaqAccordion from '../../components/FaqAccordion.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import ContactForm from '../../components/ContactForm.astro';
+
+const pageTitle = "Gas Water Heater Pilot Light Won't Stay Lit: 6 Causes & Fixes | Idaho Falls Water Heater Pros";
+const pageDescription = "Step-by-step guide to troubleshooting a gas water heater pilot light that keeps going out in Idaho Falls. Thermocouples, draft spillage, and safety switches.";
+
+const breadcrumbs = [
+  { name: "Blog", url: "/blog/" },
+  { name: "Gas Water Heater Pilot Light Won't Stay Lit: 6 Causes & Fixes", url: "/blog/pilot-light-wont-stay-lit-troubleshooting/" }
+];
+
+const postFaqs = [
+  {
+    "question": "Can I relight my pilot light myself?",
+    "answer": "Yes, if you follow the manufacturer instructions printed on the water heater jacket. Always wait at least five minutes with the gas knob turned \"OFF\" before attempting to relight, allowing any accumulated gas vapors to dissipate safely."
+  },
+  {
+    "question": "Why does my pilot flame look yellow instead of blue?",
+    "answer": "A healthy pilot flame burns bright blue with a slight yellow tip. A completely yellow flame indicates incomplete combustion caused by a lack of oxygen or a dirty pilot orifice, which produces carbon monoxide and sooty residue."
+  },
+  {
+    "question": "Can I clean a clogged flame arrestor with water?",
+    "answer": "NO. Water can permanently damage ceramic arrestors and rust stainless steel screens. Use a dry vacuum with a brush attachment or low-pressure compressed air to clear dust and lint from beneath the tank."
+  },
+  {
+    "question": "How much does a thermocouple replacement cost?",
+    "answer": "A thermocouple replacement is one of our most affordable repairs. We provide a clear, upfront estimate before starting work."
+  },
+  {
+    "question": "How quickly can Idaho Falls Water Heater Pros fix a pilot light outage?",
+    "answer": "We offer same-day priority dispatch across Idaho Falls, Ammon, and Bonneville County. Call (208) 218-2108 for immediate service."
+  }
+];
+---
+
+<Layout 
+  title={pageTitle} 
+  description={pageDescription} 
+  canonicalPath="/blog/pilot-light-wont-stay-lit-troubleshooting/"
+  breadcrumbs={breadcrumbs}
+  faqs={postFaqs}
+>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Article Header -->
+  <article class="blog-post-article">
+    <header class="post-header">
+      <div class="container post-header-container">
+        <div class="post-meta-top">
+          <span class="post-cat">Gas Burner Diagnostics</span>
+          <span class="post-date">Published August 8, 2026</span>
+          <span class="post-read-time">8 Min Read</span>
+        </div>
+        <h1>Gas Water Heater Pilot Light Keeps Going Out: 6 Causes and How Plumbers Fix Them</h1>
+        <p class="post-lead">
+          A pilot light that refuses to stay lit is the most common reason for unexpected cold showers in Idaho Falls. While relighting the pilot is straightforward on newer electronic units, a pilot flame that snuffs out repeatedly indicates an underlying mechanical defect or combustion safety hazard. Here are the six primary causes behind chronic pilot outages and the professional steps required to restore dependable hot water.
+        </p>
+      </div>
+    </header>
+
+    <TrustStrip />
+
+    <!-- Article Content -->
+    <section class="section">
+      <div class="container blog-content-container">
+        <div class="article-body">
+          
+      <h2>How Modern Gas Water Heater Pilot Systems Function</h2>
+      <p>
+        Before diagnosing pilot outages, it is helpful to distinguish between older mechanical water heaters and modern sealed-combustion systems.
+      </p>
+      <p>
+        Older water heaters manufactured prior to 2003 featured an open burner chamber accessible beneath a slide-off metal door. Modern water heaters, however, comply with Flammable Vapor Ignition Resistant (FVIR) standards. They feature a completely sealed glass combustion chamber, a specialized flame arrestor plate, and a high-temperature thermal switch.
+      </p>
+      <p>
+        In both styles, a continuous pilot flame must engulf a safety sensor (a thermocouple or thermopile) to prove flame presence before the main gas valve is allowed to open. When the pilot flame goes out, the safety sensor cools down, snapping the safety valve closed within sixty seconds to prevent hazardous gas leaks.
+      </p>
+
+      <h2>The Six Most Common Causes of Pilot Outages in Idaho Falls</h2>
+
+      <h3>1. Weak or Carbon-Fouled Thermocouple</h3>
+      <p>
+        The thermocouple is the front-line safety sensor. In Eastern Idaho’s hard water environment, mineral dust and airborne particles coat the copper sensor tip in soot and mineral scale. If the thermocouple cannot produce its required 20 to 30 millivolts of DC power, the safety magnet inside the gas control valve drops out, extinguishing the pilot flame.
+      </p>
+
+      <h3>2. Clogged Flame Arrestor Screen (FVIR System Starvation)</h3>
+      <p>
+        Underneath the burner chamber of every modern water heater is a porous ceramic or stainless steel flame arrestor screen designed to let fresh combustion air in while preventing burning vapors from escaping.
+      </p>
+      <p>
+        Over several years, laundry lint, pet dander, and basement dust coat the underside of this arrestor screen. When the main burner ignites, the starved flame consumes all available oxygen in seconds. The starving flame rolls upward and snuffs out the pilot flame due to severe oxygen starvation.
+      </p>
+
+      <h3>3. Restricted Pilot Orifice</h3>
+      <p>
+        Natural gas travels to the pilot burner through an ultra-fine orifice—a pinhole opening smaller than a human hair. Tiny particles of pipe scale, spider webs, or oily residue from gas lines can obstruct this orifice.
+      </p>
+      <p>
+        A restricted orifice produces a weak, lazy yellow flame instead of a sharp, roaring blue torch. A lazy flame lacks the thermal energy required to heat the thermocouple sufficiently, causing intermittent dropouts.
+      </p>
+
+      <h3>4. Negative Pressure Backdrafts from High Foothill Winds</h3>
+      <p>
+        Homes situated in foothills neighborhoods like <a href="/locations/ammon/">Ammon</a>, <a href="/locations/cedar-ridge/">Cedar Ridge</a>, and <a href="/locations/country-club-hills/">Country Club Hills</a> frequently experience fierce wind gusts off the mountains.
+      </p>
+      <p>
+        If an atmospheric chimney vent terminates in a turbulent wind zone or lacks a high-velocity wind-resistant cap, strong gusts can push high-pressure outdoor air straight down the chimney flue. This downdraft descends into the water heater draft hood, blowing out the pilot flame like a candle.
+      </p>
+
+      <h3>5. Tripped Thermal Cut-Off (TCO) Switch</h3>
+      <p>
+        FVIR water heaters feature a fusible thermal switch or bi-metal thermal cut-off (TCO) switch wired directly in series with the thermocouple. If internal combustion temperatures exceed safe limits (often due to a clogged arrestor screen or backdrafting), the TCO trips to prevent a house fire. On some models, the TCO can be reset; on others, the entire burner door assembly must be replaced.
+      </p>
+
+      <h3>6. Defective Gas Control Valve Electromagnet</h3>
+      <p>
+        If the thermocouple produces 25+ millivolts, the pilot flame is crisp and blue, and all safety switches are closed, but the pilot still extinguishes the instant you release the lighting knob, the electromagnet inside the gas control valve has burned out. The complete gas valve assembly must be replaced.
+      </p>
+
+      <h2>Pilot Light Troubleshooting Table</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Pilot Symptom</th>
+              <th>Flame Appearance</th>
+              <th>Likely Culprit</th>
+              <th>Corrective Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Shuts off instantly when knob released</td>
+              <td>Crisp blue flame</td>
+              <td>Defective thermocouple or failed magnet</td>
+              <td>Multimeter test & replace thermocouple</td>
+            </tr>
+            <tr>
+              <td>Pilot flame is lazy, yellow, and small</td>
+              <td>Weak yellow candle-like flame</td>
+              <td>Clogged pilot orifice</td>
+              <td>Disassemble & clean with compressed air</td>
+            </tr>
+            <tr>
+              <td>Pilot goes out when main burner fires</td>
+              <td>Flame lifts off burner & vanishes</td>
+              <td>Clogged FVIR arrestor screen</td>
+              <td>Brush & vacuum underside arrestor</td>
+            </tr>
+            <tr>
+              <td>Pilot only blows out on stormy / windy days</td>
+              <td>Normal blue flame until gusts occur</td>
+              <td>Flue backdraft / downdraft</td>
+              <td>Install high-velocity wind cap on roof</td>
+            </tr>
+            <tr>
+              <td>Igniter sparks but flame never catches</td>
+              <td>No flame produced</td>
+              <td>Air in gas line or closed supply shutoff</td>
+              <td>Purge line & inspect gas supply valve</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>When to Call a Licensed Plumber</h2>
+      <p>
+        While cleaning a dusty air intake screen or relighting a pilot once is a reasonable homeowner task, disassembling gas lines, unthreading sealed combustion doors, or diagnosing electrical millivolt dropouts requires professional plumbing certification.
+      </p>
+      <p>
+        Improper reassembly of a sealed combustion chamber can damage the high-temperature silicone gasket, allowing deadly carbon monoxide to escape into your living spaces.
+      </p>
+      <p>
+        At Idaho Falls Water Heater Pros, our technicians carry commercial draft testing meters, OEM Honeywell and White-Rodgers gas controls, and universal pilot assemblies. Call <a href="tel:+12082182108">(208) 218-2108</a> to schedule an inspection and get an upfront estimate.
+      </p>
+    
+        
+      <!-- In-Depth Preventive Maintenance & Professional Protocols -->
+      <div class="content-block">
+        <span class="section-tag">Idaho Falls Preventive Protocol</span>
+        <h2>Proactive Maintenance Protocols for Bonneville County Homeowners</h2>
+        <p>
+          Given the unique environmental stresses of Eastern Idaho—including 14.1 GPG dissolved calcium carbonate from the Eastern Snake River Plain Aquifer, winter groundwater temperatures dropping to 38°F, and severe seasonal freeze-thaw cycles—relying solely on reactive emergency repairs is costly and disruptive. Implementing a structured preventive maintenance routine protects your investment, maintains manufacturer warranty compliance, and preserves peak energy efficiency.
+        </p>
+        <p>
+          Our licensed service team recommends the following seasonal schedule for all residential and commercial water heating systems in Idaho Falls and Ammon:
+        </p>
+        <ul>
+          <li><strong>Every 6 Months: Visual and Operational Inspection:</strong> Inspect the cold water inlet and hot water outlet connections for green oxidation or white crusting (dielectric corrosion). Check the temperature and pressure (T&P) relief valve discharge pipe to verify there is no active dripping or dried mineral trails. Examine the burner viewing glass on gas units to ensure a crisp blue flame without yellow tipping or soot buildup.</li>
+          <li><strong>Every 12 Months: Pressurized Hydro-Flush and Descaling:</strong> Connect a high-temperature drain hose to the lower drain valve and evacuate accumulated calcium gravel from the tank floor. For tankless systems, isolate the heat exchanger using service valves and circulate a food-grade virgin citric acid solution for 60 to 90 minutes to dissolve microscopic scale adhering to heat exchanger tubes.</li>
+          <li><strong>Every 2 Years: Sacrificial Anode Rod Evaluation:</strong> Unthread the top anode rod bolt using a 1-1/16-inch socket and inspect the core wire. If more than six inches of the steel center wire is exposed, or if the rod diameter has diminished below 1/4 inch, replace the rod immediately with a new magnesium rod or upgrade to a powered titanium anode.</li>
+          <li><strong>Every 3 to 5 Years: Thermal Expansion Tank and Pressure Regulation Audit:</strong> Test your home’s baseline static water pressure using a calibrated digital pressure gauge. If municipal pressure exceeds 75 PSI, recalibrate or replace the pressure reducing valve (PRV). Test the air Schrader valve on the thermal expansion tank to verify that the internal rubber bladder has not torn or waterlogged.</li>
+        </ul>
+        <p>
+          By following this preventive maintenance framework, Idaho Falls property owners can easily extend the service life of their water heaters from the regional average of 8 years up to 12 to 15 years, saving thousands of dollars in premature replacement expenses while enjoying consistent, scalding-safe hot water every day of the year.
+        </p>
+      </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <FaqAccordion faqs={postFaqs} title="Frequently Asked Questions" />
+
+    <!-- CTA Band -->
+    <CtaBand 
+      headline="Need Professional Water Heater Help in Idaho Falls?"
+      subtext="Call (208) 218-2108 now to speak directly with an on-call licensed plumber and request an estimate."
+    />
+
+    <!-- Contact Section (Pure Phone CTA) -->
+    <ContactForm 
+      title="Request Your On-Site Estimate" 
+      subtitle="Call (208) 218-2108 directly to discuss your system with an on-call technician and schedule prompt local dispatch."
+      locationContext="Idaho Falls & Bonneville County"
+    />
+  </article>
+</Layout>
+
+<style>
+  .post-header {
+    background: linear-gradient(180deg, #f0f7fc 0%, #ffffff 100%);
+    padding: 3.5rem 0 2.5rem 0;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .post-header-container {
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .post-meta-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .post-cat {
+    color: var(--color-secondary);
+    background: rgba(234, 88, 12, 0.1);
+    padding: 0.25rem 0.65rem;
+    border-radius: var(--radius-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .post-date, .post-read-time {
+    color: var(--color-text-muted);
+  }
+
+  .post-header h1 {
+    font-size: clamp(1.85rem, 3.5vw, 2.5rem);
+    line-height: 1.25;
+    margin-bottom: 1.25rem;
+  }
+
+  .post-lead {
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+    margin: 0 auto;
+  }
+
+  .blog-content-container {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  .article-body {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--color-text-dark);
+  }
+
+  .article-body h2 {
+    font-size: 1.6rem;
+    margin-top: 2.75rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+  }
+
+  .article-body h3 {
+    font-size: 1.3rem;
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .article-body p {
+    margin-bottom: 1.35rem;
+  }
+
+  .article-body ul, .article-body ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .article-body li {
+    margin-bottom: 0.65rem;
+    line-height: 1.6;
+  }
+
+  .article-body strong {
+    color: var(--color-primary-dark);
+  }
+
+  .article-body a {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  .article-body a:hover {
+    color: var(--color-secondary);
+  }
+</style>

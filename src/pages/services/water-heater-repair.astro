@@ -1,0 +1,586 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import FaqAccordion from '../../components/FaqAccordion.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import ContactForm from '../../components/ContactForm.astro';
+
+const pageTitle = "Water Heater Repair Idaho Falls | Same-Day 24/7 Service";
+const pageDescription = "Fast, professional water heater repair in Idaho Falls, ID. From pilot light failures to burning elements and valve leaks, our licensed plumbers repair all brands 24/7.";
+
+const breadcrumbs = [
+  { name: "Services", url: "/services/" },
+  { name: "Water Heater Repair", url: "/services/water-heater-repair/" }
+];
+
+const faqs = [
+  {
+    question: "Why is my water heater running out of hot water so quickly?",
+    answer: "The most frequent culprit in Idaho Falls is either a burnt-out lower heating element (in electric models) or a broken plastic dip tube. The dip tube directs cold incoming water to the bottom of the tank so it heats up before rising. If the tube cracks or disintegrates, incoming cold water mixes directly with hot water at the top, resulting in showers turning lukewarm within minutes."
+  },
+  {
+    question: "How do I know if my water heater is worth repairing or if I should replace it?",
+    answer: "If the failure is mechanical or electrical—such as a failed gas thermocouple, heating element, thermostat, or leaking temperature-and-pressure (T&P) valve—and the tank is under 8 years old, repair is almost always the smart economic choice. If the steel tank itself is leaking from the bottom or rusted through, the unit cannot be repaired safely and must be replaced."
+  },
+  {
+    question: "What causes the popping or banging noise inside my water heater?",
+    answer: "Idaho Falls tap water contains roughly 14.1 GPG (Grains Per Gallon) of dissolved minerals from the Eastern Snake River Plain Aquifer. This creates heavy calcium carbonate scale deposits at the bottom of your tank. Water gets trapped beneath this rock-hard sediment layer, boils, and violently bubbles through, creating a distinctive kettling or banging sound."
+  },
+  {
+    question: "Can I relight my own pilot light safely?",
+    answer: "Yes, if your water heater has an electronic spark igniter and clear instructions on the front panel. However, if the pilot repeatedly blows out, the burner area smells strongly of gas, or the flame burns yellow instead of crisp blue, you should shut off the gas valve immediately and call our licensed technicians at (208) 218-2108."
+  },
+  {
+    question: "Do you carry replacement parts on your trucks for immediate repair?",
+    answer: "Yes. Our service vans are fully stocked with commercial-grade heating elements, dual-action thermostats, thermocouples, thermopiles, pilot assemblies, drain valves, and T&P relief valves for Bradford White, Rheem, AO Smith, State, and American Standard water heaters."
+  }
+];
+
+const relatedServices = [
+  { name: "Water Heater Replacement", url: "/services/water-heater-replacement/" },
+  { name: "Water Heater Maintenance & Descaling", url: "/services/water-heater-maintenance/" },
+  { name: "Gas Water Heater Repair & Installation", url: "/services/gas-water-heater-repair-installation/" },
+  { name: "Electric Water Heater Repair & Installation", url: "/services/electric-water-heater-repair-installation/" }
+];
+
+const galleryPhotos = [
+  {
+    src: "/images/residential-gas-water-heater-tank.webp",
+    alt: "50-gallon residential gas water heater tank with draft hood and drain pan in Idaho Falls",
+    title: "Residential Gas Water Heater Setup",
+    caption: "Code-compliant 50-gallon gas tank featuring galvanized draft hood, safety pan, and copper connections."
+  },
+  {
+    src: "/images/residential-electric-water-heater-tank.webp",
+    alt: "Energy-efficient 50-gallon electric storage water heater with dual thermostats in Idaho Falls",
+    title: "Electric Water Heater Installation",
+    caption: "High-recovery electric storage water heater with dual access panels and insulated thermal lines."
+  },
+  {
+    src: "/images/tankless-water-heater-installation-wall-mount.webp",
+    alt: "High-efficiency wall-mounted tankless water heater with copper supply lines and digital display",
+    title: "Wall-Mounted Tankless Water Heater",
+    caption: "Continuous on-demand hot water system with digital thermostat control and isolation valves."
+  },
+  {
+    src: "/images/gas-water-heater-burner-repair-inspection.webp",
+    alt: "Clean blue flame combustion inside gas water heater burner chamber and thermocouple inspection",
+    title: "Gas Burner & Pilot Flame Calibration",
+    caption: "Diagnostic inspection of pilot orifice, flame sensor, and thermocouple combustion."
+  },
+  {
+    src: "/images/electric-water-heater-heating-element-testing.webp",
+    alt: "Digital multimeter testing electrical continuity across upper heating element terminals",
+    title: "Heating Element Ohms Resistance Test",
+    caption: "Pinpointing burnt or shorted 4500-watt immersion heating elements using precision multimeters."
+  },
+  {
+    src: "/images/water-heater-heating-element-replacement.webp",
+    alt: "Brand new copper low-watt density water heater heating element and specialized socket wrench",
+    title: "Low-Watt Density Heating Elements",
+    caption: "Resistored incoloy replacement elements engineered to withstand high mineral scale buildup."
+  },
+  {
+    src: "/images/water-heater-thermal-expansion-tank-plumbing.webp",
+    alt: "Blue thermal expansion tank installed on closed residential plumbing loop above water heater",
+    title: "Thermal Expansion Tank Calibration",
+    caption: "Regulating closed-loop thermal overpressure to prevent tank weld fatigue and relief valve leaks."
+  },
+  {
+    src: "/images/copper-pipes-and-brass-valves-water-heater.webp",
+    alt: "Heavy-duty full-port brass ball drain valve installed on water heater base fitting",
+    title: "Commercial-Grade Brass Drain Valve",
+    caption: "Upgrading fragile plastic factory drain valves to durable quarter-turn brass ball valves."
+  },
+  {
+    src: "/images/pressure-relief-valve-testing-plumber.webp",
+    alt: "Temperature and pressure relief valve (T&P valve) safety test with copper drop pipe",
+    title: "T&P Safety Relief Valve Testing",
+    caption: "Verifying 150 PSI overpressure and 210°F thermal discharge spring performance."
+  },
+  {
+    src: "/images/sacrificial-anode-rod-replacement.webp",
+    alt: "Corroded sacrificial magnesium anode rod compared to brand new replacement rod for water heater",
+    title: "Sacrificial Anode Rod Replacement",
+    caption: "Comparing a depleted magnesium anode rod to a brand new rod to prevent steel tank rust."
+  },
+  {
+    src: "/images/hard-water-sediment-tank-flushing-descaling.webp",
+    alt: "Flushing dissolved calcium carbonate mineral scale from water heater tank into drain bucket",
+    title: "Pressurized Sediment Hydro-Flushing",
+    caption: "Evacuating hard water sediment gravel produced by the Eastern Snake River Plain Aquifer."
+  },
+  {
+    src: "/images/water-heater-dielectric-unions-copper-pipe.webp",
+    alt: "Dielectric union fittings installed between galvanized water heater tank and copper plumbing",
+    title: "Dielectric Union Corrosion Prevention",
+    caption: "Eliminating galvanic electrolytic reaction between dissimilar metals at tank inlet connections."
+  },
+  {
+    src: "/images/gas-water-heater-control-valve-multimeter.webp",
+    alt: "Testing gas control thermostat valve voltage and thermopile millivolts with multimeter",
+    title: "Gas Control Valve Diagnostics",
+    caption: "Verifying millivolt output from thermopile to ensure safe and reliable gas valve cycling."
+  },
+  {
+    src: "/images/tankless-water-heater-digital-display-valves.webp",
+    alt: "Tankless water heater digital control panel set to 120 degrees with brass service valves",
+    title: "Tankless Flow & Temperature Controls",
+    caption: "Factory-calibrated digital modulation ensuring precise domestic hot water temperatures."
+  },
+  {
+    src: "/images/water-heater-repair-technician-idaho-falls.webp",
+    alt: "Field technician repairing residential gas water heater equipment in Idaho Falls basement",
+    title: "On-Site Water Heater Repair Service",
+    caption: "Comprehensive diagnostic troubleshooting and OEM parts replacement on residential units."
+  }
+];
+---
+
+<Layout 
+  title={pageTitle} 
+  description={pageDescription} 
+  canonicalPath="/services/water-heater-repair/"
+  breadcrumbs={breadcrumbs}
+  serviceName="Water Heater Repair"
+  faqs={faqs}
+>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero Section -->
+  <section class="service-hero">
+    <div class="container">
+      <div class="service-hero-inner">
+        <div class="service-hero-content">
+          <span class="section-tag">24/7 Emergency Dispatch</span>
+          <h1>Water Heater Repair in Idaho Falls</h1>
+          <p class="service-hero-lead">
+            No hot water or a leaking tank can disrupt your entire household in an instant. Idaho Falls Water Heater Pros provides dependable water heater repair in Idaho Falls with same-day appointments, upfront diagnostics, and 24/7 emergency dispatch. We service gas, electric, and tankless units across all Idaho Falls zip codes and surrounding communities.
+          </p>
+          <div class="service-hero-ctas">
+            <a href="tel:+12082182108" class="btn btn-primary btn-lg">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+              Call (208) 218-2108
+            </a>
+            <a href="#contact" class="btn btn-outline btn-lg">
+              Schedule Repair Online
+            </a>
+          </div>
+          <p class="hero-availability-note">
+            Available across all Bonneville County neighborhoods. View our full <a href="/locations/">service area directory</a>.
+          </p>
+        </div>
+
+        <div class="service-hero-highlight">
+          <div class="highlight-card">
+            <img 
+              src="/images/water-heater-repair-technician-idaho-falls.webp" 
+              alt="Licensed technician repairing water heater in Idaho Falls" 
+              width="450" 
+              height="280" 
+              class="service-feature-photo" 
+            />
+            <h3>Fast Local Dispatch</h3>
+            <p class="promo-desc">Our trucks carry OEM elements, valves, and thermocouples for same-day repair across Bonneville County.</p>
+            <a href="tel:+12082182108" class="btn btn-primary" style="width:100%;">
+              Call for an Estimate: (208) 218-2108
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <!-- Scope of Service Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What We Fix</span>
+        <h2>Comprehensive Water Heater Repair Services</h2>
+        <p>Our licensed plumbers diagnose and resolve the root cause of domestic hot water failures.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>Heating Element Replacement</h3>
+          <p>We test electrical continuity and resistance to replace burnt upper and lower immersion elements with premium resistored low-watt density components built to resist hard water scale.</p>
+        </div>
+        <div class="card">
+          <h3>Thermostat & Control Calibration</h3>
+          <p>Faulty thermostats cause water to turn scalding hot or stay ice cold. We replace worn dual-thermostat systems on electric tanks and digital sensors on high-efficiency models.</p>
+        </div>
+        <div class="card">
+          <h3>Gas Valve & Pilot Assembly</h3>
+          <p>From failed thermocouples and corroded burner orifices to faulty Honeywell gas control valves, we restore safe, consistent ignition to natural gas and propane systems.</p>
+        </div>
+        <div class="card">
+          <h3>Pressure Relief Valve (T&P) Service</h3>
+          <p>A dripping or leaking temperature and pressure valve is a critical safety warning. We test relief springs, inspect thermal expansion levels, and replace malfunctioning valves.</p>
+        </div>
+        <div class="card">
+          <h3>Dip Tube Replacement</h3>
+          <p>When cracked dip tubes dump cold water directly into the top of your tank, you lose hot water within minutes. We install cross-linked polyethylene dip tubes with built-in vortex swirl.</p>
+        </div>
+        <div class="card">
+          <h3>Drain Valve & Fitting Leaks</h3>
+          <p>Plastic factory drain valves often crack and leak over time. We replace them with heavy-duty brass ball-type drain valves that allow for clean seasonal maintenance flushes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Educational Section: Why Failures Occur in Idaho Falls -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Eastern Idaho Local Factors</span>
+        <h2>Why Water Heaters Break Down in Idaho Falls</h2>
+        <p>Understanding the local conditions that place severe demands on your home's water heating equipment.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>14.1 GPG Hard Water Mineral Scale</h3>
+          <p>
+            Groundwater drawn from the Eastern Snake River Plain Aquifer contains roughly 240 PPM (14.1 grains per gallon) of dissolved calcium and magnesium. When water is heated past 120°F, these minerals rapidly solidify into calcium carbonate scale. 
+          </p>
+          <p>
+            This scale blankets bottom burner plates and encrusts electric immersion elements. The heater must burn hotter and longer to transfer heat through the rock layer, causing premature element burnout and overheating tank bottoms.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Sub-Zero Winter Thermal Shock</h3>
+          <p>
+            During Idaho Falls winters, municipal groundwater enters your plumbing at temperatures near 35°F to 40°F. Your water heater must work intensely to raise that incoming water to 125°F—an 85-degree temperature rise.
+          </p>
+          <p>
+            This extreme temperature differential causes rapid thermal contraction and expansion of metal fittings, stressing older weld seams, gaskets, and dip tubes until leaks develop.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step-by-Step Diagnostic Process -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Repair Workflow</span>
+        <h2>How We Complete Your Water Heater Repair on Site</h2>
+        <p>A thorough diagnostic protocol ensures we fix the underlying problem, not just the symptom.</p>
+      </div>
+
+      <div class="grid-4 process-grid">
+        <div class="process-step">
+          <div class="step-badge">1</div>
+          <h3>System Isolation</h3>
+          <p>We safely isolate the electrical breaker or gas supply line and test for stray voltage or combustible gas leaks before beginning work.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-badge">2</div>
+          <h3>Multi-Point Testing</h3>
+          <p>Using digital multimeters, manometers, and pressure gauges, we test element ohms, gas pressure, and thermal expansion levels.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-badge">3</div>
+          <h3>Component Replacement</h3>
+          <p>We replace the damaged components using OEM-certified parts, tighten all brass threaded fittings, and reseal gas connections with pipe compound.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-badge">4</div>
+          <h3>Operational Verification</h3>
+          <p>We refill the system, purge trapped air, test flame color and electrical draw, and monitor hot water recovery to confirm normal function.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Signs You Need Service -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Warning Signs</span>
+        <h2>When to Call for Water Heater Repair</h2>
+        <p>Catching small component issues early prevents costly basement water damage and catastrophic tank ruptures.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>Water Temperature Drops Fast</h3>
+          <p>Showers that run out of hot water after five minutes usually indicate a failed lower heating element or a shattered dip tube.</p>
+        </div>
+        <div class="card">
+          <h3>Rusty or Discolored Hot Water</h3>
+          <p>If hot water comes out brown or cloudy while cold water runs clear, your sacrificial anode rod has expired and the inner steel tank is beginning to rust.</p>
+        </div>
+        <div class="card">
+          <h3>Moisture or Puddles Around the Tank</h3>
+          <p>Water pooling beneath the tank can come from a leaking temperature valve, drain fitting, or an internal tank fracture. Immediate inspection is vital.</p>
+        </div>
+        <div class="card">
+          <h3>Rumbling, Popping, or Sizzling Sounds</h3>
+          <p>Popping noises resemble popcorn cooking in the basement. This is steam fighting through thick mineral sediment built up over months of hard water exposure.</p>
+        </div>
+        <div class="card">
+          <h3>Foul Rotten-Egg Odor</h3>
+          <p>A sulfur or rotten egg smell in your hot water occurs when bacteria react with aluminum or magnesium anode rods. We install powered titanium rods to eliminate odors.</p>
+        </div>
+        <div class="card">
+          <h3>Pilot Light Keeps Going Out</h3>
+          <p>If your gas water heater's pilot flame refuses to stay lit, the thermocouple is dirty or defective, or the gas control valve's magnet has failed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools & Professional Methods -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Professional Tools</span>
+        <h2>Precision Equipment We Use for Accurate Repairs</h2>
+        <p>We do not guess. Our technicians use calibrated diagnostic instruments to pinpoint water heater failures.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>Digital Multimeters</h3>
+          <p>Accurately measures resistance (ohms) across heating elements and voltage supply to confirm high-limit switches and thermostats are operating within safe parameters.</p>
+        </div>
+        <div class="card">
+          <h3>Electronic Gas Sniffers & Manometers</h3>
+          <p>Detects natural gas leaks down to parts per million and measures inlet gas pressure in inches of water column (W.C.) for proper burner flame combustion.</p>
+        </div>
+        <div class="card">
+          <h3>High-Torque Element Sockets & Brass Fittings</h3>
+          <p>Prevents stripped hex heads when removing corroded elements from older water tanks and replaces cheap plastic parts with commercial-grade brass.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 15-Photo Field Diagnostic & Equipment Gallery -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Visual Field Portfolio</span>
+        <h2>15 Field Diagnostic & Equipment Photos in Idaho Falls</h2>
+        <p>Explore authentic photography of our diagnostic equipment, replacement parts, and residential installations across Bonneville County.</p>
+      </div>
+
+      <div class="gallery-grid">
+        {galleryPhotos.map((photo) => (
+          <figure class="gallery-item card">
+            <div class="gallery-img-wrap">
+              <img 
+                src={photo.src} 
+                alt={photo.alt} 
+                width="400" 
+                height="260" 
+                loading="lazy" 
+                class="gallery-img"
+              />
+            </div>
+            <figcaption class="gallery-caption">
+              <h4>{photo.title}</h4>
+              <p>{photo.caption}</p>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services Links -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Connected Services</span>
+        <h2>Related Hot Water Solutions in Idaho Falls</h2>
+        <p>Explore other service options to keep your domestic hot water running efficiently.</p>
+      </div>
+
+      <div class="grid-4">
+        {relatedServices.map((item) => (
+          <div class="card">
+            <h3>{item.name}</h3>
+            <p>Explore dedicated repair, installation, and preventative options for your home.</p>
+            <a href={item.url} class="btn btn-outline" style="width:100%; text-align:center;">
+              View Details →
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <FaqAccordion faqs={faqs} title="Water Heater Repair FAQs" />
+
+  <!-- CTA Band -->
+  <CtaBand 
+    headline="Need Water Heater Repair in Idaho Falls Today?"
+    subtext="Call (208) 218-2108 right now. Our on-call technicians are ready to dispatch across Idaho Falls, Ammon, and Bonneville County 24/7."
+  />
+
+  <!-- Contact Form & Map -->
+  <ContactForm 
+    title="Schedule Your Water Heater Repair"
+    subtitle="Call (208) 218-2108 directly to discuss your system and request an estimate."
+    locationContext="Idaho Falls Water Heater Repair"
+  />
+</Layout>
+
+<style>
+  .service-hero {
+    background: linear-gradient(180deg, #f0f7fc 0%, #ffffff 100%);
+    padding: 3.5rem 0 4rem 0;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .service-hero-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  @media (min-width: 960px) {
+    .service-hero-inner {
+      grid-template-columns: 1.2fr 0.8fr;
+    }
+  }
+
+  .service-hero-lead {
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+  }
+
+  .service-hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-availability-note {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    margin-bottom: 0;
+  }
+
+  .hero-availability-note a {
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+
+  .highlight-card {
+    background: #ffffff;
+    border: 2px solid var(--color-accent);
+    border-radius: var(--radius-lg);
+    padding: 2.25rem;
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+  }
+
+  .highlight-card h3 {
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+  }
+
+  .promo-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--color-accent);
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+  }
+
+  .promo-desc {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1.25rem;
+  }
+
+  .promo-code {
+    display: inline-block;
+    background-color: var(--color-bg-subtle);
+    border: 1px dashed var(--color-primary);
+    padding: 0.5rem 1.25rem;
+    font-weight: 800;
+    color: var(--color-primary-dark);
+    border-radius: var(--radius-sm);
+    letter-spacing: 0.08em;
+  }
+
+  /* 15-Photo Gallery Styling */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .gallery-item {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .gallery-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .gallery-img-wrap {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #f1f5f9;
+  }
+
+  .gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-item:hover .gallery-img {
+    transform: scale(1.04);
+  }
+
+  .gallery-caption {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .gallery-caption h4 {
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    margin-bottom: 0.4rem;
+  }
+
+  .gallery-caption p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    margin: 0;
+  }
+</style>

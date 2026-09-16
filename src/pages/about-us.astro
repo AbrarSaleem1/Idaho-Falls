@@ -1,0 +1,332 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import TrustStrip from '../components/TrustStrip.astro';
+import CtaBand from '../components/CtaBand.astro';
+import ContactForm from '../components/ContactForm.astro';
+
+const pageTitle = "About Idaho Falls Water Heater Pros | Local Hot Water Experts";
+const pageDescription = "Learn about Idaho Falls Water Heater Pros. Dedicated domestic water heater repair, replacement, and installation specialists serving Idaho Falls and Bonneville County.";
+
+const breadcrumbs = [
+  { name: "About Us", url: "/about-us/" }
+];
+---
+
+<Layout 
+  title={pageTitle} 
+  description={pageDescription} 
+  canonicalPath="/about-us/"
+  breadcrumbs={breadcrumbs}
+  schemaType="AboutPage"
+>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero Section -->
+  <section class="about-hero">
+    <div class="container">
+      <span class="section-tag">Dedicated Local Specialists</span>
+      <h1>About Idaho Falls Water Heater Pros</h1>
+      <p class="about-hero-lead">
+        We are a specialized plumbing contractor dedicated exclusively to residential and commercial water heating systems. Based right here in Idaho Falls on Chaffin Lane, we help homeowners solve cold water emergencies, mineral scale buildup, and tank leaks with honest diagnostics and durable craftsmanship.
+      </p>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <!-- Our Story -->
+  <section class="section">
+    <div class="container">
+      <div class="about-story-grid">
+        <div class="story-text">
+          <span class="section-tag">Our History</span>
+          <h2>Focusing on What Matters: Hot Water When You Need It</h2>
+          <p>
+            Idaho Falls Water Heater Pros was founded on a simple observation: most general plumbing contractors treat water heaters as an afterthought between clearing clogged sewer lines and roughing in new construction bathrooms.
+          </p>
+          <p>
+            When a water heater fails in an Idaho winter, a homeowner cannot afford to wait days for a plumber to order parts. They need an expert who arrives with fully stocked trucks, understands the unique 14.1 GPG mineral hardness of our local Eastern Snake River Plain Aquifer, and knows how to safely manage combustion venting and thermal expansion to Idaho State Plumbing Code.
+          </p>
+          <p>
+            By focusing exclusively on water heating—including atmospheric gas tanks, high-efficiency electric systems, and on-demand tankless conversions—our technicians carry deeper diagnostic knowledge and get hot water restored faster than generalists.
+          </p>
+        </div>
+
+        <div class="story-card">
+          <h3>Company Fundamentals</h3>
+          <ul class="fundamentals-list">
+            <li>
+              <strong>Physical Headquarters:</strong> 1265 Chaffin Ln, Idaho Falls, ID 83401, USA
+            </li>
+            <li>
+              <strong>Service Availability:</strong> 24 Hours a Day, 7 Days a Week, 365 Days a Year
+            </li>
+            <li>
+              <strong>Primary Coverage:</strong> Idaho Falls, Ammon, and Bonneville County (ZIP codes: 83401, 83402, 83403, 83404, 83405, 83406, 83415)
+            </li>
+            <li>
+              <strong>Compliance:</strong> Idaho State Plumbing Code (UPC), City of Idaho Falls Building Division permitted
+            </li>
+            <li>
+              <strong>Core Philosophy:</strong> Upfront fixed pricing, no hidden trip charges, and zero pushy sales tactics
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Owner & Leadership Team Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Leadership & Team</span>
+        <h2>Meet Our Local Leadership</h2>
+        <p>Real tradespeople committed to honest work and community service in Eastern Idaho.</p>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-photo-placeholder">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="64" height="64"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            <span>Master Plumber / Operations Lead</span>
+          </div>
+          <div class="team-info">
+            <h3>Senior Technical Supervisor</h3>
+            <p class="team-role">Field Operations & Code Compliance</p>
+            <p class="team-bio">
+              With over 15 years of hands-on plumbing and hydronic heating experience in Bonneville County, our technical lead oversees quality assurance on every water heater replacement. Certified in combustion gas analysis, Navien tankless systems, and commercial water distribution.
+            </p>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-photo-placeholder">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="64" height="64"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            <span>Dispatch & Customer Care Lead</span>
+          </div>
+          <div class="team-info">
+            <h3>Dispatch & Client Services Coordinator</h3>
+            <p class="team-role">Emergency Scheduling & Customer Relations</p>
+            <p class="team-bio">
+              Managing our 24/7 emergency dispatch desk from our Chaffin Lane office. Dedicated to keeping homeowners informed about technician arrival windows, parts availability, and transparent upfront quotes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Values -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Standards</span>
+        <h2>Our Core Values</h2>
+        <p>How we conduct business on every service call throughout Idaho Falls.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>Direct Transparency</h3>
+          <p>We quote exact prices before starting any repair or installation. You will never encounter unexpected fees, diagnostic surcharges, or inflated cleanup costs.</p>
+        </div>
+        <div class="card">
+          <h3>Uncompromising Safety</h3>
+          <p>Gas venting, carbon monoxide risks, and high hydrostatic pressure are serious hazards. We adhere strictly to Idaho Plumbing Code and never cut corners on thermal expansion or safety valves.</p>
+        </div>
+        <div class="card">
+          <h3>Hard Water Craftsmanship</h3>
+          <p>Because we live and work in Idaho Falls, we specify components designed to resist 14.1 GPG hard water—including brass ball valves, low-watt density elements, and heavy-duty anode rods.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area Coverage Summary -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Where We Operate</span>
+        <h2>Serving the Greater Idaho Falls Metropolitan Area</h2>
+        <p>We dispatch directly from 1265 Chaffin Ln to all corners of Bonneville County.</p>
+      </div>
+
+      <div class="coverage-summary-box">
+        <p>
+          Our service area spans Downtown Idaho Falls, Snake River Landing, Kate Curley Park, Ammon, Country Club Hills, Cedar Ridge, Hidden Valley, Heritage Heights, Boulder Creek Estates, Woodruff, Cotton, Community Park, Eagle Rock, Idaho Falls West, New Sweden, Osgood, Lincoln, Grant, Coltman, Hillview, Taylor, Shelton, and Bone.
+        </p>
+        <p>
+          We provide active 24/7 service across all seven regional zip codes: <strong>83401, 83402, 83403, 83404, 83405, 83406, and 83415</strong>.
+        </p>
+        <div class="coverage-actions">
+          <a href="/locations/" class="btn btn-secondary">Explore All Neighborhood Guides →</a>
+          <a href="/services/" class="btn btn-outline">Browse All Services →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <CtaBand 
+    headline="Need Reliable Water Heater Service in Idaho Falls?"
+    subtext="Call (208) 218-2108 now to speak directly with our team. We are available 24 hours a day, 7 days a week."
+  />
+
+  <!-- Contact Form & Map -->
+  <ContactForm 
+    title="Reach Out to Our Office"
+    subtitle="Send a message below or call our dispatch desk directly at (208) 218-2108."
+    locationContext="About Us Page"
+  />
+</Layout>
+
+<style>
+  .about-hero {
+    background: linear-gradient(180deg, #f0f7fc 0%, #ffffff 100%);
+    padding: 3.5rem 0 3rem 0;
+    text-align: center;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .about-hero h1 {
+    margin-bottom: 1rem;
+  }
+
+  .about-hero-lead {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+
+  .about-story-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  @media (min-width: 960px) {
+    .about-story-grid {
+      grid-template-columns: 1.25fr 0.75fr;
+    }
+  }
+
+  .story-card {
+    background: var(--color-bg-light);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    border-top: 4px solid var(--color-primary);
+  }
+
+  .story-card h3 {
+    margin-bottom: 1.25rem;
+  }
+
+  .fundamentals-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .fundamentals-list li {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    line-height: 1.45;
+  }
+
+  .fundamentals-list strong {
+    display: block;
+    color: var(--color-primary-dark);
+    margin-bottom: 0.15rem;
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .team-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .team-card {
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .team-photo-placeholder {
+    background: var(--color-bg-subtle);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .team-photo-placeholder span {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    font-weight: 600;
+    margin-top: 0.5rem;
+  }
+
+  .team-info {
+    padding: 1.75rem;
+    flex: 1;
+  }
+
+  .team-role {
+    color: var(--color-accent);
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .team-bio {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+
+  .coverage-summary-box {
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    text-align: center;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .coverage-summary-box p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .coverage-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.75rem;
+  }
+</style>

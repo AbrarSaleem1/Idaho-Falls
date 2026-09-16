@@ -1,0 +1,26 @@
+# Build output & dependencies
+dist/
+node_modules/
+.astro/
+
+# Environment and sensitive data
+.env
+.env.*
+!.env.example
+
+# Logs and system files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+.DS_Store
+Thumbs.db
+
+# Utility and scratch scripts
+server.js
+download-images.js
+download-more.js
+process-generated-images.js
+scratch_wiki.json
+push-to-github.bat
+*.dll

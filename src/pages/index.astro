@@ -1,0 +1,851 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TrustStrip from '../components/TrustStrip.astro';
+import FaqAccordion from '../components/FaqAccordion.astro';
+import CtaBand from '../components/CtaBand.astro';
+import ContactForm from '../components/ContactForm.astro';
+
+const pageTitle = "Water Heater Repair Idaho Falls | 24/7 Local Emergency Service";
+const pageDescription = "Fast, licensed water heater repair in Idaho Falls, ID. From leaking tanks and pilot failures to tankless installations, call (208) 218-2108 for an estimate.";
+
+const homeFaqs = [
+  {
+    question: "How fast can a technician arrive for emergency water heater repair in Idaho Falls?",
+    answer: "Because our dispatch hub is centrally located on Chaffin Lane in Idaho Falls, our technicians typically arrive within 45 to 90 minutes for urgent leaks, burner failures, and cold water emergencies throughout Idaho Falls, Ammon, and surrounding zip codes."
+  },
+  {
+    question: "Why is my water heater making a loud popping or rumbling sound?",
+    answer: "Idaho Falls tap water has an average mineral hardness of 14.1 Grains Per Gallon (GPG). Over time, calcium carbonate scale settles at the base of your tank. As the burner heats the water trapped beneath this calcified sediment layer, steam bubbles violently pop through, creating that loud rumbling or tea-kettling noise. A professional flush and descaling can often restore quiet operation."
+  },
+  {
+    question: "Should I repair or replace my water heater?",
+    answer: "If your water heater is under 8 to 10 years old, hasn't developed a tank wall breach, and the issue is an isolated part like a thermocouple, gas valve, or electric heating element, a repair is usually the most practical path. However, if the inner tank is rusted through or actively leaking from the base, replacement is required by safety codes. Call our office to discuss your system and request an estimate."
+  },
+  {
+    question: "Do you pull permits for water heater installations in Idaho Falls?",
+    answer: "Yes. Every water heater replacement and new installation performed by Idaho Falls Water Heater Pros complies strictly with the Idaho State Plumbing Code (UPC). We pull the required permits through the City of Idaho Falls Building Division and schedule final inspections to ensure your home remains compliant and safe."
+  },
+  {
+    question: "Are thermal expansion tanks required in Bonneville County homes?",
+    answer: "Yes, under Idaho State Plumbing Code, any home with a closed water system—such as those with a backflow preventer or pressure-reducing valve—must have a properly sized thermal expansion tank installed. This prevents dangerous hydrostatic pressure spikes from rupturing your water heater tank or plumbing joints."
+  }
+];
+
+const services = [
+  {
+    title: "Water Heater Repair",
+    desc: "Fast diagnostics and lasting repairs for faulty thermostats, failing elements, leaking valves, and pilot assemblies.",
+    url: "/services/water-heater-repair/",
+    image: "/images/water-heater-repair-technician-idaho-falls.webp",
+    alt: "Licensed plumber repairing domestic water heater in Idaho Falls"
+  },
+  {
+    title: "Water Heater Replacement",
+    desc: "Seamless changeouts of aging, ruptured, or inefficient tanks with energy-saving units sized precisely for your household.",
+    url: "/services/water-heater-replacement/",
+    image: "/images/commercial-residential-water-heater-replacement.webp",
+    alt: "New residential water heater replacement tank installation"
+  },
+  {
+    title: "Water Heater Maintenance",
+    desc: "Deep tank flushing, sacrificial anode rod replacements, and safety testing to combat Idaho Falls' severe 14.1 GPG hard water.",
+    url: "/services/water-heater-maintenance/",
+    image: "/images/hard-water-sediment-tank-flushing-descaling.webp",
+    alt: "Flushing hard water calcium sediment from water heater drain valve"
+  },
+  {
+    title: "Water Heater Installation",
+    desc: "Full code-compliant installations for remodels and new builds, complete with thermal expansion tanks and seismic strapping.",
+    url: "/services/water-heater-installation/",
+    image: "/images/modern-residential-basement-mechanical-room.webp",
+    alt: "Code compliant water heater installation in modern basement mechanical room"
+  },
+  {
+    title: "Tankless Water Heater Repair & Installation",
+    desc: "Endless hot water on demand with compact, ultra-high-efficiency wall units from leading brands like Rinnai and Navien.",
+    url: "/services/tankless-water-heater-repair-installation/",
+    image: "/images/tankless-water-heater-installation-wall-mount.webp",
+    alt: "Wall-mounted tankless on-demand water heater installation"
+  },
+  {
+    title: "Gas Water Heater Repair & Installation",
+    desc: "Expert service for atmospheric, power-vent, and direct-vent gas units, including gas control valves and flue draft testing.",
+    url: "/services/gas-water-heater-repair-installation/",
+    image: "/images/gas-water-heater-burner-repair-inspection.webp",
+    alt: "Gas water heater burner assembly and flue draft inspection"
+  },
+  {
+    title: "Electric Water Heater Repair & Installation",
+    desc: "Specialized electrical troubleshooting for burnt-out upper and lower elements, tripped reset buttons, and 240V wiring.",
+    url: "/services/electric-water-heater-repair-installation/",
+    image: "/images/electric-water-heater-heating-element-testing.webp",
+    alt: "Testing electric water heater heating element resistance with multimeter"
+  }
+];
+
+const batch1Locations = [
+  {
+    name: "Downtown Idaho Falls (83404)",
+    desc: "Specialized service for historic numbered streets and commercial properties near Broadway and Shoup.",
+    url: "/locations/downtown-idaho-falls/"
+  },
+  {
+    name: "Snake River Landing (83402)",
+    desc: "Modern direct-vent and on-demand tankless water heater maintenance along Snake River Parkway and Pier View Drive.",
+    url: "/locations/snake-river-landing/"
+  },
+  {
+    name: "Kate Curley Park Area (83404)",
+    desc: "Bungalow and mid-century home plumbing solutions, atmospheric venting inspections, and element upgrades.",
+    url: "/locations/kate-curley-park/"
+  },
+  {
+    name: "Ammon (83406 / 83401)",
+    desc: "High-capacity water heaters and dual-unit setups built for growing families along Sunnyside and 17th Street.",
+    url: "/locations/ammon/"
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription} canonicalPath="/" faqs={homeFaqs}>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-pulse"></span>
+          24/7 Water Heater Repair in Idaho Falls & Bonneville County
+        </div>
+        <h1>Idaho Falls Water Heater Repair & Installation Experts</h1>
+        <p class="hero-lead">
+          When your hot water stops working, you need an experienced local technician who understands Idaho Falls plumbing codes, severe winter ground freezes, and local hard water challenges. Idaho Falls Water Heater Pros provides dependable water heater repair in Idaho Falls with same-day appointments, 24/7 emergency response, and clear estimates.
+        </p>
+        <div class="hero-ctas">
+          <a href="tel:+12082182108" class="btn btn-primary btn-lg">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+            Call (208) 218-2108
+          </a>
+          <a href="tel:+12082182108" class="btn btn-outline btn-lg">
+            Call for an Estimate
+          </a>
+        </div>
+        <div class="hero-subline">
+          <span>✓ Idaho State Licensed Technicians</span>
+          <span>✓ 24/7 Emergency Dispatch</span>
+          <span>✓ Honest Written Estimates</span>
+        </div>
+      </div>
+      
+      <div class="hero-image-wrap">
+        <img 
+          src="/images/professional-plumber-diagnosing-water-heater.webp" 
+          alt="50-gallon residential gas water heater equipment installation in Idaho Falls" 
+          width="600" 
+          height="400" 
+          class="hero-img" 
+        />
+        <div class="hero-img-badge">
+          <strong>Centrally Located on Chaffin Ln</strong>
+          <span>Rapid 45–90 Minute Average Arrival</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Strip -->
+  <TrustStrip />
+
+  <!-- Services Grid with SEO Photography -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Complete Hot Water Solutions</span>
+        <h2>Comprehensive Water Heater Services in Idaho Falls</h2>
+        <p>From minor repairs to complete mechanical conversions, our licensed plumbing technicians service all makes, models, and fuel sources across Eastern Idaho.</p>
+      </div>
+
+      <div class="grid-3">
+        {services.map((srv) => (
+          <div class="card service-card">
+            <div class="service-img-wrap">
+              <img 
+                src={srv.image} 
+                alt={srv.alt} 
+                width="400" 
+                height="240" 
+                loading="lazy" 
+                class="service-card-img" 
+              />
+            </div>
+            <h3 class="service-card-title">{srv.title}</h3>
+            <p class="service-card-desc">{srv.desc}</p>
+            <a href={srv.url} class="service-card-link">
+              Read Service Details & Sizing →
+            </a>
+          </div>
+        ))}
+      </div>
+
+      <div class="services-hub-link-wrap">
+        <a href="/services/" class="btn btn-secondary">
+          Explore Our Full Services Directory →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visual Feature Banner -->
+  <section class="feature-photo-band">
+    <div class="container feature-photo-inner">
+      <div class="feature-text">
+        <span class="section-tag">Quality Hardware</span>
+        <h2>Commercial-Grade Parts Built for Eastern Idaho Water</h2>
+        <p>
+          We install heavy-duty brass ball valves, low-watt density heating elements, and expansion tanks specifically selected to withstand Bonneville County's 14.1 GPG mineral hardness. No cheap plastic fittings or undersized components.
+        </p>
+        <div class="feature-actions">
+          <a href="tel:+12082182108" class="btn btn-primary">
+            Call (208) 218-2108 for an Estimate
+          </a>
+        </div>
+      </div>
+      <div class="feature-img-col">
+        <img 
+          src="/images/copper-pipes-and-brass-valves-water-heater.webp" 
+          alt="Heavy-duty brass shutoff valves and copper water lines for water heater" 
+          width="500" 
+          height="330" 
+          loading="lazy" 
+          class="feature-img" 
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Local Neighborhoods Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Local Service Areas</span>
+        <h2>Serving Every Neighborhood in Idaho Falls & Bonneville County</h2>
+        <p>Water heater demands vary whether you own a historic home near Kate Curley Park or a new build at Snake River Landing. We bring targeted local expertise to your neighborhood.</p>
+      </div>
+
+      <div class="grid-2">
+        {batch1Locations.map((loc) => (
+          <div class="card location-card">
+            <h3>{loc.name}</h3>
+            <p>{loc.desc}</p>
+            <a href={loc.url} class="location-link">
+              View {loc.name} Water Heater Service Guide →
+            </a>
+          </div>
+        ))}
+      </div>
+
+      <div class="locations-hub-banner">
+        <p>We serve all neighborhoods across zip codes: 83401, 83402, 83403, 83404, 83405, 83406, and 83415.</p>
+        <a href="/locations/" class="btn btn-outline">
+          Browse All Idaho Falls Service Areas & Neighborhoods →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Local Water Chemistry & Common Problems Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Idaho Falls Hard Water Challenges</span>
+        <h2>Common Water Heater Problems We Solve in Idaho Falls</h2>
+        <p>Local tap water carries approximately 14.1 GPG of dissolved limestone and magnesium from the Eastern Snake River Plain Aquifer. Combined with harsh winters, this creates distinct equipment strain.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card problem-card">
+          <div class="prob-num">01</div>
+          <h3>Loud Popping & Kettle Noises</h3>
+          <p>Heavy calcium sediment settles at the bottom of the tank. Heated water boils under this hardened layer, creating pressure pockets that rumble loudly. We perform power flushing and manual descaling.</p>
+        </div>
+
+        <div class="card problem-card">
+          <div class="prob-num">02</div>
+          <h3>Burnt-Out Lower Heating Elements</h3>
+          <p>In electric models, thick limescale coats the lower electric heating element. Unable to transfer heat into the water, the element overheats and burns out rapidly. We replace burnt elements with heavy-duty low-watt-density units.</p>
+        </div>
+
+        <div class="card problem-card">
+          <div class="prob-num">03</div>
+          <h3>Pilot Light Outages & Thermocouples</h3>
+          <p>Winter drafts, dust accumulation, or faulty millivolt thermocouples cause gas burners to shut down without warning. We test gas control valves, clean burners, and replace thermocouples safely.</p>
+        </div>
+
+        <div class="card problem-card">
+          <div class="prob-num">04</div>
+          <h3>Leaking Temperature & Pressure Valves</h3>
+          <p>A dripping T&P relief valve usually indicates excessive thermal expansion or water main pressure spikes above 80 PSI. We test your pressure regulator and install code-required expansion tanks.</p>
+        </div>
+
+        <div class="card problem-card">
+          <div class="prob-num">05</div>
+          <h3>Tank Bottom Corrosion & Rust Leaks</h3>
+          <p>Once the sacrificial anode rod depletes, corrosive minerals attack the steel tank lining directly. If water is pooling around the base of your tank, call us for an immediate replacement estimate.</p>
+        </div>
+
+        <div class="card problem-card">
+          <div class="prob-num">06</div>
+          <h3>Lukewarm or Rapidly Depleted Water</h3>
+          <p>A broken plastic dip tube allows cold incoming water to mix directly with hot water at the top of the tank instead of settling at the bottom. We replace dip tubes to restore full hot water capacity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Partners Banner -->
+  <section class="partners-banner">
+    <div class="container">
+      <p class="partners-title">Servicing & Installing All Major Water Heater Brands</p>
+      <div class="partners-list">
+        <span class="partner-badge">Bradford White</span>
+        <span class="partner-badge">Rheem</span>
+        <span class="partner-badge">AO Smith</span>
+        <span class="partner-badge">Rinnai Tankless</span>
+        <span class="partner-badge">Navien</span>
+        <span class="partner-badge">State Water Heaters</span>
+        <span class="partner-badge">Lochinvar</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4-Step Process Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Streamlined & Transparent</span>
+        <h2>Our 4-Step Water Heater Service Process</h2>
+        <p>Straightforward communication, no pushy sales pitches. Here is how we restore your hot water.</p>
+      </div>
+
+      <div class="grid-4 process-grid">
+        <div class="process-step">
+          <div class="step-badge">1</div>
+          <h3>24/7 Call & Dispatch</h3>
+          <p>Call our local office at (208) 218-2108. We collect your water heater symptoms and dispatch an on-call technician.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-badge">2</div>
+          <h3>On-Site Diagnostics</h3>
+          <p>We test electrical continuity, gas line pressures, burner draft, and sediment buildup to pinpoint the failure point.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-badge">3</div>
+          <h3>Itemized Estimate</h3>
+          <p>You receive an estimate covering the required work before repairs or installation begins. You choose the solution.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-badge">4</div>
+          <h3>Precision Repair & Safety Test</h3>
+          <p>We complete the work, test temperature settings, check for gas or water leaks, and verify compliance with Idaho code.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Summary -->
+  <section class="section">
+    <div class="container">
+      <div class="about-summary-card">
+        <div class="about-summary-text">
+          <span class="section-tag">Local Family-First Plumbing</span>
+          <h2>Dedicated Water Heater Technicians in Idaho Falls</h2>
+          <p>
+            Unlike general plumbing contractors who split their time between drain cleaning, sewer trenches, and general remodel work, Idaho Falls Water Heater Pros concentrates exclusively on residential and commercial hot water systems.
+          </p>
+          <p>
+            Our master technicians are trained in gas venting codes, combustion safety, 240V high-wattage electrical circuits, and the unique hard water scale chemistry of Bonneville County. Whether you live in a historic home near Kate Curley Park with low basement ceilings or a newly constructed home in Snake River Landing needing a high-efficiency tankless unit, call us to request an estimate.
+          </p>
+          <div class="about-actions">
+            <a href="tel:+12082182108" class="btn btn-primary">Call (208) 218-2108 for an Estimate</a>
+            <a href="/about-us/" class="btn btn-secondary">Learn More About Our Company →</a>
+          </div>
+        </div>
+        <div class="about-summary-stats">
+          <div class="stat-box">
+            <span class="stat-num">24/7</span>
+            <span class="stat-label">Emergency Dispatch</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num">14.1</span>
+            <span class="stat-label">GPG Hard Water Solutions</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Code Compliant Installs</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num">0</span>
+            <span class="stat-label">Hidden Trip Fees</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas Hub Preview -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Bonneville County Coverage</span>
+        <h2>Serving All 23 Neighborhoods Across Greater Idaho Falls</h2>
+        <p>Our licensed mobile plumbing units are stationed locally on Chaffin Lane, providing 24/7 dispatch across every postal code in Bonneville County.</p>
+      </div>
+
+      <div class="grid-4">
+        <div class="card area-summary-card">
+          <span class="zip-tag" style="background:#0b3b60; color:#ffffff; display:inline-block; margin-bottom:0.75rem;">ZIP 83406</span>
+          <h3>Ammon & Foothills</h3>
+          <p>Ammon, Country Club Hills, Cedar Ridge, Hidden Valley, Heritage Heights, Boulder Creek Estates, Woodruff.</p>
+          <a href="/locations/ammon/" class="btn btn-secondary" style="margin-top:auto;">Explore 83406 Guides →</a>
+        </div>
+
+        <div class="card area-summary-card">
+          <span class="zip-tag" style="background:#0b3b60; color:#ffffff; display:inline-block; margin-bottom:0.75rem;">ZIP 83404</span>
+          <h3>Central & Historic</h3>
+          <p>Downtown Idaho Falls, Kate Curley Park Area, Cotton, Community Park Area, Numbered Streets.</p>
+          <a href="/locations/downtown-idaho-falls/" class="btn btn-secondary" style="margin-top:auto;">Explore 83404 Guides →</a>
+        </div>
+
+        <div class="card area-summary-card">
+          <span class="zip-tag" style="background:#0b3b60; color:#ffffff; display:inline-block; margin-bottom:0.75rem;">ZIP 83402</span>
+          <h3>West Side & Riverfront</h3>
+          <p>Snake River Landing, Eagle Rock, Idaho Falls West, Historic West Side, Airport Corridor.</p>
+          <a href="/locations/snake-river-landing/" class="btn btn-secondary" style="margin-top:auto;">Explore 83402 Guides →</a>
+        </div>
+
+        <div class="card area-summary-card">
+          <span class="zip-tag" style="background:#0b3b60; color:#ffffff; display:inline-block; margin-bottom:0.75rem;">ZIP 83401</span>
+          <h3>North, East & Rural</h3>
+          <p>New Sweden, Osgood, Lincoln, Grant, Coltman, Hillview, Taylor, Shelton, Bone highland enclaves.</p>
+          <a href="/locations/new-sweden/" class="btn btn-secondary" style="margin-top:auto;">Explore 83401 Guides →</a>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="/locations/" class="btn btn-outline btn-lg">View All 23 Detailed Neighborhood Guides →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Knowledge Base Preview -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Homeowner Guides & Advice</span>
+        <h2>Idaho Falls Water Heater Knowledge Base</h2>
+        <p>Explore 20 in-depth articles on troubleshooting, hard water management, winter sizing, and building codes.</p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card blog-preview-card">
+          <span class="blog-category" style="color:var(--color-secondary); font-size:0.8rem; font-weight:700; text-transform:uppercase;">Water Quality & Scale</span>
+          <h3 style="margin: 0.5rem 0; font-size:1.15rem;">
+            <a href="/blog/hard-water-effects-idaho-falls/" style="color:var(--color-text-dark); text-decoration:none;">Why Idaho Falls' 14.1 GPG Hard Water Destroys Water Heaters</a>
+          </h3>
+          <p style="font-size:0.92rem; color:var(--color-text-muted); line-height:1.5;">Learn how calcium limestone scale ruins heating elements, causes popping noises, and how annual descaling protects your system.</p>
+          <a href="/blog/hard-water-effects-idaho-falls/" style="color:var(--color-primary); font-weight:600; text-decoration:none; margin-top:auto;">Read Article →</a>
+        </article>
+
+        <article class="card blog-preview-card">
+          <span class="blog-category" style="color:var(--color-secondary); font-size:0.8rem; font-weight:700; text-transform:uppercase;">Winter Physics</span>
+          <h3 style="margin: 0.5rem 0; font-size:1.15rem;">
+            <a href="/blog/tankless-vs-tank-idaho-falls-winter/" style="color:var(--color-text-dark); text-decoration:none;">Tankless vs. Tank Water Heaters: Sizing for 38°F Winter Water</a>
+          </h3>
+          <p style="font-size:0.92rem; color:var(--color-text-muted); line-height:1.5;">Discover how an 82°F temperature rise impacts tankless flow rates (GPM) during sub-zero Bonneville County winters.</p>
+          <a href="/blog/tankless-vs-tank-idaho-falls-winter/" style="color:var(--color-primary); font-weight:600; text-decoration:none; margin-top:auto;">Read Article →</a>
+        </article>
+
+        <article class="card blog-preview-card">
+          <span class="blog-category" style="color:var(--color-secondary); font-size:0.8rem; font-weight:700; text-transform:uppercase;">Pressure Safety</span>
+          <h3 style="margin: 0.5rem 0; font-size:1.15rem;">
+            <a href="/blog/thermal-expansion-tank-failure-symptoms/" style="color:var(--color-text-dark); text-decoration:none;">Why Thermal Expansion Tanks Fail and How Pressure Spikes Cause Leaks</a>
+          </h3>
+          <p style="font-size:0.92rem; color:var(--color-text-muted); line-height:1.5;">How closed plumbing systems trap expanding hot water, causing dripping relief valves, water hammer, and tank seam breaches.</p>
+          <a href="/blog/thermal-expansion-tank-failure-symptoms/" style="color:var(--color-primary); font-weight:600; text-decoration:none; margin-top:auto;">Read Article →</a>
+        </article>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="/blog/" class="btn btn-outline btn-lg">Browse All 20 Plumbing Knowledge Guides →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <FaqAccordion faqs={homeFaqs} />
+
+  <!-- CTA Band -->
+  <CtaBand 
+    headline="Cold Shower in Idaho Falls? Let's Fix It Today."
+    subtext="Call (208) 218-2108 now to speak directly with an on-call technician. Call to request an estimate for fast service across Idaho Falls and Ammon."
+  />
+
+  <!-- Contact CTA & Map Section -->
+  <ContactForm 
+    title="Call Our Office for an Estimate"
+    subtitle="Call (208) 218-2108 directly to discuss your water heater symptoms and schedule service."
+    locationContext="Idaho Falls Citywide"
+  />
+</Layout>
+
+<style>
+  .hero-section {
+    background: linear-gradient(180deg, #f0f7fc 0%, #ffffff 100%);
+    padding: 3.5rem 0 4.5rem 0;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  @media (min-width: 960px) {
+    .hero-inner {
+      grid-template-columns: 1.15fr 0.85fr;
+    }
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #e0f2fe;
+    color: var(--color-primary);
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    margin-bottom: 1rem;
+    border: 1px solid #bae6fd;
+  }
+
+  .hero-pulse {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #0284c7;
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.3);
+  }
+
+  .hero-lead {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+  }
+
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-lg {
+    padding: 0.95rem 1.85rem;
+    font-size: 1.1rem;
+  }
+
+  .hero-subline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--color-text-light);
+  }
+
+  .hero-image-wrap {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 3px solid #ffffff;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .hero-img-badge {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(11, 59, 96, 0.95) 100%);
+    color: #ffffff;
+    padding: 1.5rem 1.25rem 1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-img-badge strong {
+    font-size: 0.98rem;
+  }
+
+  .hero-img-badge span {
+    font-size: 0.85rem;
+    color: #fed7aa;
+  }
+
+  .service-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .service-img-wrap {
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .service-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .service-card:hover .service-card-img {
+    transform: scale(1.05);
+  }
+
+  .service-card-title {
+    font-size: 1.25rem;
+    margin: 1.25rem 1.25rem 0.5rem 1.25rem;
+  }
+
+  .service-card-desc {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    flex: 1;
+    margin: 0 1.25rem 1.25rem 1.25rem;
+  }
+
+  .service-card-link {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--color-primary);
+    margin: 0 1.25rem 1.25rem 1.25rem;
+  }
+
+  .service-card-link:hover {
+    color: var(--color-accent);
+  }
+
+  .services-hub-link-wrap {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .feature-photo-band {
+    background-color: var(--color-bg-subtle);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    padding: 3.5rem 0;
+  }
+
+  .feature-photo-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  @media (min-width: 960px) {
+    .feature-photo-inner {
+      grid-template-columns: 1.2fr 0.8fr;
+    }
+  }
+
+  .feature-img-col {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+  }
+
+  .feature-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .location-card {
+    border-left: 4px solid var(--color-primary);
+  }
+
+  .location-link {
+    font-weight: 700;
+    color: var(--color-accent);
+    display: inline-block;
+    margin-top: 0.5rem;
+  }
+
+  .locations-hub-banner {
+    margin-top: 2.5rem;
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    padding: 1.75rem;
+    border-radius: var(--radius-md);
+    text-align: center;
+  }
+
+  .locations-hub-banner p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .problem-card {
+    position: relative;
+    padding-top: 2rem;
+  }
+
+  .prob-num {
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #e2e8f0;
+  }
+
+  .partners-banner {
+    background-color: var(--color-bg-light);
+    border-top: 1px solid var(--color-border-light);
+    border-bottom: 1px solid var(--color-border-light);
+    padding: 2.5rem 0;
+    text-align: center;
+  }
+
+  .partners-title {
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-light);
+    margin-bottom: 1.25rem;
+  }
+
+  .partners-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .partner-badge {
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    padding: 0.6rem 1.25rem;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    color: var(--color-primary);
+    font-size: 0.95rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .process-step {
+    background: #ffffff;
+    padding: 1.75rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    position: relative;
+  }
+
+  .step-badge {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    color: #ffffff;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .process-step h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .process-step p {
+    font-size: 0.92rem;
+    margin-bottom: 0;
+  }
+
+  .about-summary-card {
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  @media (min-width: 960px) {
+    .about-summary-card {
+      grid-template-columns: 1.3fr 0.7fr;
+    }
+  }
+
+  .about-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .about-summary-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .stat-box {
+    background: var(--color-bg-light);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-md);
+    padding: 1.5rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .stat-num {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .stat-label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+  }
+</style>

@@ -1,0 +1,373 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import ContactForm from '../../components/ContactForm.astro';
+
+const pageTitle = "Idaho Falls Water Heater Blog | Expert Guides & Local Advice";
+const pageDescription = "Explore 20 comprehensive homeowner guides on water heater repair, replacement, hard water maintenance, troubleshooting, and plumbing codes in Idaho Falls.";
+
+const breadcrumbs = [
+  { name: "Blog", url: "/blog/" }
+];
+
+const blogPosts = [
+  {
+    title: "Why Idaho Falls' 14.1 GPG Hard Water Destroys Water Heaters (And How to Stop It)",
+    slug: "hard-water-effects-idaho-falls",
+    category: "Water Quality & Scale",
+    date: "September 15, 2026",
+    author: "Senior Diagnostic Lead",
+    excerpt: "Learn how dissolved limestone from the Eastern Snake River Plain Aquifer builds into rock-hard calcium scale, ruins electric elements, and how an annual flush protects your investment.",
+    url: "/blog/hard-water-effects-idaho-falls/"
+  },
+  {
+    title: "Tankless vs. Tank Water Heaters in Idaho Falls: Sizing for 38°F Winter Groundwater",
+    slug: "tankless-vs-tank-idaho-falls-winter",
+    category: "Equipment Sizing",
+    date: "September 12, 2026",
+    author: "Master Plumbing Specialist",
+    excerpt: "Discover how 38°F winter groundwater impacts tankless water heater sizing in Idaho Falls. Compare flow rates, BTU requirements, and costs for Bonneville County.",
+    url: "/blog/tankless-vs-tank-idaho-falls-winter/"
+  },
+  {
+    title: "Atmospheric vs. Power-Vent Gas Water Heaters: Idaho Falls Safety & Venting Code Guide",
+    slug: "atmospheric-vs-power-vent-gas-water-heater",
+    category: "Venting & Safety Codes",
+    date: "September 10, 2026",
+    author: "Venting Systems Inspector",
+    excerpt: "Compare atmospheric vs power-vent gas water heaters for Idaho Falls homes. Learn venting codes, backdraft risks, sidewall PVC exhaust rules, and efficiency.",
+    url: "/blog/atmospheric-vs-power-vent-gas-water-heater/"
+  },
+  {
+    title: "Thermocouple vs. Gas Control Valve Failure: How to Diagnose Why Your Pilot Won't Stay Lit",
+    slug: "signs-thermocouple-vs-gas-control-valve-failure",
+    category: "Gas Diagnostics",
+    date: "September 8, 2026",
+    author: "Gas Appliance Specialist",
+    excerpt: "Diagnose why your gas water heater pilot light won’t stay lit. Compare thermocouple vs gas control valve failure symptoms, testing steps, and repairs.",
+    url: "/blog/signs-thermocouple-vs-gas-control-valve-failure/"
+  },
+  {
+    title: "Why Does the Red Reset Button on Your Electric Water Heater Keep Tripping?",
+    slug: "electric-water-heater-reset-button-tripping",
+    category: "Electric Repairs",
+    date: "September 5, 2026",
+    author: "Electrical Diagnostics Tech",
+    excerpt: "Find out why the red high-limit reset button keeps tripping on your electric water heater in Idaho Falls. Diagnosing thermostats, elements, and hard water scale.",
+    url: "/blog/electric-water-heater-reset-button-tripping/"
+  },
+  {
+    title: "Water Heater Anode Rod Guide: Magnesium vs. Aluminum vs. Powered Titanium",
+    slug: "anode-rod-replacement-magnesium-vs-aluminum-powered",
+    category: "Corrosion Protection",
+    date: "September 2, 2026",
+    author: "Corrosion Control Specialist",
+    excerpt: "Protect your water heater from Idaho Falls hard water. Compare magnesium, aluminum-zinc, and powered titanium anode rods, lifespan, and sulfur odors.",
+    url: "/blog/anode-rod-replacement-magnesium-vs-aluminum-powered/"
+  },
+  {
+    title: "Why Thermal Expansion Tanks Fail and How Closed Plumbing Causes High Pressure Leaks",
+    slug: "thermal-expansion-tank-failure-symptoms",
+    category: "Pressure Control",
+    date: "August 28, 2026",
+    author: "Hydraulic Systems Engineer",
+    excerpt: "Learn why thermal expansion tanks fail in Idaho Falls and how closed plumbing systems cause high pressure spikes, dripping relief valves, and tank leaks.",
+    url: "/blog/thermal-expansion-tank-failure-symptoms/"
+  },
+  {
+    title: "Water Heater Leaking from the Bottom: Is It Repairable or Does It Need Replacement?",
+    slug: "water-heater-leaking-from-bottom-diagnosis",
+    category: "Leak Diagnostics",
+    date: "August 24, 2026",
+    author: "Senior Service Lead",
+    excerpt: "Found water pooling around your water heater in Idaho Falls? Learn how to tell if it is an external fitting leak or an unrepairable internal tank breach.",
+    url: "/blog/water-heater-leaking-from-bottom-diagnosis/"
+  },
+  {
+    title: "Water Heater Sizing Guide for Idaho Falls Homes: 40 vs. 50 vs. 75 Gallons",
+    slug: "water-heater-sizing-guide-family-homes",
+    category: "Equipment Sizing",
+    date: "August 20, 2026",
+    author: "Field Operations Manager",
+    excerpt: "How to choose between a 40, 50, or 75-gallon water heater in Idaho Falls. Calculate first-hour ratings (FHR), bathroom demands, and winter recovery speeds.",
+    url: "/blog/water-heater-sizing-guide-family-homes/"
+  },
+  {
+    title: "Plastic Bits in Faucet Aerators and Lukewarm Showers: Diagnosing a Broken Dip Tube",
+    slug: "broken-dip-tube-symptoms-replacement",
+    category: "Internal Components",
+    date: "August 16, 2026",
+    author: "Diagnostic Specialist",
+    excerpt: "Finding white plastic bits in faucet aerators or running out of hot water in minutes? Learn how a broken dip tube causes lukewarm showers and how to fix it.",
+    url: "/blog/broken-dip-tube-symptoms-replacement/"
+  },
+  {
+    title: "Why Your Water Heater Sounds Like a Tea Kettle, Rumbling Train, or Popcorn",
+    slug: "water-heater-noises-popping-rumbling-screeching",
+    category: "Troubleshooting",
+    date: "August 12, 2026",
+    author: "Acoustic Diagnostics Lead",
+    excerpt: "Why is your water heater making popping, rumbling, or tea kettle whistling noises in Idaho Falls? Learn what causes tank sounds and how to stop them.",
+    url: "/blog/water-heater-noises-popping-rumbling-screeching/"
+  },
+  {
+    title: "Gas Water Heater Pilot Light Keeps Going Out: 6 Causes and How Plumbers Fix Them",
+    slug: "pilot-light-wont-stay-lit-troubleshooting",
+    category: "Gas Diagnostics",
+    date: "August 8, 2026",
+    author: "Combustion Safety Tech",
+    excerpt: "Step-by-step guide to troubleshooting a gas water heater pilot light that keeps going out in Idaho Falls. Thermocouples, draft spillage, and safety switches.",
+    url: "/blog/pilot-light-wont-stay-lit-troubleshooting/"
+  },
+  {
+    title: "Are Hybrid Heat Pump Water Heaters Worth It in Idaho's Cold Climate?",
+    slug: "hybrid-heat-pump-water-heaters-idaho-climate",
+    category: "Energy Efficiency",
+    date: "August 4, 2026",
+    author: "Clean Energy Specialist",
+    excerpt: "Are hybrid electric heat pump water heaters worth the investment in Idaho Falls? Analyze cold basement performance, energy savings, space, and rebates.",
+    url: "/blog/hybrid-heat-pump-water-heaters-idaho-climate/"
+  },
+  {
+    title: "The Hidden Dangers and Code Violations of DIY Water Heater Installation & Repair",
+    slug: "risks-of-diy-water-heater-repair",
+    category: "Safety & Codes",
+    date: "July 30, 2026",
+    author: "Senior Plumbing Inspector",
+    excerpt: "Thinking of repairing or replacing your own water heater in Idaho Falls? Learn the hidden dangers of gas leaks, carbon monoxide, scalds, and code violations.",
+    url: "/blog/risks-of-diy-water-heater-repair/"
+  },
+  {
+    title: "How to Protect Direct-Vent and Tankless Water Heaters from Sub-Zero Idaho Freezes",
+    slug: "freeze-protection-tankless-direct-vent-winter",
+    category: "Winterization",
+    date: "July 26, 2026",
+    author: "Winter Operations Lead",
+    excerpt: "Protect your direct-vent tankless water heater from sub-zero Idaho Falls freezes. Learn backdraft damper installation, drain line insulation, and freeze kits.",
+    url: "/blog/freeze-protection-tankless-direct-vent-winter/"
+  },
+  {
+    title: "High Municipal Water Pressure in Idaho Falls: Why You Need a PRV to Protect Your Tank",
+    slug: "pressure-reducing-valves-water-heater-lifespan",
+    category: "Pressure Control",
+    date: "July 22, 2026",
+    author: "Municipal Systems Tech",
+    excerpt: "Discover how municipal water pressure over 80 PSI destroys water heaters in Idaho Falls. Signs of high pressure, PRV installation, and thermal expansion.",
+    url: "/blog/pressure-reducing-valves-water-heater-lifespan/"
+  },
+  {
+    title: "Commercial Water Heater Health Department Compliance in Bonneville County",
+    slug: "commercial-water-heater-compliance-idaho-falls",
+    category: "Commercial Plumbing",
+    date: "July 18, 2026",
+    author: "Commercial Operations Lead",
+    excerpt: "Health department sanitation codes and commercial water heater sizing for restaurants, salons, and businesses in Bonneville County. 24/7 priority repair.",
+    url: "/blog/commercial-water-heater-compliance-idaho-falls/"
+  },
+  {
+    title: "Relocating a Water Heater During a Basement Finish or Remodel in Idaho Falls",
+    slug: "relocating-water-heater-basement-remodel",
+    category: "Remodeling",
+    date: "July 14, 2026",
+    author: "Remodel Project Lead",
+    excerpt: "Planning a basement finish or remodel in Idaho Falls? Learn plumbing codes, drain pan rules, combustion air, gas line routing, and tankless relocation.",
+    url: "/blog/relocating-water-heater-basement-remodel/"
+  },
+  {
+    title: "What to Do Immediately When Your Water Heater Bursts and Floods Your Basement",
+    slug: "emergency-water-heater-flooding-steps",
+    category: "Emergency Safety",
+    date: "July 10, 2026",
+    author: "Emergency Response Tech",
+    excerpt: "Water heater leaking or bursting in Idaho Falls? Follow these 5 immediate emergency steps to stop flooding, prevent electrical hazards, and minimize damage.",
+    url: "/blog/emergency-water-heater-flooding-steps/"
+  },
+  {
+    title: "Gas Line Sizing for Tankless Water Heaters: Upgrading from 1/2-Inch to 3/4-Inch Pipe",
+    slug: "gas-line-sizing-for-tankless-water-heaters",
+    category: "Gas Piping",
+    date: "July 6, 2026",
+    author: "Certified Gas Fitter",
+    excerpt: "Why tankless water heaters require 3/4\" gas line upgrades in Idaho Falls. Calculate BTU loads, equivalent pipe length, and gas meter capacity for Bonneville County.",
+    url: "/blog/gas-line-sizing-for-tankless-water-heaters/"
+  }
+];
+---
+
+<Layout 
+  title={pageTitle} 
+  description={pageDescription} 
+  canonicalPath="/blog/"
+  breadcrumbs={breadcrumbs}
+  schemaType="CollectionPage"
+>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero Section -->
+  <section class="blog-hero">
+    <div class="container">
+      <span class="section-tag">Homeowner Education</span>
+      <h1>Idaho Falls Water Heater Knowledge Base</h1>
+      <p class="blog-hero-lead">
+        20 in-depth plumbing guides written by local technicians who understand the water chemistry, winter weather, and building codes of Idaho Falls and Bonneville County.
+      </p>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <!-- Blog Posts Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">All 20 Knowledge Guides</span>
+        <h2>Troubleshooting, Maintenance, Sizing & Plumbing Codes</h2>
+        <p>Explore our complete library of expert guides to protect your water heater, solve emergencies, and maximize energy efficiency.</p>
+      </div>
+
+      <div class="grid-2 blog-grid">
+        {blogPosts.map((post) => (
+          <article class="card blog-card">
+            <div class="blog-meta">
+              <span class="blog-category">{post.category}</span>
+              <span class="blog-date">{post.date}</span>
+            </div>
+            <h3>
+              <a href={post.url} class="blog-title-link">{post.title}</a>
+            </h3>
+            <p class="blog-excerpt">{post.excerpt}</p>
+            <div class="blog-card-footer">
+              <span class="blog-author">By {post.author}</span>
+              <a href={post.url} class="read-more-link">Read Full Guide →</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <CtaBand 
+    headline="Have a Water Heater Question or Need Immediate Service?"
+    subtext="Call (208) 218-2108 now to speak directly with an on-call licensed plumber in Idaho Falls and request an estimate."
+  />
+
+  <!-- Contact Section (Pure Phone CTA) -->
+  <ContactForm 
+    title="Schedule Your Diagnostic or Maintenance Call" 
+    subtitle="Call (208) 218-2108 directly to discuss your system with an on-call technician and request an estimate."
+    locationContext="All Idaho Falls & Bonneville County Zip Codes"
+  />
+</Layout>
+
+<style>
+  .blog-hero {
+    background: linear-gradient(180deg, #f0f7fc 0%, #ffffff 100%);
+    padding: 3.5rem 0 3rem 0;
+    text-align: center;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .blog-hero h1 {
+    max-width: 850px;
+    margin: 0 auto 1.25rem auto;
+    font-size: clamp(2rem, 4vw, 2.7rem);
+  }
+
+  .blog-hero-lead {
+    max-width: 750px;
+    margin: 0 auto;
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+
+  .blog-grid {
+    margin-top: 2rem;
+  }
+
+  .blog-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .blog-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .blog-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.85rem;
+    font-size: 0.85rem;
+  }
+
+  .blog-category {
+    color: var(--color-secondary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: rgba(234, 88, 12, 0.1);
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .blog-date {
+    color: var(--color-text-muted);
+  }
+
+  .blog-card h3 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+  }
+
+  .blog-title-link {
+    color: var(--color-text-dark);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .blog-title-link:hover {
+    color: var(--color-primary);
+  }
+
+  .blog-excerpt {
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
+  }
+
+  .blog-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--color-border-light);
+    padding-top: 0.85rem;
+    margin-top: auto;
+    font-size: 0.9rem;
+  }
+
+  .blog-author {
+    color: var(--color-text-muted);
+    font-weight: 500;
+  }
+
+  .read-more-link {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .read-more-link:hover {
+    color: var(--color-secondary);
+  }
+</style>

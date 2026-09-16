@@ -1,0 +1,349 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import FaqAccordion from '../../components/FaqAccordion.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import ContactForm from '../../components/ContactForm.astro';
+
+const pageTitle = "Water Heater Repair Snake River Landing Idaho Falls | 83402 Service";
+const pageDescription = "Licensed water heater repair and tankless installation in Snake River Landing (83402). Certified Navien and Rinnai descaling, power-vent repairs, and 24/7 service.";
+
+const breadcrumbs = [
+  { name: "Service Areas", url: "/locations/" },
+  { name: "Snake River Landing", url: "/locations/snake-river-landing/" }
+];
+
+const neighborhoodFaqs = [
+  {
+    question: "Why do tankless water heaters in Snake River Landing require annual descaling?",
+    answer: "Water supplied to Snake River Landing carries an average of 14.1 grains per gallon of mineral hardness. In a tankless system, cold water is superheated in narrow heat exchanger waterways within seconds. Without annual descaling using food-grade virgin citric solution, calcium carbonate rapidly coats the inner coils, triggering flow restrictions, system error codes, and eventual heat exchanger cracks."
+  },
+  {
+    question: "How do I know if my water pressure reducing valve (PRV) is failing in the 83402 area?",
+    answer: "Newer developments along Snake River Parkway and Pier View Drive connect to high-pressure municipal mains. If your home's pressure-reducing valve fails, indoor pressure can spike well above 80 PSI. Warning signs include a constantly dripping T&P relief valve on your water heater, loud banging pipes (water hammer) when faucets shut off, and leaking washing machine hoses."
+  },
+  {
+    question: "Can a tankless water heater handle multi-head master bathroom showers in winter?",
+    answer: "Yes, but only if sized for Idaho's winter groundwater temperatures. When groundwater enters at 38°F, luxury multi-head showers demanding 5 to 7 GPM require an ultra-high-output unit rated at 199,000 BTU, or a cascaded two-unit system. We calculate your exact fixture unit count to guarantee continuous hot water without pressure or temperature drops."
+  },
+  {
+    question: "What causes error codes on Navien or Rinnai tankless units in Snake River Landing?",
+    answer: "The most common error codes in modern homes stem from exhaust vent blockages (such as snow accumulation or frost around sidewall concentric terminations), mineral scale buildup on the flame sensor rods, or gas supply pressure dropouts. Our certified technicians carry factory diagnostic software to clear and repair system faults quickly."
+  },
+  {
+    question: "Do you offer emergency after-hours water heater repair for Snake River Landing townhomes?",
+    answer: "Yes. Our on-call technicians operate 24 hours a day, 7 days a week. Whether you experience an active valve leak or total loss of hot water on a weekend evening, call (208) 218-2108 for immediate priority dispatch."
+  }
+];
+
+const featuredServices = [
+  {
+    title: "Tankless Descaling & Heat Exchanger Flushing",
+    desc: "Closed-loop pump flushes using non-corrosive citric acid to eliminate calcium scale and restore peak energy efficiency.",
+    url: "/services/tankless-water-heater-repair-installation/"
+  },
+  {
+    title: "Direct-Vent & Power-Vent Replacements",
+    desc: "Clean installations designed for tight utility closets with horizontal sidewall venting to Idaho code.",
+    url: "/services/water-heater-replacement/"
+  },
+  {
+    title: "Water Pressure Regulator & Expansion Calibration",
+    desc: "Protecting luxury fixtures and water heater tanks from damaging municipal pressure surges.",
+    url: "/services/water-heater-repair/"
+  },
+  {
+    title: "Instant Hot Water Recirculation Loops",
+    desc: "Servicing built-in circulator pumps and thermal bypass valves for on-demand hot water at every fixture.",
+    url: "/services/water-heater-installation/"
+  }
+];
+---
+
+<Layout 
+  title={pageTitle} 
+  description={pageDescription} 
+  canonicalPath="/locations/snake-river-landing/"
+  breadcrumbs={breadcrumbs}
+  faqs={neighborhoodFaqs}
+  areaServedName="Snake River Landing"
+>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero Section -->
+  <section class="neighborhood-hero">
+    <div class="container">
+      <span class="section-tag">ZIP Code 83402 Service Hub</span>
+      <h1>High-Efficiency Water Heater Repair & Tankless Service in Snake River Landing</h1>
+      <p class="neighborhood-hero-lead">
+        Master-planned living along the Snake River brings modern architectural beauty, high-end interior finishes, and state-of-the-art mechanical systems. However, luxury bathrooms with multi-head showers, soaking tubs, and multi-story floor plans place heavy demands on domestic water heating equipment. When a high-efficiency power-vent tank or wall-mounted tankless unit acts up, you need a technician certified in modern combustion controls. Idaho Falls Water Heater Pros provides specialized water heater repair in Snake River Landing with 24/7 on-call dispatch, factory-trained tankless diagnostics, and honest pricing.
+      </p>
+      <div class="hero-ctas">
+        <a href="tel:+12082182108" class="btn btn-primary btn-lg">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+          Call (208) 218-2108
+        </a>
+        <a href="#contact" class="btn btn-outline btn-lg">
+          Schedule Service Online
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <!-- Content Section -->
+  <section class="section">
+    <div class="container content-container">
+      <div class="content-block">
+        <span class="section-tag">Neighborhood Geography</span>
+        <h2>Water Heating in Idaho Falls' Premier Waterfront Development</h2>
+        <p>
+          Encompassing hundreds of acres west of the Snake River, Snake River Landing represents one of the most dynamic modern master-planned communities in Eastern Idaho. Bordered by Sunnyside Road to the south, Snake River Parkway running through its core, and Pier View Drive connecting modern residential neighborhoods to corporate campuses, this district showcases contemporary construction built from the mid-2000s onward.
+        </p>
+        <p>
+          Residents living along Event Center Drive, near Heritage Park, or adjacent to the Central Valley Trail enjoy proximity to Milligan Park's 4,000-square-foot pier overlooking the river. The homes here—ranging from custom executive single-family properties to multi-level townhomes and modern condominiums—rely on advanced hydronic and domestic hot water systems. Unlike older neighborhoods with gravity flues and simple atmospheric tanks, properties in Snake River Landing feature direct-vent technology, condensing gas water heaters, and wall-mounted tankless units designed to conserve energy and maximize interior living space.
+        </p>
+        <p>
+          While modern systems deliver outstanding energy efficiency and continuous hot water, their digital circuit boards, electronic flow sensors, and compact heat exchangers require precise calibration. When mineral scale accumulates or sensors drift out of tolerance, homeowners face cold showers or confusing error codes. Our technicians are factory-trained on modern tankless systems and arrive with the dedicated diagnostic instruments needed to service advanced mechanical setups.
+        </p>
+      </div>
+
+      <!-- Featured Services -->
+      <div class="content-block">
+        <span class="section-tag">Tailored Service Offerings</span>
+        <h2>High-Efficiency Water Heater Solutions in 83402</h2>
+        <p>
+          We provide specialized services designed specifically for modern townhome and single-family mechanical layouts.
+        </p>
+        <div class="grid-2">
+          {featuredServices.map((srv) => (
+            <div class="card">
+              <h3>{srv.title}</h3>
+              <p>{srv.desc}</p>
+              <a href={srv.url} class="btn btn-outline" style="margin-top:0.5rem; display:inline-block;">
+                Explore Details →
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Deep Dive: Modern Plumbing Dynamics -->
+      <div class="content-block">
+        <span class="section-tag">Engineering Insights</span>
+        <h2>Unique Mechanical Considerations in Snake River Landing</h2>
+        <p>
+          Maintaining high-performance hot water in newer construction presents distinct engineering requirements:
+        </p>
+
+        <h3>1. High Municipal Water Pressure & Pressure Reducing Valve (PRV) Strain</h3>
+        <p>
+          Due to the elevation profile of West Idaho Falls and proximity to major municipal supply mains, incoming water pressure at the street often ranges between 85 and 100 PSI. Plumbing fixtures, appliances, and water heater tanks are engineered to operate safely below 75 PSI.
+        </p>
+        <p>
+          Every modern home in Snake River Landing relies on a brass pressure-reducing valve installed at the water main entrance. When these regulators wear out or debris clogs the internal spring diaphragm, high hydrostatic pressure pushes past the valve. This extra pressure stresses water heater tank seams, causes thermal expansion tanks to rupture internally, and leads to constant dripping from the temperature and pressure (T&P) relief valve. We test dynamic water pressure on every service call and rebuild or replace failing PRVs before they damage expensive equipment.
+        </p>
+
+        <h3>2. Hard Water Scaling Inside Compact Heat Exchangers</h3>
+        <p>
+          Even in brand-new construction, tap water in Snake River Landing comes from the Eastern Snake River Plain Aquifer, carrying roughly 14.1 GPG of dissolved calcium carbonate and magnesium. In traditional tanks, mineral scale settles gradually over years. In high-efficiency tankless water heaters, however, water passes through tightly coiled copper or stainless steel tubing surrounded by intense gas burner heat.
+        </p>
+        <p>
+          This rapid heat exchange causes calcium to precipitate out immediately, coating the inner tube walls in a rock-hard layer. Within 12 to 18 months, unmaintained tankless units begin displaying error codes (such as Navien error E016 or Rinnai code 11), experiencing reduced flow rates, and producing lukewarm water. Our team performs closed-loop descaling flushes using food-grade virgin citric solution that safely dissolves scale without etching the delicate metal heat exchanger walls.
+        </p>
+
+        <h3>3. Direct-Vent Sidewall Exhaust Terminations & Winter Freezing</h3>
+        <p>
+          Homes in Snake River Landing do not have masonry chimneys. Instead, condensing gas water heaters vent exhaust horizontally through schedule 40 PVC or polypropylene pipes exiting exterior basement rim joists. During bitter Eastern Idaho cold snaps, moisture produced by condensing exhaust gases can freeze around the exterior vent termination hood.
+        </p>
+        <p>
+          If frost or icicles block the intake or exhaust ports, the water heater's internal air pressure switch will immediately lock out the burner to prevent dangerous carbon monoxide from backing up into the home. We inspect vent pitch, install condensation drain lines with freeze-protected traps, and ensure exterior termination hoods maintain proper clearance above anticipated snowdrifts.
+        </p>
+      </div>
+
+      <!-- Luxury Bathroom Hot Water Demand Comparison -->
+      <div class="content-block">
+        <span class="section-tag">Sizing Comparison</span>
+        <h2>Meeting Peak Demand: High-Capacity Storage vs. Cascaded Tankless</h2>
+        <p>
+          Large homes along Snake River Parkway frequently feature master retreats with double vanities, freestanding soaking tubs requiring 60+ gallons of hot water, and multi-head walk-in showers.
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Configuration</th>
+                <th>Peak Delivery Profile</th>
+                <th>Space & Energy Profile</th>
+                <th>Best Application</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>75-Gallon Power-Vent Gas Tank</strong></td>
+                <td>Stores 75 gallons at 130°F; recovers roughly 65–70 gallons per hour</td>
+                <td>Requires 6 sq ft floor space; continuous standby heat loss</td>
+                <td>Homes with heavy simultaneous hot water bursts in a 30-minute window</td>
+              </tr>
+              <tr>
+                <td><strong>Single High-Output Tankless (199K BTU)</strong></td>
+                <td>Continuous 4.8–5.2 GPM in winter; endless supply that never runs out</td>
+                <td>Wall-hung; zero floor space; consumes gas only while water flows</td>
+                <td>Townhomes and single-family homes running up to two fixtures at once</td>
+              </tr>
+              <tr>
+                <td><strong>Cascaded Dual Tankless System</strong></td>
+                <td>Continuous 9.5+ GPM; handles 3–4 simultaneous showers plus laundry</td>
+                <td>Wall-hung dual setup; intelligent sequencing balances run hours</td>
+                <td>Luxury custom residences with large soaking tubs and multi-head showers</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Our licensed technicians assess your fixture count, pipe manifold layout, and household usage habits to specify the exact system that guarantees you will never step into a cold shower.
+        </p>
+      </div>
+
+      <!-- Local Streets & Service Area Coverage -->
+      <div class="content-block">
+        <span class="section-tag">Service Footprint</span>
+        <h2>Covering Every Corner of Snake River Landing & West Idaho Falls</h2>
+        <p>
+          Our mobile service fleet provides 24/7 coverage throughout the 83402 zip code, including:
+        </p>
+        <ul>
+          <li><strong>Snake River Parkway:</strong> Rapid dispatch to executive residences, luxury townhomes, and mixed-use commercial properties.</li>
+          <li><strong>Pier View Drive & Event Center Drive:</strong> Servicing residential townhomes and condominiums near the community waterfront.</li>
+          <li><strong>Sunnyside Road Corridor:</strong> Fast access to residential subdivisions connecting Snake River Landing to southern Idaho Falls.</li>
+          <li><strong>Heritage Park & Central Valley Trail:</strong> Dedicated service to surrounding custom homes and multi-family developments.</li>
+          <li><strong>Milligan Park & Riverwalk Adjacency:</strong> Comprehensive maintenance for high-efficiency waterfront domestic plumbing.</li>
+        </ul>
+        <p>
+          Need service elsewhere in Bonneville County? We also provide full coverage in neighboring districts including <a href="/locations/downtown-idaho-falls/">Downtown Idaho Falls</a>, the historic <a href="/locations/kate-curley-park/">Kate Curley Park Area</a>, and <a href="/locations/ammon/">Ammon</a>. Check our <a href="/locations/">locations hub</a> for complete service area details.
+        </p>
+      </div>
+
+      <!-- Case Study -->
+      <div class="content-block">
+        <span class="section-tag">Field Example</span>
+        <h2>Case Study: Solving Cold Water Sandwich Fluctuations on Pier View Drive</h2>
+        <p>
+          A family living in a three-story townhome on Pier View Drive contacted us regarding irritating temperature swings from their tankless water heater. Whenever family members took back-to-back showers or turned the shower off while soaping up, the water heater delivered a blast of cold water before reheating.
+        </p>
+        <p>
+          Our technician arrived and inspected the unit. The system was an older non-condensing tankless model without an internal buffer tank or dedicated recirculation system. Furthermore, twelve months of mineral scale had formed on the flow sensor turbine, delaying the burner ignition by several seconds.
+        </p>
+        <p>
+          We performed a complete chemical-free descaling flush, replaced the sticky flow turbine, and installed a dedicated under-sink thermal bypass valve paired with an intelligent recirculation schedule. Hot water now arrives at the master shower in under five seconds with zero cold water sandwich effect.
+        </p>
+      </div>
+
+      <!-- Upfront Pricing Principles -->
+      <div class="content-block">
+        <span class="section-tag">Pricing Transparency</span>
+        <h2>Clear, Upfront Pricing with Zero Hidden Charges</h2>
+        <p>
+          High-end neighborhoods shouldn't come with inflated plumbing rates. At Idaho Falls Water Heater Pros, our pricing is completely flat-rate and transparent. We charge by the job, not by the neighborhood.
+        </p>
+        <p>
+          You receive a written estimate detailing all parts, labor, and permit fees before any work begins. If we discover unexpected complications during service, we discuss them with you first. No surprise invoices, ever.
+        </p>
+      </div>
+
+      <!-- Permitting & External Link -->
+      <div class="content-block">
+        <span class="section-tag">Code Compliance</span>
+        <h2>Full Compliance with City of Idaho Falls Plumbing Codes</h2>
+        <p>
+          All water heater replacements and tankless retrofits in Snake River Landing must comply with the Idaho State Plumbing Code and the regulations enforced by the <a href="https://www.idahofallsidaho.gov/" target="_blank" rel="noopener">City of Idaho Falls Building Division</a>. We pull all required permits, guarantee seismic bracing and thermal expansion compliance, and coordinate final inspections so your home's mechanical systems remain fully warrantied and code-certified.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <FaqAccordion faqs={neighborhoodFaqs} title="Snake River Landing Water Heater FAQs" />
+
+  <!-- CTA Band -->
+  <CtaBand 
+    headline="Water Heater Trouble in Snake River Landing?"
+    subtext="Call (208) 218-2108 now for fast, expert dispatch to Snake River Parkway, Pier View Drive, or anywhere in 83402. We are on call 24/7."
+  />
+
+  <!-- Contact Form & Map -->
+  <ContactForm 
+    title="Schedule Snake River Landing Service"
+    subtitle="Call (208) 218-2108 directly to speak with an on-call technician and request an estimate."
+    locationContext="Snake River Landing 83402"
+  />
+</Layout>
+
+<style>
+  .neighborhood-hero {
+    background: linear-gradient(180deg, #f0f7fc 0%, #ffffff 100%);
+    padding: 3.5rem 0 3rem 0;
+    text-align: center;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .neighborhood-hero h1 {
+    max-width: 960px;
+    margin: 0 auto 1.25rem auto;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  }
+
+  .neighborhood-hero-lead {
+    max-width: 820px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+
+  .hero-ctas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .content-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .content-block {
+    margin-bottom: 3.5rem;
+  }
+
+  .content-block h2 {
+    margin-bottom: 1.25rem;
+  }
+
+  .content-block h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.6rem;
+    font-size: 1.25rem;
+  }
+
+  .content-block p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+
+  .content-block ul {
+    margin-bottom: 1.5rem;
+  }
+
+  .content-block li {
+    font-size: 1.02rem;
+    line-height: 1.6;
+    margin-bottom: 0.65rem;
+  }
+</style>
