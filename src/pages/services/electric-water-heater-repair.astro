@@ -1,0 +1,378 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import FaqAccordion from '../../components/FaqAccordion.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import ContactForm from '../../components/ContactForm.astro';
+
+const pageTitle = "Electric Water Heater Repair Idaho Falls | Fast 24/7 Diagnostics";
+const pageDescription = "Fast, licensed electric water heater repair in Idaho Falls, ID. We troubleshoot burnt-out heating elements, tripped ECO reset switches, thermostats, and 240V circuits.";
+
+const breadcrumbs = [
+  { name: "Services", url: "/services/" },
+  { name: "Electric Water Heater Repair", url: "/services/electric-water-heater-repair/" }
+];
+
+const faqs = [
+  {
+    question: "Why does the red reset button on my electric water heater keep tripping?",
+    answer: "The red button on your upper thermostat is the Emergency Cut-Off (ECO) high-limit safety switch. It automatically trips when internal water temperatures exceed 170°F to prevent scalding steam and tank rupture. This is almost always caused by a shorted heating element that continues heating uncontrollably, or a stuck thermostat contact. If the button trips more than once, power the breaker off and call our licensed technicians immediately to test electrical continuity."
+  },
+  {
+    question: "Why did my electric water heater suddenly stop producing hot water completely?",
+    answer: "First, inspect your home's main breaker panel to verify that the dedicated 30-amp 240V double-pole circuit breaker hasn't tripped. If the breaker is active, the failure is typically a burnt-out upper heating element or a tripped ECO high-limit switch. In standard dual-element residential units, electrical power passes through the upper thermostat and element first. If the upper element fails or breaks continuity, the entire heater cannot cycle to heat water."
+  },
+  {
+    question: "How does Idaho Falls' 14.1 GPG hard water destroy electric heating elements?",
+    answer: "Eastern Idaho groundwater from the Snake River Plain Aquifer contains heavy concentrations of dissolved calcium carbonate and magnesium (14.1 GPG). When heating elements energize to high temperatures, calcium rapidly precipitates out of solution and encrusts the element sheath. This thick crust acts as an insulating barrier, trapping heat inside the Nichrome resistance coil until it overheats, fractures, and trips your circuit breaker."
+  },
+  {
+    question: "Can I replace just one heating element or should both be changed?",
+    answer: "If one element has failed due to mineral buildup or age, we strongly recommend replacing both the upper and lower elements at the same time. Both elements have endured identical water chemistry and operational cycles; replacing both along with new rubber gaskets and testing both thermostats prevents a second emergency service call weeks later."
+  },
+  {
+    question: "What are resistored low-watt-density replacement elements?",
+    answer: "Standard replacement elements concentrate intense heat over a compact surface area. Low-watt-density elements spread the same heating wattage (typically 4500W) across a longer, folded incoloy alloy loop. Operating at lower surface temperatures drastically reduces scale accumulation and extends element life significantly in Idaho Falls hard water."
+  }
+];
+
+const relatedServices = [
+  { name: "Water Heater Repair", url: "/services/water-heater-repair/" },
+  { name: "Gas Water Heater Repair", url: "/services/gas-water-heater-repair/" },
+  { name: "Tankless Water Heater Repair", url: "/services/tankless-water-heater-repair/" },
+  { name: "Water Heater Maintenance", url: "/services/water-heater-maintenance/" }
+];
+---
+
+<Layout 
+  title={pageTitle} 
+  description={pageDescription} 
+  canonicalPath="/services/electric-water-heater-repair/"
+  breadcrumbs={breadcrumbs}
+  serviceName="Electric Water Heater Repair"
+  faqs={faqs}
+>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero Section -->
+  <section class="service-hero">
+    <div class="container">
+      <div class="service-hero-inner">
+        <div class="service-hero-content">
+          <span class="section-tag">240V Electrical Specialists</span>
+          <h1>Electric Water Heater Repair in Idaho Falls</h1>
+          <p class="service-hero-lead">
+            Waking up to an ice-cold shower or hearing buzzing from your electrical mechanical closet? Idaho Falls Water Heater Pros delivers fast, licensed electric water heater repair across Idaho Falls and Bonneville County. From multimeter element resistance testing to upper thermostat replacements and high-limit ECO resets, our trucks arrive fully stocked with commercial-grade incoloy elements for same-day repair.
+          </p>
+          <div class="service-hero-ctas">
+            <a href="tel:+12082182108" class="btn btn-primary btn-lg">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+              Call (208) 218-2108
+            </a>
+            <a href="#contact" class="btn btn-outline btn-lg">
+              Schedule Electric Repair
+            </a>
+          </div>
+          <p class="hero-availability-note">
+            24/7 emergency dispatch across Idaho Falls, Ammon, and Snake River Landing. Check our <a href="/locations/">service areas</a>.
+          </p>
+        </div>
+
+        <div class="service-hero-highlight">
+          <div class="highlight-card">
+            <img 
+              src="/images/electric-water-heater-heating-element-testing.webp" 
+              alt="Electric water heater element resistance ohm testing in Idaho Falls" 
+              width="450" 
+              height="280" 
+              class="service-feature-photo" 
+            />
+            <h3>Fast Diagnostic & Repair Dispatch</h3>
+            <p class="promo-desc">Burned element changeouts, thermostat calibrations, high-limit ECO switch resets, and breaker short diagnostics.</p>
+            <a href="tel:+12082182108" class="btn btn-primary" style="width:100%;">
+              Emergency Repair: (208) 218-2108
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <!-- Common Problems Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Common Symptoms</span>
+        <h2>Electric Water Heater Problems We Repair Daily</h2>
+        <p>Expert electrical troubleshooting for Rheem, Bradford White, AO Smith, State, and Whirlpool electric tanks.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>Burnt-Out Heating Elements</h3>
+          <p>
+            Heavy mineral scaling from Idaho Falls' 14.1 GPG hard water insulates element coils, causing them to overheat and burn out. We measure coil resistance with digital multimeters and replace shorted units with heavy-duty incoloy elements.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Tripped High-Limit ECO Switch</h3>
+          <p>
+            If the red reset button on the upper thermostat constantly clicks off, a stuck contact or shorted element is driving water temperatures past 170°F. We diagnose the runaway heat condition and replace the defective thermostat.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Lukewarm or Running Out of Hot Water</h3>
+          <p>
+            If hot water only lasts a few minutes, your lower heating element or lower thermostat has likely failed. While the upper element heats the top of the tank, the lower element must carry continuous recovery.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>240V Circuit Breaker Trips</h3>
+          <p>
+            When a split heating element sheath allows live 240V current to contact water, it creates an immediate direct ground fault that trips your electrical panel. We trace line voltage, neutral, and ground integrity.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Leaking Element Gaskets</h3>
+          <p>
+            Vibration and corrosive water degrade the rubber O-ring seal between the screw-in element hex head and tank spud. We drain, inspect tank threads, clean the seating face, and install high-temp vulcanized seals.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Buzzing, Hissing & Rumbling Noises</h3>
+          <p>
+            Thick calcified mineral deposits trapping boiling steam bubbles beneath elements cause popping and sizzling noises. We combine element servicing with pressurized sediment tank flushing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deep Dive Technical Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Technical Grounding</span>
+        <h2>Why Electric Elements Fail Prematurely in Idaho Falls</h2>
+        <p>Understanding Eastern Idaho groundwater chemistry and how proper repair saves your tank.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Mineral Crust & Thermal Overheating</h3>
+          <p>
+            Standard dual-element electric water heaters rely on electrical resistance wire packed within magnesium oxide powder inside a copper or alloy sheath. In Idaho Falls, water hardness averages 14.1 grains per gallon (GPG).
+          </p>
+          <p>
+            As electricity heats the sheath, calcium carbonate precipitates out of solution and fuses to the hot metal. This rock-hard insulation layer prevents water from cooling the element, forcing internal coil temperatures past design thresholds until the wire melts and breaks the circuit.
+          </p>
+          <p>
+            Learn more about managing local mineral buildup in our comprehensive <a href="/blog/hard-water-effects-idaho-falls/">hard water effects guide</a>.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>The Danger of 'Dry Fire' Damage</h3>
+          <p>
+            An energized 4500W heating element that is not completely submerged in water will overheat and disintegrate in less than 30 seconds—a destructive event known as dry firing.
+          </p>
+          <p>
+            Amateur repairs frequently burn out new elements immediately because air was not purged from the tank before switching the 240V breaker back on. Our certified plumbers adhere to rigid fill-and-bleed protocols, testing hydrostatic pressure and faucet aeration before restoring electricity.
+          </p>
+          <p>
+            For complex tank ruptures or aged units, compare costs with our full <a href="/services/water-heater-replacement/">water heater replacement service</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diagnostic Workflow -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Step-by-Step</span>
+        <h2>Our Certified Electrical Repair Protocol</h2>
+        <p>Safety-first diagnostic and repair procedures complying with National Electrical Code (NEC) and Idaho plumbing standards.</p>
+      </div>
+
+      <div class="grid-4 process-grid">
+        <div class="process-step">
+          <div class="step-badge">1</div>
+          <h3>Lockout & Voltage Test</h3>
+          <p>We shut down the dedicated breaker, verify zero voltage on L1 and L2 terminals with a calibrated multimeter, and secure the circuit.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-badge">2</div>
+          <h3>Component Ohms Testing</h3>
+          <p>We disconnect wiring leads and measure resistance. A healthy 4500W element reads ~12.8 ohms. Infinite or zero ohms confirms a ruptured element.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-badge">3</div>
+          <h3>Clean Element Extraction</h3>
+          <p>We drain water below the element port and extract calcified elements using heavy-duty 1-1/2" socket tools without stripping tank spud threads.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-badge">4</div>
+          <h3>Purge, Fill & Current Audit</h3>
+          <p>We install low-watt density incoloy elements, replace gaskets, purge 100% of air from lines, power up, and verify full amperage draw.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Complete Service Line</span>
+        <h2>Explore Other Idaho Falls Water Heater Services</h2>
+        <p>From annual sediment flushing to gas repairs, our team handles all residential hot water needs.</p>
+      </div>
+
+      <div class="grid-4">
+        {relatedServices.map((item) => (
+          <div class="card">
+            <h3>{item.name}</h3>
+            <p>Certified, licensed service delivered promptly across Idaho Falls and surrounding towns.</p>
+            <a href={item.url} class="btn btn-outline" style="width:100%; text-align:center;">
+              Learn More →
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <FaqAccordion faqs={faqs} title="Electric Water Heater Repair FAQs" />
+
+  <CtaBand 
+    headline="Cold Water or Tripping Breaker in Idaho Falls?"
+    subtext="Call (208) 218-2108 for immediate assistance. Our licensed plumbers carry factory-spec elements and thermostats for rapid same-day restoration."
+  />
+
+  <ContactForm 
+    title="Request Electric Water Heater Repair"
+    subtitle="Direct dispatch available 24 hours a day, 7 days a week. Speak directly with our master technicians."
+    locationContext="Idaho Falls Electric Water Heater Repair"
+  />
+</Layout>
+
+<style>
+  .service-hero {
+    background: linear-gradient(180deg, #f0f7fc 0%, #ffffff 100%);
+    padding: 3.5rem 0 4rem 0;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .service-hero-inner {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .service-hero-lead {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--color-text-muted);
+    margin: 1.25rem 0 2rem 0;
+  }
+
+  .service-hero-ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-availability-note {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+  }
+
+  .hero-availability-note a {
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+
+  .highlight-card {
+    background: white;
+    padding: 1.75rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    border: 1px solid var(--color-border-light);
+  }
+
+  .service-feature-photo {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    margin-bottom: 1.25rem;
+    object-fit: cover;
+  }
+
+  .highlight-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--color-primary-dark);
+  }
+
+  .promo-desc {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+
+  .process-grid {
+    margin-top: 2rem;
+  }
+
+  .process-step {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border-light);
+    position: relative;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .step-badge {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .process-step h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .process-step p {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  @media (max-width: 900px) {
+    .service-hero-inner {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

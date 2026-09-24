@@ -1,0 +1,378 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import FaqAccordion from '../../components/FaqAccordion.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import ContactForm from '../../components/ContactForm.astro';
+
+const pageTitle = "Gas Water Heater Repair Idaho Falls | Pilot, Valve & Flue Service";
+const pageDescription = "Licensed gas water heater repair in Idaho Falls, ID. 24/7 emergency troubleshooting for pilot lights, thermocouples, gas control valves, burners, and power-vents.";
+
+const breadcrumbs = [
+  { name: "Services", url: "/services/" },
+  { name: "Gas Water Heater Repair", url: "/services/gas-water-heater-repair/" }
+];
+
+const faqs = [
+  {
+    question: "Why does my gas water heater pilot light keep blowing out?",
+    answer: "The most frequent culprit is a dirty, worn, or misaligned thermocouple or thermopile. The thermocouple is an essential safety sensor that sits in the pilot flame; if it fails to detect heat and generate sufficient electrical millivolts (typically 20 to 30 mV), the gas control valve automatically cuts the gas supply to prevent unburned gas accumulation. During Eastern Idaho winters, severe wind gusts down aging chimney flues or lint-clogged air intake screens can also snuff out the pilot."
+  },
+  {
+    question: "What does a blinking status light on my gas water heater control valve mean?",
+    answer: "Modern Honeywell, Robertshaw, and White-Rodgers electronic gas control valves feature an LED diagnostic indicator light. A normal heartbeat flash indicates proper operation. Specific flash patterns (e.g., 2 flashes, 4 flashes, or 7 flashes) signal specific faults such as high water temperature shutdowns, thermopile voltage failure, or sensor errors. Our technicians carry digital diagnostic equipment to read and clear these fault codes instantly."
+  },
+  {
+    question: "What should I do immediately if I smell natural gas near my water heater?",
+    answer: "If you detect a faint odor when the pilot light is out, ventilate the area. However, if you smell a strong rotten-egg natural gas odor (mercaptan), treat it as an emergency: do NOT turn on or off any electrical switches, do NOT use a phone inside the house, and do NOT light any matches. Evacuate all occupants and pets immediately, leave the front door open, call the Intermountain Gas 24/7 emergency line, and contact our emergency dispatch at (208) 218-2108 from outside."
+  },
+  {
+    question: "Why is water leaking from my gas water heater's bottom burner compartment?",
+    answer: "If water is dripping directly into the burner tray, it can be caused by heavy condensation when cold groundwater (35°F to 40°F in Idaho Falls winters) fills an empty tank, or a catastrophic failure where the inner steel tank has rusted through beneath sediment buildup. If the internal glass lining has ruptured, the tank cannot be safely patched and must be replaced."
+  },
+  {
+    question: "What causes rumbling or booming noises when the gas burner ignites?",
+    answer: "Rumbling and delayed ignition pops occur when thick calcium carbonate sediment covers the bottom of the tank above the burner. Water trapped under this mineral layer boils into steam bubbles that pop violently against the glass lining. Delayed ignition happens when lint or soot blocks burner ports, causing gas to pocket before suddenly flashing. Both conditions require immediate professional burner cleaning and tank flushing."
+  }
+];
+
+const relatedServices = [
+  { name: "Water Heater Repair", url: "/services/water-heater-repair/" },
+  { name: "Electric Water Heater Repair", url: "/services/electric-water-heater-repair/" },
+  { name: "Tankless Water Heater Repair", url: "/services/tankless-water-heater-repair/" },
+  { name: "Water Heater Maintenance", url: "/services/water-heater-maintenance/" }
+];
+---
+
+<Layout 
+  title={pageTitle} 
+  description={pageDescription} 
+  canonicalPath="/services/gas-water-heater-repair/"
+  breadcrumbs={breadcrumbs}
+  serviceName="Gas Water Heater Repair"
+  faqs={faqs}
+>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero Section -->
+  <section class="service-hero">
+    <div class="container">
+      <div class="service-hero-inner">
+        <div class="service-hero-content">
+          <span class="section-tag">Combustion Safety Certified</span>
+          <h1>Gas Water Heater Repair in Idaho Falls</h1>
+          <p class="service-hero-lead">
+            Dealing with an extinguished pilot light, an error-coded gas valve, or no hot water on a freezing Idaho Falls morning? Gas water heaters demand certified technical care to protect your household from gas leaks and carbon monoxide hazards. Idaho Falls Water Heater Pros provides licensed, 24/7 gas water heater repair throughout Idaho Falls, Ammon, and Bonneville County with certified draft testing and factory replacement parts.
+          </p>
+          <div class="service-hero-ctas">
+            <a href="tel:+12082182108" class="btn btn-primary btn-lg">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+              Call (208) 218-2108
+            </a>
+            <a href="#contact" class="btn btn-outline btn-lg">
+              Schedule Gas Repair
+            </a>
+          </div>
+          <p class="hero-availability-note">
+            Emergency gas repair dispatch across Downtown Idaho Falls, Ammon, and beyond. Explore our <a href="/locations/">service locations</a>.
+          </p>
+        </div>
+
+        <div class="service-hero-highlight">
+          <div class="highlight-card">
+            <img 
+              src="/images/gas-water-heater-burner-repair-inspection.webp" 
+              alt="Gas water heater burner manifold and thermocouple testing in Idaho Falls" 
+              width="450" 
+              height="280" 
+              class="service-feature-photo" 
+            />
+            <h3>24/7 Gas Plumbing Diagnostics</h3>
+            <p class="promo-desc">Thermocouple millivolt testing, electronic gas control valve repairs, pilot tube cleaning, and power-vent draft verification.</p>
+            <a href="tel:+12082182108" class="btn btn-primary" style="width:100%;">
+              Call for Fast Dispatch: (208) 218-2108
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <!-- Common Problems Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Common Malfunctions</span>
+        <h2>Gas Water Heater Repairs We Specialize In</h2>
+        <p>Comprehensive troubleshooting for natural gas and propane systems from Bradford White, Rheem, AO Smith, and State Water Heaters.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>Pilot Light Extinguishment</h3>
+          <p>
+            When a pilot won't ignite or shuts off as soon as you release the knob, the thermocouple or thermopile is defective, misaligned, or coated in carbon soot. We clean pilot orifices and replace failed thermal sensors.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Electronic Gas Control Valve Failure</h3>
+          <p>
+            A faulty internal thermostat sensor or defective electronic gas solenoid prevents the main burner from firing. We test millivolts, read diagnostic LED flash codes, and replace faulty valve assemblies.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Power-Vent Blower & Pressure Switch Errors</h3>
+          <p>
+            Power-vent gas heaters use an electric induced-draft blower and vacuum pressure switch. If vent pipes freeze, sag, or collect condensation, the switch locks out the burner. We test switch ohms and clear vent obstructions.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Burner Orifice Clogging & Yellow Flames</h3>
+          <p>
+            A healthy gas burner produces a crisp, roaring blue flame. Dirty burner ports or restricted air intake screens cause lazy yellow flames, producing soot and dangerous carbon monoxide. We clean and adjust air-gas ratios.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Temperature & Pressure (T&P) Valve Leaks</h3>
+          <p>
+            Thermal expansion or excessive water pressure from city mains forces the T&P relief valve to dump hot water. We inspect valve seating, test municipal PSI, and calibrate thermal expansion tanks.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Gas Flex Line & Shut-Off Valve Leaks</h3>
+          <p>
+            Corroded gas flex lines or stiff quarter-turn shutoffs create microscopic gas seepage. We use electronic combustible gas sniffers and bubble leak detection fluid to identify and replace faulty fittings.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Flue & Combustion Safety Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Safety First</span>
+        <h2>Flue Draft & Carbon Monoxide Protection in Idaho Falls</h2>
+        <p>Why proper venting and air supply are vital in Eastern Idaho's sub-zero winter climate.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Winter Chimney Backdrafts & Vent Spillage</h3>
+          <p>
+            Atmospheric gas water heaters depend on thermal buoyancy to evacuate combustion exhaust gases through vertical metal B-vents or masonry chimneys.
+          </p>
+          <p>
+            In Idaho Falls winters, when outside air plunges below zero, the cold column of air inside an uninsulated chimney can overcome weak hot gas draft, pushing carbon monoxide (CO) back into living spaces. Our certified plumbers conduct digital draft gauge testing and smoke pencil spillage checks to verify safe venting.
+          </p>
+          <p>
+            Learn more about draft issues in our detailed <a href="/blog/atmospheric-vs-power-vent-gas-water-heater/">atmospheric vs. power-vent comparison</a>.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Hard Water Sediment Straining Gas Tanks</h3>
+          <p>
+            With Idaho Falls water hardness testing at 14.1 GPG, calcium carbonate settles rapidly over the burner plate at the bottom of the tank.
+          </p>
+          <p>
+            Because the gas flame fires directly against this bottom steel dish, the sediment layer acts as a barrier, forcing the burner to run longer and superheating the bottom metal until the tank steel crystallizes and splits. Regular sediment maintenance and anode rod replacements extend your tank's operational life.
+          </p>
+          <p>
+            If your gas unit is over 10 years old with a leaking tank, review your options for a new <a href="/services/water-heater-replacement/">water heater replacement</a> or an on-demand upgrade with our <a href="/services/tankless-water-heater-repair/">tankless water heater repair</a> experts.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diagnostic Workflow -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Rigorous Testing</span>
+        <h2>Our Step-by-Step Gas Diagnostic Workflow</h2>
+        <p>Meticulous troubleshooting protocols designed for maximum safety and long-lasting repairs.</p>
+      </div>
+
+      <div class="grid-4 process-grid">
+        <div class="process-step">
+          <div class="step-badge">1</div>
+          <h3>Combustible Gas & Sniffer Audit</h3>
+          <p>We test around gas shutoff valves, unions, and control bodies with sensitive electronic gas detectors to rule out active leaks before ignition.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-badge">2</div>
+          <h3>Thermocouple Millivolt Verification</h3>
+          <p>We test open-circuit and closed-circuit DC millivoltage generated by the thermopile/thermocouple to diagnose flame sensing failures.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-badge">3</div>
+          <h3>Burner & Flame Inspection</h3>
+          <p>We remove the sealed burner access door, clean pilot tubing and burner ports, inspect the flame arrestor screen, and verify clean combustion.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-badge">4</div>
+          <h3>Flue Draft & Carbon Monoxide Check</h3>
+          <p>With the main burner fully engaged, we test draft at the hood and monitor carbon monoxide levels to guarantee 100% safe home venting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Full Service Directory</span>
+        <h2>Additional Hot Water Services in Idaho Falls</h2>
+        <p>Complete repair and maintenance services tailored to Eastern Idaho homes.</p>
+      </div>
+
+      <div class="grid-4">
+        {relatedServices.map((item) => (
+          <div class="card">
+            <h3>{item.name}</h3>
+            <p>Dependable, code-compliant plumbing solutions available throughout Bonneville County.</p>
+            <a href={item.url} class="btn btn-outline" style="width:100%; text-align:center;">
+              Learn More →
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <FaqAccordion faqs={faqs} title="Gas Water Heater Repair FAQs" />
+
+  <CtaBand 
+    headline="Gas Water Heater Pilot Out or Not Heating in Idaho Falls?"
+    subtext="Call (208) 218-2108 right away. Our certified gas plumbing technicians provide same-day diagnostics, valve replacements, and 24/7 emergency service."
+  />
+
+  <ContactForm 
+    title="Schedule Gas Water Heater Repair"
+    subtitle="Speak directly with an on-call technician in Idaho Falls. Fast dispatch guaranteed."
+    locationContext="Idaho Falls Gas Water Heater Repair"
+  />
+</Layout>
+
+<style>
+  .service-hero {
+    background: linear-gradient(180deg, #f0f7fc 0%, #ffffff 100%);
+    padding: 3.5rem 0 4rem 0;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .service-hero-inner {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .service-hero-lead {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--color-text-muted);
+    margin: 1.25rem 0 2rem 0;
+  }
+
+  .service-hero-ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-availability-note {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+  }
+
+  .hero-availability-note a {
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+
+  .highlight-card {
+    background: white;
+    padding: 1.75rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    border: 1px solid var(--color-border-light);
+  }
+
+  .service-feature-photo {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    margin-bottom: 1.25rem;
+    object-fit: cover;
+  }
+
+  .highlight-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--color-primary-dark);
+  }
+
+  .promo-desc {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+
+  .process-grid {
+    margin-top: 2rem;
+  }
+
+  .process-step {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border-light);
+    position: relative;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .step-badge {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .process-step h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .process-step p {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  @media (max-width: 900px) {
+    .service-hero-inner {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

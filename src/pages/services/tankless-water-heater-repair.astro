@@ -1,0 +1,378 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import FaqAccordion from '../../components/FaqAccordion.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import ContactForm from '../../components/ContactForm.astro';
+
+const pageTitle = "Tankless Water Heater Repair Idaho Falls | Certified Descaling & Fixes";
+const pageDescription = "Certified tankless water heater repair in Idaho Falls, ID. Fast troubleshooting for error codes, mineral scale, flame sensors, and cold water sandwich issues.";
+
+const breadcrumbs = [
+  { name: "Services", url: "/services/" },
+  { name: "Tankless Water Heater Repair", url: "/services/tankless-water-heater-repair/" }
+];
+
+const faqs = [
+  {
+    question: "What does an error code on my tankless water heater mean?",
+    answer: "Digital error codes pinpoint exact system malfunctions. For example, on Navien units, E003 indicates ignition failure while E012 or E110 points to flame rod detection or heat exchanger overheating. On Rinnai units, Code 11 signals no ignition, Code 12 indicates flame failure, and Code 14 flags thermal fuse overheating. Our factory-certified technicians carry manufacturer diagnostic software to decode and resolve fault codes immediately."
+  },
+  {
+    question: "Why did my tankless water heater stop heating water in sub-zero winter weather?",
+    answer: "In Eastern Idaho winters, when temperatures plunge below zero, two common issues arise: first, condensation lines can freeze if not heat-taped or properly pitched, backing up acidic moisture into the unit and triggering a safety lockout. Second, snow or rime ice can obstruct exterior concentric intake and exhaust vent terminations, starving the burner of combustion air."
+  },
+  {
+    question: "How does 14.1 GPG hard water damage tankless heat exchangers?",
+    answer: "Tankless units heat water instantly through extremely narrow copper or stainless steel heat exchanger passages. When water reaches high temperatures, dissolved calcium and magnesium rapidly crystallize onto the inner tube walls. Even a 1mm scale layer acts as thermal insulation, causing the metal to overheat, flow rates (GPM) to drop, and eventually cracking the expensive heat exchanger core."
+  },
+  {
+    question: "How often should a tankless water heater be descaled in Idaho Falls?",
+    answer: "Given Idaho Falls' severe water hardness of 14.1 grains per gallon, residential tankless units require professional descaling and acid flushing every 12 months. Homes without whole-house water softeners or with high daily hot water demand may require servicing every 6 to 9 months to maintain manufacturer warranty coverage and prevent scale lockouts."
+  },
+  {
+    question: "What causes the 'cold water sandwich' effect and can it be fixed?",
+    answer: "A 'cold water sandwich' occurs when someone turns off a hot water faucet and turns it back on shortly afterward. While the burner reignites, a pocket of unheated water slips through into the plumbing line, shocking the bather with cold water. We repair and adjust internal buffer tanks, calibrate flow sensors, or install external recirculation loops to eliminate temperature fluctuation."
+  }
+];
+
+const relatedServices = [
+  { name: "Water Heater Repair", url: "/services/water-heater-repair/" },
+  { name: "Gas Water Heater Repair", url: "/services/gas-water-heater-repair/" },
+  { name: "Electric Water Heater Repair", url: "/services/electric-water-heater-repair/" },
+  { name: "Water Heater Maintenance", url: "/services/water-heater-maintenance/" }
+];
+---
+
+<Layout 
+  title={pageTitle} 
+  description={pageDescription} 
+  canonicalPath="/services/tankless-water-heater-repair/"
+  breadcrumbs={breadcrumbs}
+  serviceName="Tankless Water Heater Repair"
+  faqs={faqs}
+>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero Section -->
+  <section class="service-hero">
+    <div class="container">
+      <div class="service-hero-inner">
+        <div class="service-hero-content">
+          <span class="section-tag">Factory Certified Technicians</span>
+          <h1>Tankless Water Heater Repair in Idaho Falls</h1>
+          <p class="service-hero-lead">
+            Flashing error codes, fluctuating shower temperatures, or complete shutdown during freezing Eastern Idaho weather? On-demand water heaters require specialized electronic diagnostics, precision gas pressure calibration, and deep chemical descaling. Idaho Falls Water Heater Pros provides certified tankless water heater repair for Navien, Rinnai, Rheem, and Noritz systems throughout Idaho Falls, Ammon, and Bonneville County.
+          </p>
+          <div class="service-hero-ctas">
+            <a href="tel:+12082182108" class="btn btn-primary btn-lg">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+              Call (208) 218-2108
+            </a>
+            <a href="#contact" class="btn btn-outline btn-lg">
+              Schedule Tankless Repair
+            </a>
+          </div>
+          <p class="hero-availability-note">
+            Rapid service in Snake River Landing, Downtown, and across Bonneville County. View our <a href="/locations/">service area directory</a>.
+          </p>
+        </div>
+
+        <div class="service-hero-highlight">
+          <div class="highlight-card">
+            <img 
+              src="/images/tankless-water-heater-installation-wall-mount.webp" 
+              alt="Wall-mounted high-efficiency tankless water heater diagnostic inspection in Idaho Falls" 
+              width="450" 
+              height="280" 
+              class="service-feature-photo" 
+            />
+            <h3>On-Demand Troubleshooting Specialists</h3>
+            <p class="promo-desc">Navien & Rinnai certified repairs, annual acid descaling, flame sensor cleaning, and winter freeze recovery.</p>
+            <a href="tel:+12082182108" class="btn btn-primary" style="width:100%;">
+              Emergency Repair: (208) 218-2108
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <!-- Common Problems Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Electronic & Mechanical Diagnostics</span>
+        <h2>Tankless Water Heater Issues We Repair in Idaho Falls</h2>
+        <p>Comprehensive component repairs for Navien NPE/NPN series, Rinnai Sensei, Rheem Performance Platinum, and Noritz units.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>Digital Error Code Lockouts</h3>
+          <p>
+            When your digital controller flashes error numbers (e.g., ignition failure, flame detection, exhaust temperature limits), the unit locks out to protect internal electronics. We connect diagnostic analyzers to pinpoint the root cause.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Heat Exchanger Mineral Scaling</h3>
+          <p>
+            Eastern Idaho's 14.1 GPG hard water coats the micro-fins of heat exchangers with calcium crust, choking water flow and causing overheating shutdowns. We perform high-flow recirculating acid descaling to restore factory GPM.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Flame Sensor Rod & Igniter Carbon Soot</h3>
+          <p>
+            Flame rods sense ionization inside the combustion chamber. Over time, microscopic carbon oxidation coats the sensor, falsely signaling that the burner has extinguished and shutting off gas valves. We clean or replace sensors.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Cold Water Sandwich & Inconsistent Heat</h3>
+          <p>
+            Sticking flow sensor impellers, clogged cold water inlet filter screens, or failing internal check valves cause hot water to spike, fluctuate, or drop out mid-shower. We rebuild turbine sensors and flush screens.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Frozen Condensate Drains in Winter</h3>
+          <p>
+            High-efficiency condensing tankless units produce acidic water condensation. If drain tubing exposed to freezing crawlspaces or rim joists freezes solid, backpressure causes the unit to shut down. We thaw, re-pitch, and insulate lines.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Gas Supply Pressure Drops</h3>
+          <p>
+            High-capacity 199,000 BTU tankless burners require full 1/2" to 3/4" gas line volume. If manifold gas pressures drop during peak winter demand, the unit misfires. We perform dynamic digital manometer pressure testing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deep Dive Technical Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Hard Water Science</span>
+        <h2>Why Tankless Units Require Annual Descaling in Idaho Falls</h2>
+        <p>How the Snake River Plain Aquifer's high mineral content impacts high-efficiency heat exchangers.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Calcium Crystallization in Heat Exchanger Coils</h3>
+          <p>
+            Traditional tank water heaters hold 40 to 50 gallons of water at rest, allowing sediment to settle loosely on the bottom. In contrast, a tankless water heater forces water through tightly coiled tubes wrapped around a blazing 199,000 BTU burner.
+          </p>
+          <p>
+            At high water temperatures, dissolved calcium and magnesium precipitate instantaneously, plating the inside of copper and stainless steel tubes. Within 12 to 18 months in Idaho Falls (14.1 GPG), this scale chokes flow, causes hot spots, and causes the heat exchanger to split—voiding manufacturer warranties.
+          </p>
+          <p>
+            Schedule preventative flushes through our <a href="/services/water-heater-maintenance/">water heater maintenance program</a> to avoid costly core replacements.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Idaho Falls Sub-Zero Winter Freeze Protection</h3>
+          <p>
+            During severe Eastern Idaho cold snaps where outdoor temperatures drop below 0°F, tankless units mounted on exterior perimeter walls rely on internal ceramic heating blocks and freeze-protection cycles to prevent burst pipes.
+          </p>
+          <p>
+            If electrical power cuts out, concentric intake pipes collect frost rime, or high winds push sub-zero air into direct-vent flues, pipes can freeze within hours. Our emergency team is equipped to thaw frozen units safely, repair damaged copper manifold headers, and install wind-baffled termination hoods.
+          </p>
+          <p>
+            If your existing unit has suffered catastrophic freeze rupture, explore our rapid <a href="/services/water-heater-replacement/">replacement options</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diagnostic Workflow -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Precision Protocol</span>
+        <h2>Our Certified Tankless Repair Process</h2>
+        <p>Factory-grade diagnostics to quickly restore unlimited, scalding-hot water to your home.</p>
+      </div>
+
+      <div class="grid-4 process-grid">
+        <div class="process-step">
+          <div class="step-badge">1</div>
+          <h3>Error Log Interrogation</h3>
+          <p>We access the internal PCB board control menu to read real-time thermistor temperatures, fan RPM, flame ionization microamps, and historical error logs.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-badge">2</div>
+          <h3>Gas Pressure & Combustion Test</h3>
+          <p>We connect a dual-port digital manometer to test static and dynamic gas supply pressure, ensuring the burner receives sufficient fuel under load.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-badge">3</div>
+          <h3>Recirculating Chemical Descaling</h3>
+          <p>We isolate the unit with service isolation valves, connect a submersible utility pump, and circulate virgin food-grade virgin descaler to dissolve scale.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-badge">4</div>
+          <h3>Filter, Sensor & Flow Calibration</h3>
+          <p>We clean the cold inlet water filter, calibrate the water flow turbine sensor, test flame rods, reset fault codes, and test multi-fixture GPM performance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Complete Service Line</span>
+        <h2>Other Hot Water Solutions in Idaho Falls</h2>
+        <p>Comprehensive repair and maintenance options across Eastern Idaho.</p>
+      </div>
+
+      <div class="grid-4">
+        {relatedServices.map((item) => (
+          <div class="card">
+            <h3>{item.name}</h3>
+            <p>Prompt, professional water heating services backed by our 100% satisfaction guarantee.</p>
+            <a href={item.url} class="btn btn-outline" style="width:100%; text-align:center;">
+              Learn More →
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <FaqAccordion faqs={faqs} title="Tankless Water Heater Repair FAQs" />
+
+  <CtaBand 
+    headline="Tankless Water Heater Showing Error Codes or Cold in Idaho Falls?"
+    subtext="Call (208) 218-2108 immediately. Our factory-certified tankless plumbers provide same-day diagnostics, chemical descaling, and 24/7 emergency repairs."
+  />
+
+  <ContactForm 
+    title="Schedule Tankless Water Heater Repair"
+    subtitle="Speak directly with an on-call certified technician in Idaho Falls. Immediate dispatch available."
+    locationContext="Idaho Falls Tankless Water Heater Repair"
+  />
+</Layout>
+
+<style>
+  .service-hero {
+    background: linear-gradient(180deg, #f0f7fc 0%, #ffffff 100%);
+    padding: 3.5rem 0 4rem 0;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .service-hero-inner {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .service-hero-lead {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--color-text-muted);
+    margin: 1.25rem 0 2rem 0;
+  }
+
+  .service-hero-ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-availability-note {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+  }
+
+  .hero-availability-note a {
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+
+  .highlight-card {
+    background: white;
+    padding: 1.75rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    border: 1px solid var(--color-border-light);
+  }
+
+  .service-feature-photo {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    margin-bottom: 1.25rem;
+    object-fit: cover;
+  }
+
+  .highlight-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--color-primary-dark);
+  }
+
+  .promo-desc {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+
+  .process-grid {
+    margin-top: 2rem;
+  }
+
+  .process-step {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border-light);
+    position: relative;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .step-badge {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .process-step h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .process-step p {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  @media (max-width: 900px) {
+    .service-hero-inner {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

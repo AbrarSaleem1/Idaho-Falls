@@ -7,6 +7,9 @@ export default defineConfig({
   trailingSlash: 'always',
   integrations: [sitemap()],
   redirects: {
-    '/services/water-heater-installation/': '/services/water-heater-replacement/'
+    '/services/water-heater-installation/': '/services/water-heater-replacement/',
+    '/services/electric-water-heater-repair-installation/': '/services/electric-water-heater-repair/',
+    '/services/gas-water-heater-repair-installation/': '/services/gas-water-heater-repair/',
+    '/services/tankless-water-heater-repair-installation/': '/services/tankless-water-heater-repair/'
   }
 });

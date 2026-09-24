@@ -2,3 +2,10 @@
 /sitemap /sitemap-index.xml 301
 /services/water-heater-installation/* /services/water-heater-replacement/ 301
 /services/water-heater-installation /services/water-heater-replacement/ 301
+/services/electric-water-heater-repair-installation/* /services/electric-water-heater-repair/ 301
+/services/electric-water-heater-repair-installation /services/electric-water-heater-repair/ 301
+/services/gas-water-heater-repair-installation/* /services/gas-water-heater-repair/ 301
+/services/gas-water-heater-repair-installation /services/gas-water-heater-repair/ 301
+/services/tankless-water-heater-repair-installation/* /services/tankless-water-heater-repair/ 301
+/services/tankless-water-heater-repair-installation /services/tankless-water-heater-repair/ 301
+
