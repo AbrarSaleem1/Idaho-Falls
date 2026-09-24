@@ -1,2 +1,4 @@
 # Sitemap and canonical redirects
 /sitemap /sitemap-index.xml 301
+/services/water-heater-installation/* /services/water-heater-replacement/ 301
+/services/water-heater-installation /services/water-heater-replacement/ 301
