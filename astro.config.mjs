@@ -6,4 +6,7 @@ export default defineConfig({
   site: 'https://idahofallswaterheaterrepair.com',
   trailingSlash: 'always',
   integrations: [sitemap()],
+  redirects: {
+    '/services/water-heater-installation/': '/services/water-heater-replacement/'
+  }
 });
